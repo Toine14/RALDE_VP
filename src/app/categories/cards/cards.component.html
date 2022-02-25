@@ -1,24 +1,16 @@
-
-  <div class="w-1/4 rounded-lg shadow-xl bg-white">
-    <img
-      src="./../../assets/img/biology.png"
-      alt=""
-      class="rounded-t-lg h-25 object-cover"
-    />
-    <!--Card Header-->
-    <div class=" text-xl font-extrabold p-4">Card Component</div>
-    <div class="px-5">
-      <p class="text-gray-500 px-4">
-        Use card components to easily show blog posts, merchandise, functions,
-        items and more.
-      </p>
-    </div>
-    <!--Card Footer-->
-    <div class="text-right py-3 px-8 text-gray-500">
-      <button
-        class="py-2 px-4 mt-5 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600"
-      >
-        GET STARTED
-      </button>
-    </div>
+<div class="overflow-hidden shadow-lg">
+  <img class="w-full" [src]='cardInfo.img_src' alt="Mountain">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{{cardInfo.title}}</div>
+    <p class="text-gray-700 text-base">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et
+      perferendis eaque, exercitationem praesentium nihil.
+    </p>
   </div>
+  <div href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+    <a [routerLink]="cardInfo.nav_to"
+      class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
+      Explore
+    </a>
+  </div>
+</div>
