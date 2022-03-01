@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
+    "@angular/cdk": "^13.2.4",
     "@angular/cli": "12.2",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
@@ -21,6 +22,7 @@
     "@angular/router": "~13.2.0",
     "ag-grid-angular": "^27.0.0",
     "ag-grid-community": "^27.0.1",
+    "ngx-easy-table": "^15.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

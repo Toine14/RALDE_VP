@@ -1,6 +1,6 @@
-<div class="flex justify-center items-center">
-
-    <ag-grid-angular style="width: 40rem; height: 500px;" class="ag-theme-material" [rowData]="rowData"
-        [columnDefs]="columnDefs">
-    </ag-grid-angular>
-</div>
+<ngx-table [configuration]="configuration"
+           [data]="data"
+           [columns]="columns"
+           (event)="eventEmitted($event)"
+           >
+</ngx-table>

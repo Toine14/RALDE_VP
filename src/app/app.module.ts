@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AgGridModule } from 'ag-grid-angular';
+
+import { TableModule } from 'ngx-easy-table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +24,8 @@ import { PracticalListComponent } from './practical-list/practical-list.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AgGridModule
+    HttpClientModule,
+    TableModule
 
   ],
   providers: [],
