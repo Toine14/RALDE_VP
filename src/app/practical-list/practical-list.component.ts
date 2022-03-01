@@ -1,5 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Columns, Config, DefaultConfig } from 'ngx-easy-table';
+import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-practical-list',
@@ -7,11 +9,11 @@ import { Columns, Config, DefaultConfig } from 'ngx-easy-table';
   styleUrls: ['./practical-list.component.scss']
 })
 export class PracticalListComponent implements OnInit {
-  constructor() { }
+  constructor(private dataservice : DataService, private router: Router) { }
   @ViewChild('detailsTemplate') detailsTemplateRef: TemplateRef<any> | undefined;
 
 
-  public configuration!: Config ;
+  public configuration!: Config;
   public columns!: Columns[];
   public clicked!: string;
 
@@ -31,6 +33,24 @@ export class PracticalListComponent implements OnInit {
     isActive: true,
   }];
 
+  public vp = [{
+    title: 'Animal cell culture intro',
+    field: 'cellular biology',
+    creator: 'RALDE team',
+    description: 'full description of the cell culture virtual practical',
+    id:1
+  },
+  {
+    title: 'fish dissection',
+    field: 'animal biology',
+    creator: 'RALDE team',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore',
+    id:2
+  }];
+
+  public isOneSelected: boolean = false;
+  public placeHolderText: string ='Please Select a virtual practical in the bellow table'
+
 
 
   ngOnInit(): void {
@@ -39,20 +59,28 @@ export class PracticalListComponent implements OnInit {
     this.configuration.selectRow = true;
     // ... etc.
     this.columns = [
-      { key: 'phone', title: 'Phone' },
-      { key: 'age', title: 'Age' },
-      { key: 'company', title: 'Company' },
-      { key: 'name', title: 'Name' },
+      { key: 'title', title: 'Title' },
+      { key: 'field', title: 'Field' },
+      { key: 'creator', title: 'Creator' },
+     //{ key: 'name', title: 'Name' },
       //{ key: 'isActive', title: 'STATUS' },
     ];
   }
 
   eventEmitted($event: { event: string; value: any }): void {
-    console.log($event.value.row)
-    this.clicked = JSON.stringify($event);
-    // eslint-disable-next-line no-console
-    console.log(this.clicked);
+    this.isOneSelected=true;   
+    this.placeHolderText=$event.value.row.description;
+    let id = $event.value.row.id;
+        this.dataservice.set_vp_id(id)   
+      
   }
+
+  onButtonClick(){
+    this.router.navigate(['/practical']);
+
+  }
+
+
 
 
 

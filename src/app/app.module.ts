@@ -11,6 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories/categories.component';
 import { CardsComponent } from './categories/cards/cards.component';
 import { PracticalListComponent } from './practical-list/practical-list.component';
+import { PracticalsGeneratorComponent } from './practicals-generator/practicals-generator.component';
+import { BasicPracticalComponentDirective } from './practicals-generator/basic-practical-component.directive';
+import { PracticalsComponent } from './practicals-generator/practicals/practicals.component';
+import { RestartComponent } from './practical-components/restart/restart.component';
+import { QuestionComponent } from './practical-components/question/question.component';
 
 
 @NgModule({
@@ -19,7 +24,12 @@ import { PracticalListComponent } from './practical-list/practical-list.componen
     HomeComponent,
     CategoriesComponent,
     CardsComponent,
-    PracticalListComponent
+    PracticalListComponent,
+    PracticalsGeneratorComponent,
+    BasicPracticalComponentDirective,
+    PracticalsComponent,
+    RestartComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

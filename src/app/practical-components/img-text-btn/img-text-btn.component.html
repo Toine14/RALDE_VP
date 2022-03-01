@@ -1,0 +1,21 @@
+<div class="overflow-hidden shadow-lg">
+    <img class="w-full" [src]='data.img_url' alt="Mountain">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{{data.id}}</div>
+      <p class="text-gray-700 text-base">
+        {{data.text_p1}}
+      </p>
+      <p class="text-gray-700 text-base">
+        {{data.text_p2}}
+      </p>
+    </div>
+    <div href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+      <div
+      (click)="onNextClick()"
+        class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
+        next
+    </div>
+    </div>
+  </div>
+
+ 

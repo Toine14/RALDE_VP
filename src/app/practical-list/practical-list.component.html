@@ -1,6 +1,20 @@
-<ngx-table [configuration]="configuration"
-           [data]="data"
-           [columns]="columns"
-           (event)="eventEmitted($event)"
-           >
-</ngx-table>
+<div class="container flex  flex-wrap items-center justify-center py-5 mx-auto md:flex-row max-w-7xl my-5">
+    <ngx-table [configuration]="configuration" [data]="vp" [columns]="columns" (event)="eventEmitted($event)">
+    </ngx-table>
+
+
+
+
+</div>
+
+<div class="container flex flex-col bg-slate-200 rounded-sm h-40 p-10 justify-between">
+
+
+  {{placeHolderText}}
+    <button class="bg bg-raldemint-900 text-white font-bold py-2 px-4 rounded "
+        [ngClass]="[ isOneSelected ? 'opacity-100' : 'opacity-50 cursor-not-allowed']"
+        (click)="onButtonClick()"
+        >
+        Start
+    </button>
+</div>
