@@ -1,4 +1,5 @@
-<div class="overflow-hidden shadow-lg">
+<div class="basic_component">
+  <div class="overflow-hidden shadow-lg pb-3 w-4/5">
     <img class="w-full" [src]='data.img_url' alt="Mountain">
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{data.id}}</div>
@@ -10,12 +11,10 @@
       </p>
     </div>
     <div href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
-      <div
-      (click)="onNextClick()"
+      <div (click)="onNextClick()"
         class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
         next
-    </div>
+      </div>
     </div>
   </div>
-
- 
+</div>

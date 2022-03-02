@@ -1,4 +1,5 @@
 <p>practicals-generator works!</p>
 
-<app-practicals [practicalsComp]='practicalsComp'></app-practicals>
+
+<app-practicals *ngIf="!loading" [practicalsComp]='practicalsComp'></app-practicals>
 

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit,Output, EventEmitter  } from '@angular/core';
 import { Subject } from 'rxjs';
+import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 
 @Component({
   selector: 'app-img-text-btn',
@@ -12,16 +13,17 @@ export class ImgTextBtnComponent implements OnInit {
 
   @Input() data: any;
 
-  next_clicked: Subject<number> = new Subject();
+  
 
-  constructor() { }
+  constructor(private practicalService: BasicPracticalComponentService) { }
 
   ngOnInit(): void {
-    console.log(this.data)
+    //console.log(this.data)
   }
 
   onNextClick(){
-    this.next_clicked.next(this.data.followingCompId)
+    this.practicalService.set_component_id(this.data.followingCompId)
+    //this.next_clicked.next(this.data.followingCompId)
     
   }
 

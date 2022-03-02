@@ -16,6 +16,7 @@ import { BasicPracticalComponentDirective } from './practicals-generator/basic-p
 import { PracticalsComponent } from './practicals-generator/practicals/practicals.component';
 import { RestartComponent } from './practical-components/restart/restart.component';
 import { QuestionComponent } from './practical-components/question/question.component';
+import { StartComponent } from './practical-components/start/start.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { QuestionComponent } from './practical-components/question/question.comp
     BasicPracticalComponentDirective,
     PracticalsComponent,
     RestartComponent,
-    QuestionComponent
+    QuestionComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

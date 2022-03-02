@@ -17,21 +17,6 @@ export class PracticalListComponent implements OnInit {
   public columns!: Columns[];
   public clicked!: string;
 
-  public data = [{
-    phone: '+1 (934) 551-2224',
-    age: 20,
-    address: { street: 'North street', number: 12 },
-    company: 'ZILLANET',
-    name: 'Valentine Webb',
-    isActive: false,
-  }, {
-    phone: '+1 (948) 460-3627',
-    age: 31,
-    address: { street: 'South street', number: 12 },
-    company: 'KNOWLYSIS',
-    name: 'Heidi Duncan',
-    isActive: true,
-  }];
 
   public vp = [{
     title: 'Animal cell culture intro',
@@ -71,13 +56,11 @@ export class PracticalListComponent implements OnInit {
     this.isOneSelected=true;   
     this.placeHolderText=$event.value.row.description;
     let id = $event.value.row.id;
-        this.dataservice.set_vp_id(id)   
-      
+        this.dataservice.set_vp_id(id)      
   }
 
   onButtonClick(){
     this.router.navigate(['/practical']);
-
   }
 
 

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { BasicPracticalComponentService } from '../services/basic-practical-component.service';
 import { DataService } from '../services/data.service';
-import {BasicPracticalItem} from './basic-practical-item'
+import { BasicPracticalItem } from './basic-practical-item'
 
 @Component({
   selector: 'app-practicals-generator',
@@ -12,27 +12,30 @@ import {BasicPracticalItem} from './basic-practical-item'
 export class PracticalsGeneratorComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
-  Vp_id!: number; 
+  Vp_id!: number;
 
-  constructor(private dataService: DataService, private practicalService: BasicPracticalComponentService) { 
-    this.subscription = dataService.vp_id$.subscribe((id) => {this.Vp_id=id})   
+  loading:Boolean =true
+
+  constructor(private dataService: DataService, private practicalService: BasicPracticalComponentService) {
+    this.subscription = dataService.vp_id$.subscribe((id) => { this.Vp_id = id })
   }
 
-  practicalsComp : BasicPracticalItem[]=[]
+  practicalsComp: BasicPracticalItem[] = []
 
 
   ngOnInit(): void {
-    console.log(this.Vp_id)
-
-    this.practicalsComp = this.practicalService.getPracticals()
-
     
+    //TODO get the right URL
+    let url = '/assets/data/first_vp.json';
+    this.practicalService.get_practical_data(url).subscribe((data:any)=>{ this.practicalsComp = this.practicalService.getPracticals(data);this.loading=false});
+    //this.practicalsComp = this.practicalService.getPracticals();
+
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe()
+    this.subscription.unsubscribe();
   }
 
-  
+
 
 }
