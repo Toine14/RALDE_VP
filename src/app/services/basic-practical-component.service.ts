@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BasicPracticalItem } from '../practicals-generator/basic-practical-item';
 import { ImgTextBtnComponent } from '../practical-components/img-text-btn/img-text-btn.component';
+import {StartComponent} from '../practical-components/start/start.component';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -42,6 +43,7 @@ export class BasicPracticalComponentService {
         case 'QuestionComponent':
           break;
         case 'StartComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(StartComponent, component.data))
           break;
       }
 

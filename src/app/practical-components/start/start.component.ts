@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 
 @Component({
   selector: 'app-start',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: any;
+
+  constructor(private practicalService : BasicPracticalComponentService) { }
 
   ngOnInit(): void {
+  }
+
+  onStartClick(){
+    this.practicalService.set_component_id(this.data.followingCompId)    
   }
 
 }

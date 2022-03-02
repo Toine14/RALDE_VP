@@ -1,1 +1,21 @@
-<p>start works!</p>
+<div class="basic_component w-2/3">
+    <div class="overflow-hidden shadow-lg pb-3 w-4/5">
+      
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Aims : {{data.aims}}</div>
+        <p class="text-gray-700 text-base">
+          {{data.text_p1}}
+        </p>
+        <p class="text-gray-700 text-base">
+          {{data.text_p2}}
+        </p>
+      </div>
+      <div href='' class="flex flex-col justify-center items-center  sm:flex-row sm:space-x-4 mb-2 mx-2">
+        <div (click)="onStartClick()"
+          class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-900 hover:bg-gray-200 hover:text-gray-600 rounded">
+          Start
+        </div>
+ 
+      </div>
+    </div>
+  </div>

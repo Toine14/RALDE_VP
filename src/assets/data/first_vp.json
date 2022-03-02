@@ -1,28 +1,41 @@
 {
-    "title": "cell culture first prototype",
+    "title": "cell culture first virtual practical",
     "components": [
         {
-            "component_type": "ImgTextBtnComponent",
+            "component_type": "StartComponent",
             "data": {
                 "id": 0,
-                "img_url": "https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055",
-                "img_size": "",
-                "text_p1": "This is the first component of the virtual practical",
-                "text_p2": "this component consists only of an image and two paragraphs of text",
+                "aims": "to learn plenty of stuffs",
+                "creator": "RALDE team",
+                "text_p1": "This is the starting component of the virtual practical",
+                "text_p2": "this component explain the aims of the practical",
+                "text_p3": "this is a third paragraph of text",
                 "followingCompId": 1,
-                "previousCompId": 1
+                "previousCompId": 0
             }
         },
         {
             "component_type": "ImgTextBtnComponent",
             "data": {
                 "id": 1,
+                "img_url": "https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055",
+                "img_size": "",
+                "text_p1": "This is the first component of the virtual practical",
+                "text_p2": "this component consists only of an image and two paragraphs of text",
+                "followingCompId": 2,
+                "previousCompId": 0
+            }
+        },
+        {
+            "component_type": "ImgTextBtnComponent",
+            "data": {
+                "id": 2,
                 "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
                 "img_size": "",
                 "text_p1": "this is the second component of the virtual practical",
                 "text_p2": "nothing...",
-                "followingCompId": 1,
-                "previousCompId": 0
+                "followingCompId": 0,
+                "previousCompId": 1
             }
         }
     ]

@@ -22,9 +22,10 @@ export class ImgTextBtnComponent implements OnInit {
   }
 
   onNextClick(){
-    this.practicalService.set_component_id(this.data.followingCompId)
-    //this.next_clicked.next(this.data.followingCompId)
-    
+    this.practicalService.set_component_id(this.data.followingCompId)    
+  }
+  onPreviousClick(){
+    this.practicalService.set_component_id(this.data.previousCompId)    
   }
 
 }
