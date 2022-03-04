@@ -1,0 +1,71 @@
+/*
+*  position: relative gives a new position context
+*/
+.scene {
+    position: relative;
+  }
+  
+
+  
+  /*
+  *  Position the #infoi element in the top-right
+  *  of the .wrapper element
+  */
+  .hotspot {
+    position: absolute;    
+  }
+
+  .text_spot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .back_img{
+      width: 70%;
+      height: auto;
+  }
+
+  .markers{
+    width: 80%;
+    height: auto;
+}
+
+.hotspot:hover {
+    /* Toggle our animation play state to running when we are hovering over our sticker */
+    animation-play-state: running;
+    cursor: pointer;
+}
+
+.hotspot {   
+    animation-name: pulse_soft;
+    animation-duration: 0.25s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+
+@keyframes pulse_soft {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.hotspotImg {
+    height: 30px;
+    width: 30px;    
+  }
+
+  .tip_container{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+

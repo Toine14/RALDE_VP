@@ -17,6 +17,8 @@ import { PracticalsComponent } from './practicals-generator/practicals/practical
 import { RestartComponent } from './practical-components/restart/restart.component';
 import { QuestionComponent } from './practical-components/question/question.component';
 import { StartComponent } from './practical-components/start/start.component';
+import { TempComponentComponent } from './temp-component/temp-component.component';
+import { InteracComponent } from './temp-component/interac/interac.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { StartComponent } from './practical-components/start/start.component';
     PracticalsComponent,
     RestartComponent,
     QuestionComponent,
-    StartComponent
+    StartComponent,
+    TempComponentComponent,
+    InteracComponent
   ],
   imports: [
     BrowserModule,
