@@ -5,7 +5,7 @@
             "component_type": "StartComponent",
             "data": {
                 "id": 0,
-                "aims": "to learn plenty of stuffs",
+                "aims": "to learn plenty of sfs",
                 "creator": "RALDE team",
                 "text_p1": "This is the starting component of the virtual practical",
                 "text_p2": "this component explain the aims of the practical",
@@ -33,9 +33,80 @@
                 "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
                 "img_size": "",
                 "text_p1": "this is the second component of the virtual practical",
-                "text_p2": "nothing...",
-                "followingCompId": 0,
+                "text_p2": "not..",
+                "followingCompId": 3,
                 "previousCompId": 1
+            }
+        },
+        {
+            "component_type": "ImageMarkerChoiceComponent",
+            "data": {
+                "id": 3,
+                "img_url": "assets/img/labor_small.jpg",
+                "marker_url": "assets/img/point.png",
+                "markers": [
+                    {
+                        "title": "entrance",
+                        "text": "A",
+                        "x_pos": 15,
+                        "y_pos": 55,
+                        "isCorrect": false,
+                        "answer_text": "try again please"
+                    },
+                    {
+                        "title": "water bath",
+                        "text": "B",
+                        "x_pos": 45,
+                        "y_pos": 65,
+                        "isCorrect": false,
+                        "answer_text": "not at all"
+                    },
+                    {
+                        "title": "inverted microscope",
+                        "text": "C",
+                        "x_pos": 48,
+                        "y_pos": 60,
+                        "isCorrect": false,
+                        "answer_text": "seriously ?"
+                    },
+                    {
+                        "title": "CO2 incubator",
+                        "text": "D",
+                        "x_pos": 57,
+                        "y_pos": 60,
+                        "isCorrect": false,
+                        "answer_text": "you better not"
+                    },
+                    {
+                        "title": "alcohol bottle",
+                        "text": "E",
+                        "x_pos": 61,
+                        "y_pos": 70,
+                        "isCorrect": false,
+                        "answer_text": "too dangerous"
+                    },
+                    {
+                        "title": "flow cabinet",
+                        "text": "F",
+                        "x_pos": 75,
+                        "y_pos": 50,
+                        "isCorrect": true,
+                        "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment"
+                    },
+                    {
+                        "title": "centrifuge",
+                        "text": "G",
+                        "x_pos": 90,
+                        "y_pos": 50,
+                        "isCorrect": false,
+                        "answer_text": "Do not jump please"
+                    }
+                ],
+                "img_size": "",
+                "text_p1": "What is the correct spot to prepare the medium?",
+                "text_p2": "",
+                "followingCompId": 0,
+                "previousCompId": 2
             }
         }
     ]

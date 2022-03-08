@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BasicPracticalItem } from '../practicals-generator/basic-practical-item';
 import { ImgTextBtnComponent } from '../practical-components/img-text-btn/img-text-btn.component';
-import {StartComponent} from '../practical-components/start/start.component';
+import { StartComponent } from '../practical-components/start/start.component';
+import { ImageMarkerChoiceComponent } from '../practical-components/image-marker-choice/image-marker-choice.component'
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -45,9 +46,12 @@ export class BasicPracticalComponentService {
         case 'StartComponent':
           arrayBasicPractical.push(new BasicPracticalItem(StartComponent, component.data))
           break;
+        case 'ImageMarkerChoiceComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(ImageMarkerChoiceComponent, component.data))
+          break;
       }
 
-     
+
 
       console.log(component)
     }

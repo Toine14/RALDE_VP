@@ -1,54 +1,47 @@
-/*
-*  position: relative gives a new position context
-*/
-.scene {
+
+  
+  .img_back_marker {
+    margin:10px;
+    border:5px solid red;
     position: relative;
+    display: inline-flex;
+  
   }
   
-
+  .img_back_marker img {
+    max-width:100%;
+    display: block;
+  }
   
-  /*
-  *  Position the #infoi element in the top-right
-  *  of the .wrapper element
-  */
-  .hotspot {
+  .box {
+    width:8%;
+    height:8%;
+    background-image:   url(http://www.clker.com/cliparts/W/0/g/a/W/E/map-pin-red.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    
   }
-
-  .back_img{
-      width: 80%;
-      height: auto;
+  
+  #pin-1 {
+    top:29%;
+    left:36%;
   }
-
-  .markers{
-    width: 80%;
-    height: auto;
-}
-
-.hotspotImg:hover {
-    /* Toggle our animation play state to running when we are hovering over our sticker */
-    animation-play-state: running;
-    cursor: pointer;
-}
-
-.hotspotImg {
-   
-    animation-name: pulse_soft;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-play-state: paused;
-
-}
-
-@keyframes pulse_soft {
-    from {
-        transform: scale(1.0);
-    }
-
-    to {
-        transform: scale(1.5);
-    }
-}
-
+  
+  .box:hover > .pin-text {
+    display: block;
+  }
+  
+  .pin-text {
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:75%;
+    white-space:nowrap;
+    display: none;
+  }
+  
+  .pin-text h3 {
+      color:white;
+      text-shadow: 1px 1px 1px #000;
+  }

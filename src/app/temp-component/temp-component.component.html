@@ -1,91 +1,27 @@
-<div class="basic_component mt-16 ">
-    <div class="flex flex-col items-center justify-center py-12">
-        <div class="px-16">
-            <!--<app-interac></app-interac>-->
-            <div id="" class="flex flex-col justify-center">
-                <div class="flex justify-center">
-                    <img src="assets/img/labor.jpg" class="back_img">
+<div class="basic_component">
+    <div class="shadow-xl pb-3 w-4/5 h-4/5 bg-raldeblue-50">
+        <p class="text-gray-700 text-2xl flex justify-center pt-2">
+            {{data.text_p1}}
+        </p>
+        <div class="p-5 flex justify-center">
+            <div class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 rounded-sm mx-2 bg-white">
+                <img class="h-2/3 w-full rounded-sm" [src]='data.img_url_1' alt="">
+                <p class="px-2">{{data.img1Text}}</p>
+                <div (click)="onNextClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
+                    Choose
                 </div>
 
-                <div class="markers">
-                    <div *ngFor="let marker of data.markers, let i = index" class="hotspot"
-                        [style.left.%]="marker.x_pos" id={{i}} [style.top.%]="marker.y_pos" [title]="marker.title"
-                        (click)="onSpotClick($event, marker.isCorrect)">
-                        <div id="{{'marker_'+i}}" class="hotspotImg rounded-full bg-blue-500"></div>
-                        <span class="text_spot" id={{i}}>{{marker.text}}</span>
-                    </div>
+            </div>
+            <div class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 rounded-sm mx-2 bg-white">
+                <img class="h-2/3 w-full rounded-sm" [src]='data.img_url_2' alt="">
+                <p class="px-2">{{data.img2Text}}</p>
+                <div (click)="onNextClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
+                    Choose
                 </div>
-            </div>
-        </div>
 
-        <div *ngIf="show_tips_false" class="tip_container border-2 bg-red-200 border-red-400  px-10 py-2 h-10 rounded-sm">
-            <p class="text-gray-700 text-base">
-                {{answer_text_false}}
-            </p>
-        </div>
-        <div *ngIf="show_tips_true" class="tip_container border-2 bg-green-300 border-green-400 px-10 py-2 h-10 rounded-sm">
-            <p class="text-gray-700 text-base">
-                {{answer_text_true}}
-            </p>
-        </div>
-
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{data.text_p1}}</div>
-            <p class="text-gray-700 text-base">
-
-            </p>
-
-        </div>
-        <div *ngIf='good_answer' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
-            <div
-                class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
-                previous
-            </div>
-            <div
-                class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
-                next
             </div>
         </div>
     </div>
 </div>
-
-<!--
-
-<div id="top_div">
-
-
-    <div id="labor" class="scene" style="visibility: visible; opacity: 1;">
-        <img [src]='data.img_url' class="image_interactive">
-
-
-        <div class="hotspot" style="left:20.8%;top:46%;" title="Entrance Area">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('entrancearea')">
-        </div>
-
-        <div class="hotspot" style="left:42%;top:48%;" title="Water Bath">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('waterbath')">
-        </div>
-
-        <div class="hotspot" style="left:47%;top:42%;" title="Microscope">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('microscope')">
-        </div>
-
-        <div class="hotspot" style="left:59%;top:43%;" title="CO2 Incubator">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('co2incubator')">
-        </div>
-
-        <div class="hotspot" style="left:75%;top:43%;" title="Biosafety Cabinet">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('biosafetycabinet')">
-        </div>
-
-        <div class="hotspot" style="left:85%;top:44%;" title="Centrifuge">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('centrifuge')">
-        </div>
-
-        <div class="hotspot" style="left:91%;top:35.5%;" title="Window">
-            <img [src]='data.marker_url' class="marker" onclick="openInfoLayer('window')">
-        </div>
-    </div>
-
-</div>
--->

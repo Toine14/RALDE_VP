@@ -19,6 +19,7 @@ import { QuestionComponent } from './practical-components/question/question.comp
 import { StartComponent } from './practical-components/start/start.component';
 import { TempComponentComponent } from './temp-component/temp-component.component';
 import { InteracComponent } from './temp-component/interac/interac.component';
+import { ImageMarkerChoiceComponent } from './practical-components/image-marker-choice/image-marker-choice.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { InteracComponent } from './temp-component/interac/interac.component';
     QuestionComponent,
     StartComponent,
     TempComponentComponent,
-    InteracComponent
+    InteracComponent,
+    ImageMarkerChoiceComponent
   ],
   imports: [
     BrowserModule,
