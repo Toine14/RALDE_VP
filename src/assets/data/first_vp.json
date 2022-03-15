@@ -15,33 +15,83 @@
             }
         },
         {
-            "component_type": "ImgTextBtnComponent",
+            "component_type": "ImgChoicesComponent",
             "data": {
                 "id": 1,
-                "img_url": "https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055",
-                "img_size": "",
-                "text_p1": "This is the first component of the virtual practical",
-                "text_p2": "this component consists only of an image and two paragraphs of text",
-                "followingCompId": 2,
-                "previousCompId": 0
+                "compTitle":"",
+                "choices": [
+                    {
+                        "NextCompId": 2,
+                        "img_url": "assets/img/adherent_cell.png",
+                        "title": "Adherent cells",
+                        "link":"",
+                        "imgText": "Adherent cells are cells which must be attached to a surface to grow. They are commonly used in laboratory environments. The origin of this type of cells is usually solid tissues"
+                    },
+                    {
+                        "NextCompId": 2,
+                        "img_url": "assets/img/susp_cell.png",
+                        "title": "Cells in suspension",
+                        "link":"",
+                        "imgText": "A cell suspension or suspension culture is a type of cell culture in which single cells or small aggregates of cells are allowed to function and multiply in an agitated growth medium, thus forming a suspension. This type of cells is usually originate from blood."
+                    }
+                ],
+                "text_p1": "What type of cell do you want to start with?",
+                "text_p2":""
+            }
+        },
+        {
+            "component_type": "ImgChoicesComponent",
+            "data": {
+                "id": 2,
+                "compTitle":"",
+                "choices": [
+                    {
+                        "NextCompId": 3,
+                        "img_url": "assets/img/HepG2.png",
+                        "title": "HepG2",
+                        "imgText": "",
+                        "link":"https://www.atcc.org/products/hb-8065"
+                    },
+                    {
+                        "NextCompId": 3,
+                        "img_url": "assets/img/A549.png",
+                        "title": "A549",
+                        "imgText": "",
+                        "link":"https://www.atcc.org/products/ccl-185"
+                    }
+                ],
+                "text_p1": "Before starting to thaw the cells",
+                "text_p2":"Which cells do you want to work with? Click on the ATCC link to explore the cell types."
             }
         },
         {
             "component_type": "ImgTextBtnComponent",
             "data": {
-                "id": 2,
-                "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
+                "id": 3,
+                "img_url": "https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055",
                 "img_size": "",
-                "text_p1": "this is the second component of the virtual practical",
-                "text_p2": "not..",
+                "text_p1": "This is the first component of the virtual practical",
+                "text_p2": "this component consists only of an image and two paragraphs of text",
                 "followingCompId": 3,
                 "previousCompId": 1
             }
         },
         {
+            "component_type": "ImgTextBtnComponent",
+            "data": {
+                "id": 4,
+                "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
+                "img_size": "",
+                "text_p1": "this is the second component of the virtual practical",
+                "text_p2": "not..",
+                "followingCompId": 4,
+                "previousCompId": 2
+            }
+        },
+        {
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
-                "id": 3,
+                "id": 5,
                 "img_url": "assets/img/labor_small.jpg",
                 "marker_url": "assets/img/point.png",
                 "markers": [
@@ -106,7 +156,7 @@
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
                 "followingCompId": 0,
-                "previousCompId": 2
+                "previousCompId": 3
             }
         }
     ]

@@ -1,1 +1,31 @@
-<p>img-choices works!</p>
+<div class="basic_component">
+    <div class="shadow-xl pb-3 w-4/5 h-4/5 bg-raldeblue-50">
+        <div class="flex flex-col ">
+            <p class="text-gray-700 text-2xl flex justify-center pt-2">
+                {{data.text_p1}}
+            </p>
+            <p class="text-gray-700 text-xl flex justify-center pt-2 px-6">
+                {{data.text_p2}}
+            </p>
+        </div>
+
+        <div class="p-5 flex justify-center">
+            <div *ngFor="let choice of data.choices"
+                class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 border-slate-400 rounded-md mx-2 bg-white relative">
+                <img class=" w-full min-h-90" [src]='choice.img_url' alt="">
+                <p class="absolute top-32 font-bold text-2xl text-raldeblue-800 bg-slate-200 rounded-md p-2 shadow-xl">
+                    {{choice.title}}</p>
+                <p class="px-2">{{choice.imgText}}</p>
+                <a *ngIf="choice.link !=''" [href]="choice.link" target="_blank"
+                    class="px-2 py-4 my-4 text-raldeblue-900 hover:font-bold underline">Get more info about this
+                    item</a>
+                <div (click)="onNextClick(choice.NextCompId)"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
+                    Choose
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

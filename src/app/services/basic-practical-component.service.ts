@@ -3,6 +3,7 @@ import { BasicPracticalItem } from '../practicals-generator/basic-practical-item
 import { ImgTextBtnComponent } from '../practical-components/img-text-btn/img-text-btn.component';
 import { StartComponent } from '../practical-components/start/start.component';
 import { ImageMarkerChoiceComponent } from '../practical-components/image-marker-choice/image-marker-choice.component'
+import { ImgChoicesComponent } from '../practical-components/img-choices/img-choices.component';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -49,6 +50,9 @@ export class BasicPracticalComponentService {
         case 'ImageMarkerChoiceComponent':
           arrayBasicPractical.push(new BasicPracticalItem(ImageMarkerChoiceComponent, component.data))
           break;
+        case 'ImgChoicesComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(ImgChoicesComponent, component.data))
+          break;
       }
 
 
@@ -57,16 +61,7 @@ export class BasicPracticalComponentService {
     }
     return arrayBasicPractical
 
-    /*     return [
-          new BasicPracticalItem(
-            ImgTextBtnComponent,
-            { id:0, img_url: 'https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055', img_size:'', text_p1: 'This is the first component of the virtual practical', text_p2:'this component consists only of an image and two paragraphs of text', followingCompId:1, previousCompId:1}
-          ),
-          new BasicPracticalItem(
-            ImgTextBtnComponent,
-            {id:1, img_url: 'https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg', img_size:'', text_p1: 'this is the second component of the virtual practical', text_p2: 'nothing...' , followingCompId:1, previousCompId:0}
-          ),
-        ]; */
+
   }
 
 
