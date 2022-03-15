@@ -1,0 +1,49 @@
+<!--<app-interac></app-interac>-->
+<div id="" class="img_back_marker">
+
+    <img [src]="data.img_url" class="back_img">
+
+
+
+    <div *ngFor="let marker of data.markers, let i = index" class="hotspot" [style.left.%]="marker.x_pos" id={{i}}
+        [style.top.%]="marker.y_pos" [title]="marker.title" (click)="onSpotClick($event, marker.isCorrect)">
+        <div id="{{'marker_'+i}}" class="hotspotImg rounded-full bg-blue-500"></div>
+        <span class="text_spot" id={{i}}>{{marker.text}}</span>
+    </div>
+
+    <div *ngIf="show_tips_false" class="tip_container border-2 bg-red-200 border-red-400  px-10 py-2 h-10 rounded-sm">
+        <p class="text-gray-700 text-base">
+            {{answer_text_false}}
+        </p>
+    </div>
+    <div *ngIf="show_tips_true" class="tip_container border-2 bg-green-300 border-green-400 px-10 py-2 h-12 rounded-sm">
+        <p class="text-gray-700 text-base">
+            {{answer_text_true}}
+        </p>
+    </div>
+
+</div>
+
+
+<div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{{data.text_p1}}</div>
+    <p class="text-gray-700 text-base">
+
+    </p>
+
+</div>
+<div *ngIf='good_answer' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+    <div
+        class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
+        previous
+    </div>
+    <div
+        class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
+        next
+    </div>
+</div>
+
+
+
+
+
