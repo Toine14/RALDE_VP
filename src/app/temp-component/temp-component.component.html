@@ -3,25 +3,21 @@
         <p class="text-gray-700 text-2xl flex justify-center pt-2">
             {{data.text_p1}}
         </p>
+
         <div class="p-5 flex justify-center">
-            <div class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 rounded-sm mx-2 bg-white">
-                <img class="h-2/3 w-full rounded-sm" [src]='data.img_url_1' alt="">
-                <p class="px-2">{{data.img1Text}}</p>
+            <div *ngFor="let choice of data.choices"
+                class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 border-slate-400 rounded-md mx-2 bg-white relative">
+                <img class="h-2/3 w-full" [src]='choice.img_url' alt="">
+                <p class="absolute top-32 font-bold text-2xl text-raldeblue-800 bg-slate-200 rounded-md p-2 shadow-xl">
+                    {{choice.title}}</p>
+                <p class="px-2">{{choice.imgText}}</p>
                 <div (click)="onNextClick()"
                     class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
                     Choose
                 </div>
 
             </div>
-            <div class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 rounded-sm mx-2 bg-white">
-                <img class="h-2/3 w-full rounded-sm" [src]='data.img_url_2' alt="">
-                <p class="px-2">{{data.img2Text}}</p>
-                <div (click)="onNextClick()"
-                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
-                    Choose
-                </div>
 
-            </div>
         </div>
     </div>
 </div>

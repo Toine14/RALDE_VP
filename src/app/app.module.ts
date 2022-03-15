@@ -20,6 +20,7 @@ import { StartComponent } from './practical-components/start/start.component';
 import { TempComponentComponent } from './temp-component/temp-component.component';
 import { InteracComponent } from './temp-component/interac/interac.component';
 import { ImageMarkerChoiceComponent } from './practical-components/image-marker-choice/image-marker-choice.component';
+import { ImgChoicesComponent } from './practical-components/img-choices/img-choices.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ImageMarkerChoiceComponent } from './practical-components/image-marker-
     StartComponent,
     TempComponentComponent,
     InteracComponent,
-    ImageMarkerChoiceComponent
+    ImageMarkerChoiceComponent,
+    ImgChoicesComponent
   ],
   imports: [
     BrowserModule,

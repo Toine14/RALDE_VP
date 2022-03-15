@@ -1,0 +1,68 @@
+{
+    "id": 1,
+    "img_url": "assets/img/labor.jpg",
+    "marker_url": "assets/img/point.png",
+    "markers": [
+        {
+            "title": "entrance",
+            "text": "A",
+            "x_pos": 30,
+            "y_pos": 75,
+            "isCorrect": false,
+            "answer_text": "try again please"
+        },
+        {
+            "title": "water bath",
+            "text": "B",
+            "x_pos": 45,
+            "y_pos": 65,
+            "isCorrect": false,
+            "answer_text": "not at all"
+        },
+        {
+            "title": "inverted microscope",
+            "text": "C",
+            "x_pos": 48,
+            "y_pos": 60,
+            "isCorrect": false,
+            "answer_text": "seriously ?"
+        },
+        {
+            "title": "CO2 incubator",
+            "text": "D",
+            "x_pos": 57,
+            "y_pos": 60,
+            "isCorrect": false,
+            "answer_text": "you better not"
+        },
+        {
+            "title": "alcohol bottle",
+            "text": "E",
+            "x_pos": 61,
+            "y_pos": 70,
+            "isCorrect": false,
+            "answer_text": "too dangerous"
+        },
+        {
+            "title": "flow cabinet",
+            "text": "F",
+            "x_pos": 68,
+            "y_pos": 65,
+            "isCorrect": true,
+            "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment"
+        },
+        {
+            "title": "centrifuge",
+            "text": "G",
+            "x_pos": 72,
+            "y_pos": 65,
+            "isCorrect": false,
+            "answer_text": "Gros gogole"
+        }
+    ],
+    "img_size": "",
+    "text_p1": "What is the correct spot to prepare the medium?",
+    "text_p2": "",
+    "followingCompId": 2,
+    "previousCompId": 0
+}

@@ -22,12 +22,15 @@ export class PracticalsGeneratorComponent implements OnInit, OnDestroy {
 
   practicalsComp: BasicPracticalItem[] = []
 
+  general_title="";
+
 
   ngOnInit(): void {
     
     //TODO get the right URL
     let url = '/assets/data/first_vp.json';
-    this.practicalService.get_practical_data(url).subscribe((data:any)=>{ this.practicalsComp = this.practicalService.getPracticals(data);this.loading=false});
+    
+    this.practicalService.get_practical_data(url).subscribe((data:any)=>{ this.practicalsComp = this.practicalService.getPracticals(data); this.general_title=data.title ;this.loading=false});
     //this.practicalsComp = this.practicalService.getPracticals();
 
   }

@@ -21,14 +21,11 @@ export class TempComponentComponent implements OnInit {
 
   temp_data: any = {
     "id": 1,
-    "img_url_1": "assets/img/adherent_cell.jpg",
-    "img_url_2": "assets/img/susp_cell.jpg",
-    "btn1CompId": 1,
-    "img1Text":"Adherent cells are cells which must be attached to a surface to grow. They are commonly used in laboratory environments. The origin of this type of cells is usually solid tissues",
-    "img2Text": "A cell suspension or suspension culture is a type of cell culture in which single cells or small aggregates of cells are allowed to function and multiply in an agitated growth medium, thus forming a suspension. This type of cells is usually originate from blood.",  
-
-    "text_p1": "What type of cell do you want to start with?",
+    "choices" :[{"NextCompId":1,"img_url": "assets/img/adherent_cell.jpg","title": "Adherent cells","imgText":"Adherent cells are cells which must be attached to a surface to grow. They are commonly used in laboratory environments. The origin of this type of cells is usually solid tissues"},
+    {"NextCompId":2,"img_url": "assets/img/susp_cell.jpg","title": "Cells in suspension","imgText":"A cell suspension or suspension culture is a type of cell culture in which single cells or small aggregates of cells are allowed to function and multiply in an agitated growth medium, thus forming a suspension. This type of cells is usually originate from blood.",}],
     
+    "btn1CompId": 1,
+    "text_p1": "What type of cell do you want to start with?",    
     "followingCompId": 2,
     "previousCompId": 0
   }
