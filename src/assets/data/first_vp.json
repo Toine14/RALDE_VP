@@ -129,8 +129,8 @@
                     {
                         "title": "water bath",
                         "text": "B",
-                        "x_pos": 45,
-                        "y_pos": 65,
+                        "x_pos": 40,
+                        "y_pos": 45,
                         "isCorrect": false,
                         "answer_text": "not at all"
                     },
@@ -138,7 +138,7 @@
                         "title": "inverted microscope",
                         "text": "C",
                         "x_pos": 48,
-                        "y_pos": 60,
+                        "y_pos": 45,
                         "isCorrect": false,
                         "answer_text": "seriously ?"
                     },
@@ -146,15 +146,15 @@
                         "title": "CO2 incubator",
                         "text": "D",
                         "x_pos": 57,
-                        "y_pos": 60,
+                        "y_pos": 45,
                         "isCorrect": false,
                         "answer_text": "you better not"
                     },
                     {
                         "title": "alcohol bottle",
                         "text": "E",
-                        "x_pos": 61,
-                        "y_pos": 70,
+                        "x_pos": 70,
+                        "y_pos": 55,
                         "isCorrect": false,
                         "answer_text": "too dangerous"
                     },

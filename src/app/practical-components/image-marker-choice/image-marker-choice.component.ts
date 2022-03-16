@@ -46,6 +46,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
     const markerElement = <HTMLElement>document.getElementById('marker_'+id)
 
     if (answer) {
+      this.show_tips_false = false
       this.show_tips_true=true
       this.good_answer = true      
       markerElement.style.backgroundColor='green'
@@ -53,6 +54,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
       
     }
     else {
+      this.show_tips_true = false
       this.show_tips_false=true
       markerElement.style.backgroundColor='red'
       this.answer_text_false=this.data.markers[index].answer_text

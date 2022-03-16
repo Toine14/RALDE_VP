@@ -12,87 +12,54 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./temp-component.component.scss'],
 })
 export class TempComponentComponent implements OnInit {
-
   @Input() data: any;
 
-  form!: FormGroup;
-  choices: any;
-  isGoodAnswer!: boolean;
-  answerText: string =''
+  good_answer: boolean = false;
+  show_tips_false: boolean = false;
+  show_tips: boolean = false;
+  answer_text_false: string = '';
+  answer_text_true: string = '';
 
-
-  constructor(private practicalService: BasicPracticalComponentService, private formBuilder: FormBuilder) {
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.data = this.temp_data;
-    this.form = this.formBuilder.group({
-      answers: ['', [Validators.required]]
-    });
-    this.choices = this.data.choices
+    this.data = this.temp_data
   }
-
-
-
 
 
   temp_data: any = {
     "id": 1,
-    "text_p1": "What medium is suitable for HepG2 cells ?",
-    "choices": [{ "id": "ChoiceNb1", "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "true" },
-    { "id": "ChoiceNb2", "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
-    { "id": "ChoiceNb3", "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
-    { "id": "ChoiceNb4", "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" }],
-    "badAnswerText":"Bad answer : the correct answer can be found",
-    "badAnswerLink":"https://www.atcc.org/products/hb-8065",
-    "goodAnswerText":"Good job you can continue the practical",
+    "img_url": "assets/img/labor.jpg",
+    "marker_url": "assets/img/point.png",
+    "markers": [{ "title": "entrance", "text": "A", "x_pos": 30, "y_pos": 75, "isCorrect": false, "answer_text": "try again please", "card_info": { "title": "This is a labcoat", "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean." } }, { "title": "water bath", "text": "B", "x_pos": 45, "y_pos": 65, "isCorrect": false, "answer_text": "not at all" }, { "title": "inverted microscope", "text": "C", "x_pos": 48, "y_pos": 60, "isCorrect": false, "answer_text": "seriously ?" }, { "title": "CO2 incubator", "text": "D", "x_pos": 57, "y_pos": 60, "isCorrect": false, "answer_text": "you better not" }, { "title": "alcohol bottle", "text": "E", "x_pos": 61, "y_pos": 70, "isCorrect": false, "answer_text": "too dangerous" }, { "title": "flow cabinet", "text": "F", "x_pos": 68, "y_pos": 65, "isCorrect": true, "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment" }, { "title": "centrifuge", "text": "G", "x_pos": 72, "y_pos": 65, "isCorrect": false, "answer_text": "Do not jump please" }],
+    "img_size": "",
+    "text_p1": "What is the correct spot to prepare the medium?",
+    "text_p2": "",
     "followingCompId": 2,
     "previousCompId": 0
   }
 
+  onSpotClick(event: any) {
+    var target = event.target || event.srcElement || event.currentTarget;
+    var id = target.id;
 
-
-
-  onNextClick() {
-    this.practicalService.set_component_id(this.data.followingCompId)
-  }
-  onPreviousClick() {
-    this.practicalService.set_component_id(this.data.previousCompId)
-  }
-
-
-  isGoodAnswered(){
-    if(this.isGoodAnswer==null || 'undefined'){
-      return false
+    if (id.includes('marker_')) {
+      console.log('je contiens')
+      id = id.replace('marker_', "")
     }
-    else if(this.isGoodAnswer == false)
-      {return false
-    }
-    else{return true}
-  }
+    var index: number = +id
+    const markerElement = <HTMLElement>document.getElementById('marker_' + id)
 
-
-
-  submit() {
-    let answer = this.form.value.answers.istrue
-    let answerBool = JSON.parse(answer)
-    console.log(typeof (answer))
-    if (!answerBool) {
-      this.answerText='false'
-      this.isGoodAnswer=false;
+    
       
-    }
-    else {
-      this.answerText='true'
-      this.isGoodAnswer=true;
+      this.show_tips = true
+      this.good_answer = true
+      markerElement.style.backgroundColor = 'green'
+      this.answer_text_true = this.data.markers[index].answer_text
 
-    }
-
-    console.log(answer)
-
+    
 
   }
-
 
 
 
