@@ -43,21 +43,19 @@ export class BasicPracticalComponentService {
     for (let component of jsonified.components) {
       switch (component.component_type) {
         case 'ImgTextBtnComponent':
-          arrayBasicPractical.push(new BasicPracticalItem(ImgTextBtnComponent, component.data))
-          break;
-        case 'QuestionComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(ImgTextBtnComponent, component.data, component.data.id))
           break;
         case 'StartComponent':
-          arrayBasicPractical.push(new BasicPracticalItem(StartComponent, component.data))
+          arrayBasicPractical.push(new BasicPracticalItem(StartComponent, component.data, component.data.id))
           break;
         case 'ImageMarkerChoiceComponent':
-          arrayBasicPractical.push(new BasicPracticalItem(ImageMarkerChoiceComponent, component.data))
+          arrayBasicPractical.push(new BasicPracticalItem(ImageMarkerChoiceComponent, component.data, component.data.id))
           break;
         case 'ImgChoicesComponent':
-          arrayBasicPractical.push(new BasicPracticalItem(ImgChoicesComponent, component.data))
+          arrayBasicPractical.push(new BasicPracticalItem(ImgChoicesComponent, component.data, component.data.id))
           break;
         case 'QuestionsComponent':
-          arrayBasicPractical.push(new BasicPracticalItem(QuestionsComponent, component.data))
+          arrayBasicPractical.push(new BasicPracticalItem(QuestionsComponent, component.data, component.data.id))
           break;
       }
 

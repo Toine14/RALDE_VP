@@ -37,7 +37,10 @@ export class PracticalsComponent implements OnInit, OnDestroy {
 *load the component in the ng template DynBasicPracticalComponent
 */
   loadComponent(){
-    const item = this.practicalsComp[this.componentId];
+    //const item = this.practicalsComp[this.componentId];
+
+
+    const item = this.practicalsComp.filter(obj => {return obj.id === this.componentId})[0]
     const viewContainerRef = this.DynBasicPracticalComponent.viewContainerRef;
     viewContainerRef.clear();
 
