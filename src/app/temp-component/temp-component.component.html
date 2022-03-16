@@ -1,23 +1,19 @@
-<div class="basic_component">
-    <div class="shadow-xl pb-3 w-4/5 h-4/5 bg-raldeblue-50">
-        <p class="text-gray-700 text-2xl flex justify-center pt-2">
-            {{data.text_p1}}
-        </p>
+<div class="basic_component  mb-8">
 
-        <div class="p-5 flex justify-center">
-            <div *ngFor="let choice of data.choices"
-                class="w-1/2 flex flex-col items-center justify-between pb-4  border-2 border-slate-400 rounded-md mx-2 bg-white relative">
-                <img class="h-2/3 w-full" [src]='choice.img_url' alt="">
-                <p class="absolute top-32 font-bold text-2xl text-raldeblue-800 bg-slate-200 rounded-md p-2 shadow-xl">
-                    {{choice.title}}</p>
-                <p class="px-2">{{choice.imgText}}</p>
-                <div (click)="onNextClick()"
-                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-700 hover:bg-raldemint-900 hover:text-gray-600 rounded">
-                    Choose
-                </div>
+    <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
+        <p class="font-bold text-2xl">{{data.text_p1}}</p>
 
+        <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
+            <div class="flex flex-col my-2 ">
+                <label *ngFor="let choice of choices;" class="my-1">
+                    <input formControlName="orders" type="radio" name="orders" [value]="choice" />
+                    {{choice.answer}}
+                </label>
             </div>
-
-        </div>
+            <button
+                class="mt-6 self-center  flex items-center justify-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+                [disabled]="!form.valid">submit</button>
+        </form>
+        <div class="bg-red-500"></div>
     </div>
 </div>
