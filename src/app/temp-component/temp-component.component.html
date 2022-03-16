@@ -11,17 +11,14 @@
         <span class="text_spot" id={{i}}>{{marker.text}}</span>
     </div>
 
-    <div *ngIf="show_tips_false" class="tip_container border-2 bg-red-200 border-red-400  px-10 py-2 h-10 rounded-sm">
-        <p class="text-gray-700 text-base">
-            {{answer_text_false}}
-        </p>
-    </div>
+
     <div *ngIf="show_tips" class="tip_container ">
-        <div class="border-2 bg-blue-200 border-blue-400 px-10 py-2 h-16 rounded-sm">
+        <div class="border-2 bg-blue-200 border-blue-400 px-10 py-2 h-16 rounded-sm relative">
+            <div class="tip_close" (click)="onTipCloseClick()"></div>
 
 
             <p class="text-gray-700 text-base">
-                {{answer_text_true}}
+                {{tipTitle}}
             </p>
         </div>
     </div>

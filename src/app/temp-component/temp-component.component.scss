@@ -48,12 +48,42 @@
   }
 
   .tip_container{
+    width: 50em;
+    height: auto;
     position: absolute;
-    top: 90%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 
   }
+
+  .tip_close{
+        position:absolute;
+        top:1%;
+        right:0%;
+        width: 30px;
+        height: 30px;
+        opacity: 0.3;
+       }
+
+       .tip_close:hover {
+        opacity: 1;
+      }
+      .tip_close:before, .tip_close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        background-color: rgb(3, 95, 138);
+      }
+      .tip_close:before {
+        transform: rotate(45deg);
+      }
+      .tip_close:after {
+        transform: rotate(-45deg);
+      }
+  
 
 
 

@@ -15,10 +15,10 @@ export class TempComponentComponent implements OnInit {
   @Input() data: any;
 
   good_answer: boolean = false;
-  show_tips_false: boolean = false;
+ 
   show_tips: boolean = false;
   answer_text_false: string = '';
-  answer_text_true: string = '';
+  tipTitle: string = '';
 
   constructor() { }
 
@@ -31,13 +31,82 @@ export class TempComponentComponent implements OnInit {
     "id": 1,
     "img_url": "assets/img/labor.jpg",
     "marker_url": "assets/img/point.png",
-    "markers": [{ "title": "entrance", "text": "A", "x_pos": 30, "y_pos": 75, "isCorrect": false, "answer_text": "try again please", "card_info": { "title": "This is a labcoat", "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean." } }, { "title": "water bath", "text": "B", "x_pos": 45, "y_pos": 65, "isCorrect": false, "answer_text": "not at all" }, { "title": "inverted microscope", "text": "C", "x_pos": 48, "y_pos": 60, "isCorrect": false, "answer_text": "seriously ?" }, { "title": "CO2 incubator", "text": "D", "x_pos": 57, "y_pos": 60, "isCorrect": false, "answer_text": "you better not" }, { "title": "alcohol bottle", "text": "E", "x_pos": 61, "y_pos": 70, "isCorrect": false, "answer_text": "too dangerous" }, { "title": "flow cabinet", "text": "F", "x_pos": 68, "y_pos": 65, "isCorrect": true, "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment" }, { "title": "centrifuge", "text": "G", "x_pos": 72, "y_pos": 65, "isCorrect": false, "answer_text": "Do not jump please" }],
+    "markers": [
+        {
+            "title": "entrance",
+            "text": "A",
+            "x_pos": 30,
+            "y_pos": 75,
+            "isCorrect": false,
+            "answer_text": "try again please",
+            "card_info": {
+                "title": "This is a labcoat",
+                "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
+            }
+        },
+        {
+            "title": "water bath",
+            "text": "B",
+            "x_pos": 45,
+            "y_pos": 65,
+            "isCorrect": false,
+            "answer_text": "not at all",
+            "card_info": {
+                "title": "This is a water-bath",
+                "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
+            }
+        },
+        {
+            "title": "inverted microscope",
+            "text": "C",
+            "x_pos": 48,
+            "y_pos": 60,
+            "isCorrect": false,
+            "answer_text": "seriously ?",
+            "card_info": {
+              "title": "This is an iverted microscope",
+              "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
+          }
+        },
+        {
+            "title": "CO2 incubator",
+            "text": "D",
+            "x_pos": 57,
+            "y_pos": 60,
+            "isCorrect": false,
+            "answer_text": "you better not"
+        },
+        {
+            "title": "alcohol bottle",
+            "text": "E",
+            "x_pos": 61,
+            "y_pos": 70,
+            "isCorrect": false,
+            "answer_text": "too dangerous"
+        },
+        {
+            "title": "flow cabinet",
+            "text": "F",
+            "x_pos": 68,
+            "y_pos": 65,
+            "isCorrect": true,
+            "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment"
+        },
+        {
+            "title": "centrifuge",
+            "text": "G",
+            "x_pos": 72,
+            "y_pos": 65,
+            "isCorrect": false,
+            "answer_text": "Do not jump please"
+        }
+    ],
     "img_size": "",
     "text_p1": "What is the correct spot to prepare the medium?",
     "text_p2": "",
     "followingCompId": 2,
     "previousCompId": 0
-  }
+}
 
   onSpotClick(event: any) {
     var target = event.target || event.srcElement || event.currentTarget;
@@ -55,10 +124,14 @@ export class TempComponentComponent implements OnInit {
       this.show_tips = true
       this.good_answer = true
       markerElement.style.backgroundColor = 'green'
-      this.answer_text_true = this.data.markers[index].answer_text
+      this.tipTitle = this.data.markers[index].card_info.title
 
     
 
+  }
+
+  onTipCloseClick(){
+    this.show_tips=false;
   }
 
 

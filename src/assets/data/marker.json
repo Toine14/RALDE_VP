@@ -9,7 +9,11 @@
             "x_pos": 30,
             "y_pos": 75,
             "isCorrect": false,
-            "answer_text": "try again please"
+            "answer_text": "try again please",
+            "card_info": {
+                "title": "This is a labcoat",
+                "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
+            }
         },
         {
             "title": "water bath",
@@ -17,7 +21,11 @@
             "x_pos": 45,
             "y_pos": 65,
             "isCorrect": false,
-            "answer_text": "not at all"
+            "answer_text": "not at all",
+            "card_info": {
+                "title": "This is a water-bath",
+                "text_p2": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
+            }
         },
         {
             "title": "inverted microscope",
@@ -57,7 +65,7 @@
             "x_pos": 72,
             "y_pos": 65,
             "isCorrect": false,
-            "answer_text": "Gros gogole"
+            "answer_text": "Do not jump please"
         }
     ],
     "img_size": "",
