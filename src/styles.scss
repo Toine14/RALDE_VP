@@ -18,6 +18,14 @@ $component_padding_bottom: 2.5rem;
     width: 100%;
     //padding-bottom: 2.5rem;
 }
+
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  
+
+
 @media (min-width: 640px) {
     .container {
         max-width: 640px;

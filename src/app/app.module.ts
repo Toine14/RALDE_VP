@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TableModule } from 'ngx-easy-table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,8 @@ import { TempComponentComponent } from './temp-component/temp-component.componen
 import { InteracComponent } from './temp-component/interac/interac.component';
 import { ImageMarkerChoiceComponent } from './practical-components/image-marker-choice/image-marker-choice.component';
 import { ImgChoicesComponent } from './practical-components/img-choices/img-choices.component';
+
+
 
 
 @NgModule({
@@ -49,7 +52,8 @@ import { ImgChoicesComponent } from './practical-components/img-choices/img-choi
     AppRoutingModule,
     HttpClientModule,
     TableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

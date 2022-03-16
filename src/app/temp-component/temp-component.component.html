@@ -5,15 +5,51 @@
 
         <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
             <div class="flex flex-col my-2 ">
-                <label *ngFor="let choice of choices;" class="my-1">
-                    <input formControlName="orders" type="radio" name="orders" [value]="choice" />
+                <label *ngFor="let choice of data.choices;" class="my-1">
+                    <input formControlName="answers" type="radio" name="answers" [value]="choice" />
                     {{choice.answer}}
                 </label>
             </div>
             <button
-                class="mt-6 self-center  flex items-center justify-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
-                [disabled]="!form.valid">submit</button>
+                class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+                [disabled]="!form.valid">Check answer</button>
         </form>
-        <div class="bg-red-500"></div>
+
+        <div class="flex justify-center">
+            <div *ngIf="answerText=='false'"
+                class="bg-red-300 border border-red-400 flex justify-center p-4 rounded-md mt-4">
+                <p>{{data.badAnswerText}}</p><span>&#160;</span><a [href]="data.badAnswerLink" class='underline '
+                    target="_blank">
+                    here</a>
+            </div>
+
+            <div *ngIf="answerText=='true'" class="flex-col ">
+                <div class="bg-green-300 border border-green-400 flex justify-center p-4 rounded-md mt-4">
+                    <p>{{data.goodAnswerText}}</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div *ngIf="answerText=='true'">
+            <hr class="solid mt-4 mb-4">
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+                <div (click)="onPreviousClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
+                    previous
+                </div>
+                <div (click)="onNextClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
+                    next
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
+
+
 </div>
