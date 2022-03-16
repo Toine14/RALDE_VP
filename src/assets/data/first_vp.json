@@ -64,30 +64,44 @@
                 "text_p2":"Which cells do you want to work with? Click on the link to explore the cell types."
             }
         },
+
         {
-            "component_type": "ImgTextBtnComponent",
-            "data": {
-                "id": 3,
-                "img_url": "https://media.gettyimages.com/photos/cell-culture-samples-picture-id460717055",
-                "img_size": "",
-                "text_p1": "This is the first component of the virtual practical",
-                "text_p2": "this component consists only of an image and two paragraphs of text",
-                "followingCompId": 3,
-                "previousCompId": 1
-            }
-        },
-        {
-            "component_type": "ImgTextBtnComponent",
-            "data": {
-                "id": 4,
-                "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
-                "img_size": "",
-                "text_p1": "this is the second component of the virtual practical",
-                "text_p2": "not..",
-                "followingCompId": 4,
-                "previousCompId": 2
-            }
-        },
+            "component_type": "QuestionsComponent",
+            "data":{
+            "id": 3,
+            "text_p1": "What medium is suitable for HepG2 cells ?",
+            "text_p2":"Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
+            "choices": [{ "id": "ChoiceNb1", "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "true" },
+            { "id": "ChoiceNb2", "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
+            { "id": "ChoiceNb3", "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
+            { "id": "ChoiceNb4", "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" }],
+            "badAnswerText":"Bad answer : the correct answer can be found",
+            "badAnswerLink":"https://www.atcc.org/products/hb-8065",
+            "goodAnswerText":"Good job you can continue the practical",
+            "followingCompId": 5,
+            "previousCompId": 2}
+          },
+
+          {
+            "component_type": "QuestionsComponent",
+            "data":{
+            "id": 3,
+            "text_p1": "What medium is suitable for A549 cells ?",
+            "text_p2":"Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
+            "choices": [{ "id": "ChoiceNb1", "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
+            { "id": "ChoiceNb2", "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "true" },
+            { "id": "ChoiceNb3", "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" },
+            { "id": "ChoiceNb4", "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%", "istrue": "false" }],
+            "badAnswerText":"Bad answer : the correct answer can be found",
+            "badAnswerLink":"https://www.atcc.org/products/ccl-185",
+            "goodAnswerText":"Good job you can continue the practical",
+            "followingCompId": 5,
+            "previousCompId": 2}
+          },
+
+
+
+
         {
             "component_type": "ImageMarkerChoiceComponent",
             "data": {

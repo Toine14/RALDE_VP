@@ -4,8 +4,11 @@ import { ImgTextBtnComponent } from '../practical-components/img-text-btn/img-te
 import { StartComponent } from '../practical-components/start/start.component';
 import { ImageMarkerChoiceComponent } from '../practical-components/image-marker-choice/image-marker-choice.component'
 import { ImgChoicesComponent } from '../practical-components/img-choices/img-choices.component';
+import { QuestionsComponent } from '../practical-components/questions/questions.component';
+
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -53,11 +56,14 @@ export class BasicPracticalComponentService {
         case 'ImgChoicesComponent':
           arrayBasicPractical.push(new BasicPracticalItem(ImgChoicesComponent, component.data))
           break;
+        case 'QuestionsComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(QuestionsComponent, component.data))
+          break;
       }
 
 
 
-      console.log(component)
+      console.log(arrayBasicPractical)
     }
     return arrayBasicPractical
 

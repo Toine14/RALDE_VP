@@ -25,6 +25,7 @@ import { TempComponentComponent } from './temp-component/temp-component.componen
 import { InteracComponent } from './temp-component/interac/interac.component';
 import { ImageMarkerChoiceComponent } from './practical-components/image-marker-choice/image-marker-choice.component';
 import { ImgChoicesComponent } from './practical-components/img-choices/img-choices.component';
+import { QuestionsComponent } from './practical-components/questions/questions.component';
 
 
 
@@ -45,7 +46,8 @@ import { ImgChoicesComponent } from './practical-components/img-choices/img-choi
     TempComponentComponent,
     InteracComponent,
     ImageMarkerChoiceComponent,
-    ImgChoicesComponent
+    ImgChoicesComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
