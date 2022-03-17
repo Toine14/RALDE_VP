@@ -7,18 +7,19 @@
 
     <div *ngFor="let marker of data.markers, let i = index" class="hotspot" [style.left.%]="marker.x_pos" id={{i}}
         [style.top.%]="marker.y_pos" [title]="marker.title" (click)="onSpotClick($event)">
-        <div id="{{'marker_'+i}}" class="hotspotImg rounded-full bg-blue-500"></div>
-        <span class="text_spot" id={{i}}>{{marker.text}}</span>
+        <div id="{{i}}" class="hotspotImg rounded-full bg-blue-500"></div>
+
     </div>
 
 
-    <div *ngIf="show_tips" class="tip_container ">
-        <div class="border-2 bg-blue-200 border-blue-400 px-10 py-2 h-16 rounded-sm relative">
+    <div *ngIf="show_tips" class="tip_container" @fade>
+        <div class="border-2 bg-blue-200 border-blue-400 px-40 py-10 w-full rounded-sm relative">
             <div class="tip_close" (click)="onTipCloseClick()"></div>
-
-
-            <p class="text-gray-700 text-base">
+            <h2 class="text-gray-700 text-2xl font bold">
                 {{tipTitle}}
+            </h2>
+            <p>
+                {{tipText}}
             </p>
         </div>
     </div>
@@ -29,11 +30,11 @@
 <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">{{data.text_p1}}</div>
     <p class="text-gray-700 text-base">
-
+        {{data.text_p2}}
     </p>
 
 </div>
-<div *ngIf='good_answer' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+<div *ngIf='show_next' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
     <div
         class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
         previous

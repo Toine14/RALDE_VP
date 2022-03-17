@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 
 @Component({
   selector: 'app-image-marker-choice',
@@ -15,7 +16,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
   answer_text_false:string='';
   answer_text_true:string='';
 
-  constructor() { }
+  constructor(private practicalService: BasicPracticalComponentService) { }
 
   ngOnInit(): void {
     //this.data = this.temp_data
@@ -60,6 +61,12 @@ export class ImageMarkerChoiceComponent implements OnInit {
       this.answer_text_false=this.data.markers[index].answer_text
       
     }
+  }
+  onNextClick() {
+    this.practicalService.set_component_id(this.data.followingCompId)
+  }
+  onPreviousClick() {
+    this.practicalService.set_component_id(this.data.previousCompId)
   }
 
 }
