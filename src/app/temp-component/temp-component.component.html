@@ -1,46 +1,45 @@
-<!--<app-interac></app-interac>-->
-<div id="" class="img_back_marker">
+<!--<video controls #videoPlayer class="center mb-10">
+        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
 
-    <img [src]="data.img_url" class="back_img">
+    </video>
 
+    <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/7X8II6J-6mU" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>-->
 
+<div class="flex flex-col items-center">
 
-    <div *ngFor="let marker of data.markers, let i = index" class="hotspot" [style.left.%]="marker.x_pos" id={{i}}
-        [style.top.%]="marker.y_pos" [title]="marker.title" (click)="onSpotClick($event)">
-        <div id="{{i}}" class="hotspotImg rounded-full bg-blue-500"></div>
+    <h1 class='mt-8 text-2xl'>{{data.text_p1}}</h1>
 
-    </div>
-
-
-    <div *ngIf="show_tips" class="tip_container" @fade>
-        <div class="border-2 bg-blue-200 border-blue-400 px-40 py-10 w-full rounded-sm relative">
-            <div class="tip_close" (click)="onTipCloseClick()"></div>
-            <h2 class="text-gray-700 text-2xl font bold">
-                {{tipTitle}}
-            </h2>
-            <p>
-                {{tipText}}
-            </p>
+    <div class=" flex justify-center mt-8 ">
+        <div cdkDropList class="example-list flex flex-col items-center" (cdkDropListDropped)="drop($event)">
+            <div class="example-box " *ngFor="let item of data.choices" cdkDrag>
+                <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                {{item.answer}}
+            </div>
         </div>
     </div>
 
-</div>
+    <div *ngIf="orderChecked box-border">
+        <div *ngIf="badOrder"
+            class="bg-red-300 border border-red-400 flex justify-center p-4 rounded-md mt-4 box-border">
+            <p>
+                {{data.badAnswerText}}
+            </p>
+        </div>
+
+        <div *ngIf="goodOrder" class="flex-col ">
+            <div class="bg-green-300 border border-green-400 flex justify-center p-4 rounded-md mt-4 box-border">
+                <p>{{data.goodAnswerText}}</p>
+            </div>
 
 
-<div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">{{data.text_p1}}</div>
-    <p class="text-gray-700 text-base">
-        {{data.text_p2}}
-    </p>
+        </div>
 
-</div>
-<div *ngIf='show_next' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
-    <div
-        class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
-        previous
     </div>
-    <div
-        class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
-        next
-    </div>
+
+    <button (click)="checkOrder()"
+        class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">Check
+        answer</button>
+
 </div>

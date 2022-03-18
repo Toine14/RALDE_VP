@@ -305,7 +305,7 @@
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
-                "followingCompId": 8000,
+                "followingCompId": 0,
                 "previousCompId": 3
             }
         }

@@ -5,6 +5,7 @@ import { TableModule } from 'ngx-easy-table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -57,7 +58,8 @@ import { ImageMarkerInfosComponent } from './practical-components/image-marker-i
     HttpClientModule,
     TableModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
 
   ],
   providers: [],
