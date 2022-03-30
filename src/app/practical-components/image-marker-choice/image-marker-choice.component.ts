@@ -31,7 +31,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
     "img_size": "",
     "text_p1": "What is the correct spot to prepare the medium?",
     "text_p2": "",
-    "followingCompId": 2,
+    "nextCompId": 2,
     "previousCompId": 0
   }
 
@@ -63,7 +63,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
     }
   }
   onNextClick() {
-    this.practicalService.set_component_id(this.data.followingCompId)
+    this.practicalService.set_component_id(this.data.nextCompId)
   }
   onPreviousClick() {
     this.practicalService.set_component_id(this.data.previousCompId)

@@ -69,7 +69,7 @@ export class ImageMarkerInfosComponent implements OnInit {
   }
 
   onNextClick() {
-    this.practicalService.set_component_id(this.data.followingCompId)
+    this.practicalService.set_component_id(this.data.nextCompId)
   }
   onPreviousClick() {
     this.practicalService.set_component_id(this.data.previousCompId)

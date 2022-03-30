@@ -10,7 +10,7 @@
                 "text_p1": "This is the starting component of the virtual practical",
                 "text_p2": "this component explain the aims of the practical",
                 "text_p3": "this is a third paragraph of text",
-                "followingCompId": 1,
+                "nextCompId": 1,
                 "previousCompId": 0
             }
         },
@@ -21,14 +21,14 @@
                 "compTitle": "",
                 "choices": [
                     {
-                        "NextCompId": 20,
+                        "nextCompId": 20,
                         "img_url": "assets/img/adherent_cell.png",
                         "title": "Adherent cells",
                         "link": "",
                         "imgText": "Adherent cells are cells which must be attached to a surface to grow. They are commonly used in laboratory environments. The origin of this type of cells is usually solid tissues"
                     },
                     {
-                        "NextCompId": 20,
+                        "nextCompId": 20,
                         "img_url": "assets/img/susp_cell.png",
                         "title": "Cells in suspension",
                         "link": "",
@@ -46,14 +46,14 @@
                 "compTitle": "",
                 "choices": [
                     {
-                        "NextCompId": 200,
+                        "nextCompId": 200,
                         "img_url": "assets/img/HepG2.png",
                         "title": "HepG2",
                         "imgText": "",
                         "link": "https://www.atcc.org/products/hb-8065"
                     },
                     {
-                        "NextCompId": 201,
+                        "nextCompId": 201,
                         "img_url": "assets/img/A549.png",
                         "title": "A549",
                         "imgText": "",
@@ -95,7 +95,7 @@
                 "badAnswerText": "Bad answer : the correct answer can be found",
                 "badAnswerLink": "https://www.atcc.org/products/hb-8065",
                 "goodAnswerText": "Good job you can continue the practical",
-                "followingCompId": 4,
+                "nextCompId": 4,
                 "previousCompId": 2
             }
         },
@@ -130,7 +130,7 @@
                 "badAnswerText": "Bad answer : the correct answer can be found",
                 "badAnswerLink": "https://www.atcc.org/products/ccl-185",
                 "goodAnswerText": "Good job you can continue the practical",
-                "followingCompId": 4,
+                "nextCompId": 4,
                 "previousCompId": 2
             }
         },
@@ -138,11 +138,11 @@
             "component_type": "ImgTextBtnComponent",
             "data": {
                 "id": 8000,
-                "img_url": "https://live.staticflickr.com/807/40379829875_8a7cc48b0f_b.jpg",
+                "img_url": "",
                 "img_size": "",
                 "text_p1": "this is the second component of the virtual practical",
                 "text_p2": "not..",
-                "followingCompId": 3,
+                "nextCompId": 3,
                 "previousCompId": 1
             }
         },
@@ -151,7 +151,11 @@
             "data": {
                 "id": 4,
                 "img_url": "assets/img/labor_small.jpg",
-                "marker_url": "assets/img/point.png",
+                "img_size": "",
+                "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
+                "text_p2": "(click on every single marker to continue)",
+                "nextCompId": 5,
+                "previousCompId": 1,                
                 "markers": [
                     {
                         "title": "entrance",
@@ -225,25 +229,20 @@
                             "text_p1": "Keep the lid closed. Clean rotor and chamber regularly"
                         }
                     }
-                ],
-                "img_size": "",
-                "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
-                "text_p2": "(click on every single marker to continue)",
-                "followingCompId": 5,
-                "previousCompId": 1
-            },
-            "img_size": "",
-            "text_p1": "What is the correct spot to prepare the medium?",
-            "text_p2": "",
-            "followingCompId": 8000,
-            "previousCompId": 3
+                ]
+
+            }
         },
         {
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
                 "id": 5,
                 "img_url": "assets/img/labor_small.jpg",
-                "marker_url": "assets/img/point.png",
+                "img_size": "",
+                "text_p1": "What is the correct spot to prepare the medium?",
+                "text_p2": "",
+                "nextCompId": 0,
+                "previousCompId": 3,
                 "markers": [
                     {
                         "title": "entrance",
@@ -301,12 +300,7 @@
                         "isCorrect": false,
                         "answer_text": "Do not jump please"
                     }
-                ],
-                "img_size": "",
-                "text_p1": "What is the correct spot to prepare the medium?",
-                "text_p2": "",
-                "followingCompId": 0,
-                "previousCompId": 3
+                ]
             }
         }
     ]

@@ -16,7 +16,7 @@ export class StartComponent implements OnInit {
   }
 
   onStartClick(){
-    this.practicalService.set_component_id(this.data.followingCompId)    
+    this.practicalService.set_component_id(this.data.nextCompId)    
   }
 
 }

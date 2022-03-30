@@ -38,21 +38,14 @@ export class TempComponentComponent implements OnInit {
 
   checkOrder() {
     for (let i = 0; i < Object.keys(this.data.choices).length; i++) {
-
-      let defined_order = parseInt(this.data.choices[i].order)
-      if (defined_order != i) {
+      let defined_order = (this.data.choices[i].order)
+      if (defined_order != i+1) {
         this.badOrder = true;
         this.goodOrder=false;
       }
       this.orderChecked=true;
-
-
     }
   }
-
-
-
-
 
 
 
@@ -62,31 +55,32 @@ export class TempComponentComponent implements OnInit {
     "id": 200,
     "text_p1": "Please put these actions in the correct order",
     "text_p2": "",
+    "badAnswerText": "Bad order : try again",
+    "badAnswerLink": "you can go to this part of the practical to get the correct answer",
+    "goodAnswerText": "Good job you can continue the practical",
+    "nextCompId": 0,
+    "previousCompId": 0,
     "choices": [
       {
-        "order": "0",
+        "order": 1,
         "answer": "Wash my hands with alcoholic solution",
       },
       {
-        "order": "3",
+        "order": 4,
         "answer": "Say hello to the cells",
       },
       {
-        "order": "2",
+        "order": 3,
         "answer": "Turn on the flow cabinet",
 
       },
       {
-        "order": "1",
+        "order": 2,
         "answer": "Prepare the medium",
         "istrue": "false"
       }
     ],
-    "badAnswerText": "Bad order : try again",
-    "badAnswerLink": "you can go to this part of the practical to get the correct answer",
-    "goodAnswerText": "Good job you can continue the practical",
-    "followingCompId": 0,
-    "previousCompId": 0
+
   }
 
 
