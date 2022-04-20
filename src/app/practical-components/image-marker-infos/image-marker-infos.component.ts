@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 
+
 @Component({
   selector: 'app-image-marker-infos',
   templateUrl: './image-marker-infos.component.html',

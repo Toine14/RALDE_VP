@@ -66,7 +66,7 @@ export class BasicPracticalComponentService {
 
 
 
-      console.log(arrayBasicPractical)
+      //console.log(arrayBasicPractical)
     }
     return arrayBasicPractical
 

@@ -16,10 +16,15 @@
             {{answer_text_false}}
         </p>
     </div>
-    <div *ngIf="show_tips_true" class="tip_container border-2 bg-green-300 border-green-400 px-10 py-2 h-16 rounded-sm">
-        <p class="text-gray-700 text-base">
-            {{answer_text_true}}
-        </p>
+    <div *ngIf="show_tips_true" class="">
+        <div *ngIf="data.goodAnswerImgUrl" class="good_answer_img">
+            <img [src]="data.goodAnswerImgUrl" class="w-96 shadow-xl border-2 border-sky-400 ">
+        </div>
+        <div class="tip_container border-2 bg-green-300 border-green-400 px-10 py-2 h-16 rounded-sm">
+            <p class="text-gray-700 text-base">
+                {{answer_text_true}}
+            </p>
+        </div>
     </div>
 
 </div>
@@ -33,19 +38,12 @@
 
 </div>
 <div *ngIf='good_answer' href='' class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
-    <div
-    (click)="onPreviousClick()"
+    <div (click)="onPreviousClick()"
         class="flex items-center px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">
         previous
     </div>
-    <div
-    (click)="onNextClick()"
+    <div (click)="onNextClick()"
         class="flex items-center px-6 py-3 font-medium text-white bg-raldemint-800 hover:bg-gray-200 hover:text-gray-600 rounded">
         next
     </div>
 </div>
-
-
-
-
-

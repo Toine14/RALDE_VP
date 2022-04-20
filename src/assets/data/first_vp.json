@@ -150,7 +150,7 @@
             "component_type": "ImageMarkerInfosComponent",
             "data": {
                 "id": 4,
-                "img_url": "assets/img/labor_small.jpg",
+                "img_url": "assets/img/lab.png",
                 "img_size": "",
                 "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
                 "text_p2": "(click on every single marker to continue)",
@@ -158,59 +158,49 @@
                 "previousCompId": 1,                
                 "markers": [
                     {
-                        "title": "entrance",
+                        "title": "labcoat",
                         "text": "A",
-                        "x_pos": 27,
-                        "y_pos": 55,
+                        "x_pos": 1,
+                        "y_pos": 60,
                         "card_info": {
                             "title": "Labcoat",
                             "text_p1": "A white coat, also known as a laboratory coat or lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean."
                         }
                     },
                     {
-                        "title": "water bath",
-                        "text": "B",
-                        "x_pos": 40,
-                        "y_pos": 45,
-                        "card_info": {
-                            "title": "Water-bath",
-                            "text_p1": "Warm water is the ideal medium for all kinds of contaminants. In order to bring the media and other components to the ideal temperature for your cells, you will typically place the non-sterile vessels into a water bath. You will have to ensure that the caps of the vessels are not in contact with the water at any time. Bacteria and other contaminants might remain here and subsequently contaminate the inside of the vessel once it is opened. Just like the CO2 incubator, a water bath requires a regular disinfection routine. You must ensure that the water bath is emptied completely and disinfected prior to the addition of fresh water. Finally, the appropriate amounts of fungicide and bactericide should be added to the fresh water. A thermo block is a good alternative to the classic water bath - it is easier to clean and it works without water!"
-                        }
-                    },
-                    {
                         "title": "inverted microscope",
-                        "text": "C",
-                        "x_pos": 48,
-                        "y_pos": 45,
-                        "card_info": {
-                            "title": "Inverted microscope",
-                            "text_p1": "The degree of confluence, as well as appearance and morphology of the cells, have to be checked regularly via microscopy. When placing your cell culture consumables under the microscope, you must ensure that you are not opening the dish, flask or plate accidentally. Keep the time under the microscope as short as possible in order to avoid any unnecessary cooling of the cells. To achieve this, you should prepare the working area prior to removing the cells from the CO2 incubator."
-                        }
-                    },
-                    {
-                        "title": "CO2 incubator",
-                        "text": "D",
-                        "x_pos": 57,
-                        "y_pos": 45,
-                        "card_info": {
-                            "title": "CO2 incubator",
-                            "text_p1": "The environmental conditions in a CO2 incubator are not only perfect for growing your cells, but they are also perfect for the growth of bacterial cells and fungi. Therefore, regular disinfection of the incubator is critical for the protection of your cells. The incubator should be easy to clean, which can be accomplished by a racking system which is easy to disassemble. The water in the incubator needs to be changed regularly. Make sure that you empty the water tray completely and disinfect it before you fill it with fresh sterile water. An automatic disinfection mode can help maintain sterility, especially if the chamber is not free of seams and welds."
-                        }
-                    },
-                    {
-                        "title": "alcohol bottle",
-                        "text": "E",
-                        "x_pos": 70,
+                        "text": "B",
+                        "x_pos": 27,
                         "y_pos": 55,
                         "card_info": {
-                            "title": "Desinfectant",
-                            "text_p1": "Remember to ..."
+                            "title": "Inverted microscope",
+                            "text_p1": "The degree of confluence, as well as appearance and morphology of the cells, have to be checked regularly via microscopy. When placing your cell culture consumables under the microscope, you must ensure that you are not opening the dish, flask or plate accidentally. Keep the time under the microscope as short as possible in order to avoid any unnecessary cooling of the cells. To achieve this, you should prepare the working area prior to removing the cells from the CO2 incubator"
+                        }
+                    },
+                    {
+                        "title": "water bath",
+                        "text": "C",
+                        "x_pos": 35,
+                        "y_pos": 52,
+                        "card_info": {
+                            "title": "Water-bath",
+                            "text_p1": "Warm water is the ideal medium for all kinds of contaminants. In order to bring the media and other components to the ideal temperature for your cells, you will typically place the non-sterile vessels into a water bath. You will have to ensure that the caps of the vessels are not in contact with the water at any time. Bacteria and other contaminants might remain here and subsequently contaminate the inside of the vessel once it is opened. Just like the CO2 incubator, a water bath requires a regular disinfection routine. You must ensure that the water bath is emptied completely and disinfected prior to the addition of fresh water. Finally, the appropriate amounts of fungicide and bactericide should be added to the fresh water. A thermo block is a good alternative to the classic water bath - it is easier to clean and it works without water"
+                        }
+                    },
+                    {
+                        "title": "centrifuge",
+                        "text": "D",
+                        "x_pos": 42,
+                        "y_pos": 52,
+                        "card_info": {
+                            "title": "Centrifuge",
+                            "text_p1": "Keep the lid closed. Clean rotor and chamber regularly"
                         }
                     },
                     {
                         "title": "flow cabinet",
                         "text": "F",
-                        "x_pos": 75,
+                        "x_pos": 62,
                         "y_pos": 50,
                         "card_info": {
                             "title": "Bio safety cabinet incubator",
@@ -218,15 +208,13 @@
                         }
                     },
                     {
-                        "title": "centrifuge",
-                        "text": "G",
-                        "x_pos": 90,
-                        "y_pos": 50,
-                        "isCorrect": false,
-                        "answer_text": "",
+                        "title": "CO2 incubator",
+                        "text": "E",
+                        "x_pos": 70,
+                        "y_pos": 55,
                         "card_info": {
-                            "title": "Centrifuge",
-                            "text_p1": "Keep the lid closed. Clean rotor and chamber regularly"
+                            "title": "CO2 incubator",
+                            "text_p1": "The environmental conditions in a CO2 incubator are not only perfect for growing your cells, but they are also perfect for the growth of bacterial cells and fungi. Therefore, regular disinfection of the incubator is critical for the protection of your cells. The incubator should be easy to clean, which can be accomplished by a racking system which is easy to disassemble. The water in the incubator needs to be changed regularly. Make sure that you empty the water tray completely and disinfect it before you fill it with fresh sterile water. An automatic disinfection mode can help maintain sterility, especially if the chamber is not free of seams and welds."
                         }
                     }
                 ]
@@ -237,68 +225,29 @@
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
                 "id": 5,
-                "img_url": "assets/img/labor_small.jpg",
+                "img_url": "assets/img/lab.png",
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
                 "nextCompId": 0,
                 "previousCompId": 3,
+                "goodAnswerImgUrl":"assets/img/flow_cabinet.png",
                 "markers": [
                     {
-                        "title": "entrance",
+                        "title": "Bench",
                         "text": "A",
                         "x_pos": 15,
-                        "y_pos": 55,
+                        "y_pos": 60,
                         "isCorrect": false,
-                        "answer_text": "try again please"
-                    },
-                    {
-                        "title": "water bath",
-                        "text": "B",
-                        "x_pos": 40,
-                        "y_pos": 45,
-                        "isCorrect": false,
-                        "answer_text": "not at all"
-                    },
-                    {
-                        "title": "inverted microscope",
-                        "text": "C",
-                        "x_pos": 48,
-                        "y_pos": 45,
-                        "isCorrect": false,
-                        "answer_text": "seriously ?"
-                    },
-                    {
-                        "title": "CO2 incubator",
-                        "text": "D",
-                        "x_pos": 57,
-                        "y_pos": 45,
-                        "isCorrect": false,
-                        "answer_text": "you better not"
-                    },
-                    {
-                        "title": "alcohol bottle",
-                        "text": "E",
-                        "x_pos": 70,
-                        "y_pos": 55,
-                        "isCorrect": false,
-                        "answer_text": "too dangerous"
+                        "answer_text": "if you don't work under a flow cabinet you risk contamination"
                     },
                     {
                         "title": "flow cabinet",
-                        "text": "F",
-                        "x_pos": 75,
+                        "text": "B",
+                        "x_pos": 62,
                         "y_pos": 50,
                         "isCorrect": true,
-                        "answer_text": "Cell culture medium should indeed be prepared in a sterile enviroment"
-                    },
-                    {
-                        "title": "centrifuge",
-                        "text": "G",
-                        "x_pos": 90,
-                        "y_pos": 50,
-                        "isCorrect": false,
-                        "answer_text": "Do not jump please"
+                        "answer_text": "Working under a flow cabinet helps you to maintain the sterility of your cell cultures "
                     }
                 ]
             }

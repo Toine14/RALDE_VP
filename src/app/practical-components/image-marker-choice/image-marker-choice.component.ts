@@ -15,8 +15,9 @@ export class ImageMarkerChoiceComponent implements OnInit {
   show_tips_true:boolean = false;
   answer_text_false:string='';
   answer_text_true:string='';
+  
 
-  constructor(private practicalService: BasicPracticalComponentService) { }
+  constructor(private practicalService: BasicPracticalComponentService) {}
 
   ngOnInit(): void {
     //this.data = this.temp_data
@@ -40,7 +41,7 @@ export class ImageMarkerChoiceComponent implements OnInit {
     var id = target.id;
 
     if (id.includes('marker_')) {
-      console.log('je contiens')
+      //console.log('je contiens')
       id = id.replace('marker_', "")
     }
     var index:number = +id

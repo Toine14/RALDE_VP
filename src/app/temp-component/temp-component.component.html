@@ -7,39 +7,42 @@
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>-->
 
-<div class="flex flex-col items-center">
+<div class="flex justify-center">
 
-    <h1 class='mt-8 text-2xl'>{{data.text_p1}}</h1>
 
-    <div class=" flex justify-center mt-8 ">
-        <div cdkDropList class="example-list flex flex-col items-center" (cdkDropListDropped)="drop($event)">
-            <div class="example-box " *ngFor="let item of data.choices" cdkDrag>
-                <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
-                {{item.answer}}
-            </div>
+
+  <div class="flex flex-col  bg-slate-100 p-4">
+
+    <h1 class=' text-2xl mb-2'>{{data.text_p1}}</h1>
+
+
+    <form [formGroup]="form" (ngSubmit)="checkOrder()" novalidate>
+      <div class="flex">
+        <div *ngFor="let answer of data.answers; let i=index" class="m-1">
+          <div class="imgContainer">
+          <img [src]='answer.img_url' class="">
         </div>
-    </div>
-
-    <div *ngIf="orderChecked box-border">
-        <div *ngIf="badOrder"
-            class="bg-red-300 border border-red-400 flex justify-center p-4 rounded-md mt-4 box-border">
-            <p>
-                {{data.badAnswerText}}
-            </p>
+          <input type="checkbox" formArrayName="selectedAnswers" [value]="answer.isCorrect"
+            (change)="onCheckboxChange($event)" />
+          {{ answer.text}}
         </div>
+      </div>
+      <div class="flex">
+        <button
+          class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+          type="submit">Check your answers</button>
+          <div ng>
 
-        <div *ngIf="goodOrder" class="flex-col ">
-            <div class="bg-green-300 border border-green-400 flex justify-center p-4 rounded-md mt-4 box-border">
-                <p>{{data.goodAnswerText}}</p>
-            </div>
+          </div>
+      </div>
+    </form>
 
 
-        </div>
 
-    </div>
 
-    <button (click)="checkOrder()"
-        class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded">Check
-        answer</button>
+
+
+
+  </div>
 
 </div>
