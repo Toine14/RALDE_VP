@@ -29,6 +29,7 @@ import { ImgChoicesComponent } from './practical-components/img-choices/img-choi
 import { QuestionsComponent } from './practical-components/questions/questions.component';
 import { ImageMarkerInfosComponent } from './practical-components/image-marker-infos/image-marker-infos.component';
 import { ReorderComponent } from './practical-components/reorder/reorder.component';
+import { QuestionImgComponent } from './practical-components/question-img/question-img.component';
 
 
 
@@ -52,7 +53,8 @@ import { ReorderComponent } from './practical-components/reorder/reorder.compone
     ImgChoicesComponent,
     QuestionsComponent,
     ImageMarkerInfosComponent,
-    ReorderComponent
+    ReorderComponent,
+    QuestionImgComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { ImageMarkerChoiceComponent } from '../practical-components/image-marker
 import { ImgChoicesComponent } from '../practical-components/img-choices/img-choices.component';
 import { QuestionsComponent } from '../practical-components/questions/questions.component';
 import { ImageMarkerInfosComponent } from '../practical-components/image-marker-infos/image-marker-infos.component';
+import {QuestionImgComponent} from '../practical-components/question-img/question-img.component'
 
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -59,9 +60,13 @@ export class BasicPracticalComponentService {
         case 'QuestionsComponent':
           arrayBasicPractical.push(new BasicPracticalItem(QuestionsComponent, component.data, component.data.id))
           break;
-          case 'ImageMarkerInfosComponent':
+        case 'ImageMarkerInfosComponent':
           arrayBasicPractical.push(new BasicPracticalItem(ImageMarkerInfosComponent, component.data, component.data.id))
           break;
+        case 'QuestionImgComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(QuestionImgComponent, component.data, component.data.id))
+          break;
+
       }
 
 

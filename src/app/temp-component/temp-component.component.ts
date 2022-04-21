@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import { BasicPracticalComponentService } from '../services/basic-practical-component.service';
 
 
 
@@ -24,22 +25,26 @@ export class TempComponentComponent implements OnInit {
   tempdata: any = {
 
     "text_p1": "Start the flow cabinet",
+    "nextCompId": 0,
+    "previousCompId": 3,
+    "badAnswerText": "Bad answer, please re-read your notes",
+    "goodAnswerText": "Good job: flow cabinet should be first set at full flow to ... Window should be open at one third to ensure...",
     "answers": [
-      { "text": "half flow", "isCorrect": false, "img_url":"assets/img/half_flow.png" },
-      { "text": "full flow", "isCorrect": true, "img_url":"assets/img/full_flow.png" },
-      { "text": "open the window till half-way", "isCorrect": false, "img_url":"assets/img/half_open.png" },
-      { "text": "open window about one third", "isCorrect": true, "img_url":"assets/img/third_open.png" },
-      
+      { "text": "half flow", "isCorrect": false, "img_url": "assets/img/half_flow.png" },
+      { "text": "full flow", "isCorrect": true, "img_url": "assets/img/full_flow.png" },
+      { "text": "open the window till half-way", "isCorrect": false, "img_url": "assets/img/half_open.png" },
+      { "text": "open window about one third", "isCorrect": true, "img_url": "assets/img/third_open.png" },
+
     ]
   }
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private practicalService: BasicPracticalComponentService) {
     this.form = fb.group({
-      selectedAnswers:  new FormArray([])
-     });
-   }
+      selectedAnswers: new FormArray([])
+    });
+  }
 
-   onCheckboxChange(event: any) {
+  onCheckboxChange(event: any) {
     const selectedAnswers = (this.form.controls['selectedAnswers'] as FormArray);
     if (event.target.checked) {
       selectedAnswers.push(new FormControl(event.target.value));
@@ -49,24 +54,29 @@ export class TempComponentComponent implements OnInit {
     }
   }
 
-  
 
-   
-  checkOrder() { 
+
+
+  checkOrder() {
+    this.answered = true;
     const selectedAnswers = this.form.value.selectedAnswers
     console.log(selectedAnswers)
     let countOfTrue = 0
     let totalTicked = 0
-    for(let answer of selectedAnswers){
-      totalTicked++      
-      if(answer==='true'){
+    for (let answer of selectedAnswers) {
+      totalTicked++
+      if (answer === 'true') {
         countOfTrue++
       }
     }
-    if(this.goodAnswerCount==countOfTrue && totalTicked == countOfTrue){
+    if (this.goodAnswerCount == countOfTrue && totalTicked == countOfTrue) {
+      this.goodAnswer = true;
       console.log("good")
     }
-    else(console.log("bad")) 
+    else {
+      console.log("bad");
+      this.goodAnswer = false;
+    }
   }
 
   ngOnInit(): void {
@@ -78,9 +88,15 @@ export class TempComponentComponent implements OnInit {
 
   howManyGoodAnswers(answers: any[]) {
     return answers.filter(x => x.isCorrect).length
-    
+
   }
 
+  onNextClick() {
+    this.practicalService.set_component_id(this.data.nextCompId)
+  }
+  onPreviousClick() {
+    this.practicalService.set_component_id(this.data.previousCompId)
+  }
 
 
 
