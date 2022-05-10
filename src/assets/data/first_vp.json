@@ -481,7 +481,7 @@
                 "nextCompId": 607,
                 "previousCompId": 605,
                 "badAnswerText": "Bad answer, please re-read your notes",
-                "goodAnswerText": "Good job: having the flow cabinet full of things will disturb he flow of the air and thus disrupt the sterile environment",
+                "goodAnswerText": "Having the flow cabinet full of things will disturb he flow of the air and thus disrupt the sterile environment",
                 "answers": [
                     {
                         "text": "Full of things",
