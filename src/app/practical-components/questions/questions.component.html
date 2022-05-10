@@ -1,26 +1,30 @@
-<div class="basic_component  mb-8">
+<h2 class="text-xl font-semibold">{{data.h2}}</h2>
+<div class="basic_component  mb-8">  
 
     <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
         <p class="font-bold text-2xl">{{data.text_p1}}</p>
         <p>{{data.text_p2}}</p>
+        <div class="flex justify-between">
+            <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
+                <div class="flex flex-col  my-2 ">
+                    <label *ngFor="let choice of data.choices;" class="my-1">
+                        <input formControlName="answers" type="radio" name="answers" [value]="choice" />
+                        {{choice.answer}}
+                    </label>
+                </div>
 
-        <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
-            <div class="flex flex-col my-2 ">
-                <label *ngFor="let choice of data.choices;" class="my-1">
-                    <input formControlName="answers" type="radio" name="answers" [value]="choice" />
-                    {{choice.answer}}
-                </label>
+                <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-center">
+                    <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-4/5">
+                </div>
+
+                <button
+                    class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+                    [disabled]="!form.valid">Check answer</button>
+            </form>
+            <div *ngIf="isAnswerPictureIllustration && answerText=='true'">
+                <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-9/12">
             </div>
-
-            <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-center">
-                <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-4/5">
-            </div>
-
-            <button
-                class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
-                [disabled]="!form.valid">Check answer</button>
-        </form>
-
+        </div>
         <div class="flex justify-center">
             <div *ngIf="answerText=='false'"
                 class="bg-red-300 border border-red-400 flex justify-center p-4 rounded-md mt-4">

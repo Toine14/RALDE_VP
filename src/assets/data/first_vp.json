@@ -259,8 +259,9 @@
             "component_type": "QuestionImgComponent",
             "data": {
                 "id": 600,
+                "h2":"Preparing the cell culture room/conditions ",
                 "text_p1": "Start the flow cabinet",
-                "nextCompId": 700,
+                "nextCompId": 601,
                 "previousCompId": 500,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Good job: flow cabinet should be first set at full flow to ... Window should be open at one third to ensure...",
@@ -291,7 +292,8 @@
         {
             "component_type": "QuestionsComponent",
             "data": {
-                "id": 700,
+                "id": 601,
+                "h2":"Preparing the cell culture room/conditions ",
                 "text_p1": "How long should the UV lamp be left on for ?",
                 "text_p2": "",
                 "isPictureIllustration": true,
@@ -318,10 +320,182 @@
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "Good job you can continue the practical",
-                "nextCompId": 0,
+                "goodAnswerText": "This is the time needed to kill of the microbes present in the environment ",
+                "nextCompId": 602,
                 "previousCompId": 600
             }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 602,
+                "h2":"Preparing the cell culture room/conditions ",
+                "text_p1": "Put water bath at ___°C and put in the cell culture medium and buffer solutions",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/water_bath_37.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "37°C",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "50°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "60°C",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "human and mammalian cell lines should be kept at 37ºC for optimal growth, thus it is convenient that all solutions that are in contact with them are around this temperature. Overheating them can cause serious damage",
+                "nextCompId": 603,
+                "previousCompId": 602
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 603,
+                "h2":"Preparing the cell culture room/conditions ",
+                "text_p1": "Just before starting wipe the surface area with a tissue with ",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/alcool.png"
+                    
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Water with detergent",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "70% ethanol",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "100% ethanol",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "70% ethanol help in maintaining the environment sterile and clean.",
+                "nextCompId": 604,
+                "previousCompId": 602
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 604,
+                "h2":"Preparing the cell culture room/conditions ",
+                "text_p1": "To spray the ethanol it is best to use",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/alcool.png"
+                    
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Spray bottle",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Glass bottle with big opening",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Squeeze bottle",
+                        "istrue": "true"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Squeeze bottle deliver the right amount of alcohol",
+                "nextCompId": 605,
+                "previousCompId": 603
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 605,
+                "h2":"Preparing the cell culture room/conditions ",
+                "text_p1": "Select the correct position to work in the flow cabinet",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/alcool.png"
+                    
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "In the front",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "In the middle",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "In the back",
+                        "istrue": "false"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "The sterility is ensured in the middle of the flow cabinet.",
+                "nextCompId": 606,
+                "previousCompId": 604
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 606,
+                "h2":"Preparing the cell culture room/conditions ",
+                "text_p1": "Start the flow cabinet",
+                "nextCompId": 607,
+                "previousCompId": 605,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Good job: having the flow cabinet full of things will disturb he flow of the air and thus disrupt the sterile environment",
+                "answers": [
+                    {
+                        "text": "Full of things",
+                        "isCorrect": false,
+                        "img_url": "assets/img/full_thing.png"
+                    },
+                    {
+                        "text": "The things we need plus a container/s to put the 'garbage', tips",
+                        "isCorrect": true,
+                        "img_url": "assets/img/right_thing.png"
+                    }
+                ]
+            }
         }
+
     ]
 }

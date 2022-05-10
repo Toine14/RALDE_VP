@@ -17,7 +17,8 @@ export class QuestionsComponent implements OnInit {
   choices: any;
   isGoodAnswer!: boolean;
   answerText: string ='';
-  isPictureIllustration!: boolean;
+  isPictureIllustration: boolean = false;
+  isAnswerPictureIllustration: boolean = false;
 
 
   constructor(private practicalService: BasicPracticalComponentService, private formBuilder: FormBuilder) {
@@ -30,6 +31,7 @@ export class QuestionsComponent implements OnInit {
     });
     this.choices = this.data.choices;
     this.isPictureIllustration = this.data.isPictureIllustration
+    this.isAnswerPictureIllustration = this.data.isAnswerPictureIllustration
   }
 
   onNextClick() {
