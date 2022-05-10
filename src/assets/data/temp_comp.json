@@ -1,0 +1,32 @@
+{
+    "component_type": "QuestionsComponent",
+    "data": {
+        "id": 700,
+        "text_p1": "How long should the UV lamp be left on for ?",
+        "text_p2": "",
+        "isPictureIllustration":true,
+        "illustrationPicturesUrls":["assets/img/uv.png","assets/img/uv_flow.png"],
+        "choices": [
+            {
+                "id": "ChoiceNb1",
+                "answer": "10 min",
+                "istrue": "false"
+            },
+            {
+                "id": "ChoiceNb2",
+                "answer": "20 min",
+                "istrue": "false"
+            },
+            {
+                "id": "ChoiceNb3",
+                "answer": "30 min",
+                "istrue": "true"
+            }
+        ],
+        "badAnswerText": "Bad answer : please re read your notes",
+        "badAnswerLink": "",
+        "goodAnswerText": "Good job you can continue the practical",
+        "nextCompId": 0,
+        "previousCompId": 600
+    }
+}

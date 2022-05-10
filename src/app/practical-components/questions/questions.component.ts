@@ -16,7 +16,8 @@ export class QuestionsComponent implements OnInit {
   form!: FormGroup;
   choices: any;
   isGoodAnswer!: boolean;
-  answerText: string =''
+  answerText: string ='';
+  isPictureIllustration!: boolean;
 
 
   constructor(private practicalService: BasicPracticalComponentService, private formBuilder: FormBuilder) {
@@ -27,7 +28,8 @@ export class QuestionsComponent implements OnInit {
     this.form = this.formBuilder.group({
       answers: ['', [Validators.required]]
     });
-    this.choices = this.data.choices
+    this.choices = this.data.choices;
+    this.isPictureIllustration = this.data.isPictureIllustration
   }
 
   onNextClick() {

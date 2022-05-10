@@ -70,6 +70,10 @@
                 "id": 200,
                 "text_p1": "What medium is suitable for HepG2 cells ?",
                 "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                    ""
+                ],
                 "choices": [
                     {
                         "id": "ChoiceNb1",
@@ -154,8 +158,8 @@
                 "img_size": "",
                 "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
                 "text_p2": "(click on every single marker to continue)",
-                "nextCompId": 5,
-                "previousCompId": 1,                
+                "nextCompId": 500,
+                "previousCompId": 1,
                 "markers": [
                     {
                         "title": "labcoat",
@@ -218,20 +222,19 @@
                         }
                     }
                 ]
-
             }
         },
         {
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
-                "id": 5,
+                "id": 500,
                 "img_url": "assets/img/lab.png",
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
-                "nextCompId": 0,
+                "nextCompId": 600,
                 "previousCompId": 3,
-                "goodAnswerImgUrl":"assets/img/flow_cabinet.png",
+                "goodAnswerImgUrl": "assets/img/flow_cabinet.png",
                 "markers": [
                     {
                         "title": "Bench",
@@ -250,6 +253,74 @@
                         "answer_text": "Working under a flow cabinet helps you to maintain the sterility of your cell cultures "
                     }
                 ]
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 600,
+                "text_p1": "Start the flow cabinet",
+                "nextCompId": 700,
+                "previousCompId": 500,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Good job: flow cabinet should be first set at full flow to ... Window should be open at one third to ensure...",
+                "answers": [
+                    {
+                        "text": "half flow",
+                        "isCorrect": false,
+                        "img_url": "assets/img/half_flow.png"
+                    },
+                    {
+                        "text": "full flow",
+                        "isCorrect": true,
+                        "img_url": "assets/img/full_flow.png"
+                    },
+                    {
+                        "text": "open the window till half-way",
+                        "isCorrect": false,
+                        "img_url": "assets/img/half_open.png"
+                    },
+                    {
+                        "text": "open window about one third",
+                        "isCorrect": true,
+                        "img_url": "assets/img/third_open.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 700,
+                "text_p1": "How long should the UV lamp be left on for ?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/uv.png",
+                    "assets/img/uv_flow.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "10 minutes",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "20 minutes",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "30 minutes",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 0,
+                "previousCompId": 600
             }
         }
     ]

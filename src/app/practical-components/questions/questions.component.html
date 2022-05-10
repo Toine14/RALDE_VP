@@ -11,6 +11,11 @@
                     {{choice.answer}}
                 </label>
             </div>
+
+            <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-center">
+                <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-4/5">
+            </div>
+
             <button
                 class="mt-6 self-center  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
                 [disabled]="!form.valid">Check answer</button>
@@ -19,8 +24,8 @@
         <div class="flex justify-center">
             <div *ngIf="answerText=='false'"
                 class="bg-red-300 border border-red-400 flex justify-center p-4 rounded-md mt-4">
-                <p>{{data.badAnswerText}}</p><span>&#160;</span><a [href]="data.badAnswerLink" class='underline '
-                    target="_blank">
+                <p>{{data.badAnswerText}}</p><span>&#160;</span><a *ngIf="data.badAnswerLink"
+                    [href]="data.badAnswerLink" class='underline ' target="_blank">
                     here</a>
             </div>
 
