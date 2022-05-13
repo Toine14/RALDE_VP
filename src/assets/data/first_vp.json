@@ -1,15 +1,15 @@
 {
-    "title": "Cell culture first virtual practical",
+    "title": "Mammalian cell culture virtual practical",
     "components": [
         {
             "component_type": "StartComponent",
             "data": {
                 "id": 0,
-                "aims": "to learn plenty of sfs",
+                "aims": "to learn culture cell basics",
                 "creator": "RALDE team",
-                "text_p1": "This is the starting component of the virtual practical",
-                "text_p2": "this component explain the aims of the practical",
-                "text_p3": "this is a third paragraph of text",
+                "text_p1": "This virtuel practical aims to teach you the basics of cell culture. It is composed of a set of interactive elements that will introduce you to the different steps and knowledge required to master this field of expertise.",
+                "text_p2": "You will have to interact with the different components of this VP",
+                "text_p3": "",
                 "nextCompId": 1,
                 "previousCompId": 0
             }
@@ -139,18 +139,6 @@
             }
         },
         {
-            "component_type": "ImgTextBtnComponent",
-            "data": {
-                "id": 8000,
-                "img_url": "",
-                "img_size": "",
-                "text_p1": "this is the second component of the virtual practical",
-                "text_p2": "not..",
-                "nextCompId": 3,
-                "previousCompId": 1
-            }
-        },
-        {
             "component_type": "ImageMarkerInfosComponent",
             "data": {
                 "id": 4,
@@ -232,7 +220,7 @@
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
-                "nextCompId": 600,
+                "nextCompId": 1001,
                 "previousCompId": 3,
                 "goodAnswerImgUrl": "assets/img/flow_cabinet.png",
                 "markers": [
@@ -256,10 +244,19 @@
             }
         },
         {
+            "component_type": "TransitionComponent",
+            "data": {
+                "id": 1001,
+                "nextCompId": 600,
+                "img_url": "assets/img/lab_min.png",
+                "title": "Preparing the cell culture room/conditions "
+            }
+        },
+        {
             "component_type": "QuestionImgComponent",
             "data": {
                 "id": 600,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Start the flow cabinet",
                 "nextCompId": 601,
                 "previousCompId": 500,
@@ -293,7 +290,7 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 601,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "How long should the UV lamp be left on for ?",
                 "text_p2": "",
                 "isPictureIllustration": true,
@@ -329,7 +326,7 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 602,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Put water bath at ___°C and put in the cell culture medium and buffer solutions",
                 "text_p2": "",
                 "isPictureIllustration": false,
@@ -366,13 +363,12 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 603,
-                "h2":"Preparing the cell culture room/conditions ",
-                "text_p1": "Just before starting wipe the surface area with a tissue with ",
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Just before starting: Wipe the surface area with a tissue with ... ",
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
                     "assets/img/alcool.png"
-                    
                 ],
                 "choices": [
                     {
@@ -402,13 +398,12 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 604,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "To spray the ethanol it is best to use",
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
                     "assets/img/alcool.png"
-                    
                 ],
                 "choices": [
                     {
@@ -426,7 +421,6 @@
                         "answer": "Squeeze bottle",
                         "istrue": "true"
                     }
-
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
@@ -439,13 +433,12 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 605,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Select the correct position to work in the flow cabinet",
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
                     "assets/img/alcool.png"
-                    
                 ],
                 "choices": [
                     {
@@ -463,7 +456,6 @@
                         "answer": "In the back",
                         "istrue": "false"
                     }
-
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
@@ -476,7 +468,7 @@
             "component_type": "QuestionImgComponent",
             "data": {
                 "id": 606,
-                "h2":"Preparing the cell culture room/conditions ",
+                "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Start the flow cabinet",
                 "nextCompId": 607,
                 "previousCompId": 605,
@@ -494,6 +486,228 @@
                         "img_url": "assets/img/right_thing.png"
                     }
                 ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 607,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "The incubator for growing the cells should be kept at:",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/incub.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "37° C and 5% CO2",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "37° C and 10% CO2",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "45° C and 5% CO2",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "45° C and 10% CO2",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "human and mammalian cell lines should be kept at 37ºC for optimal growth, 5% CO2 is needed to buffer the system to ensure that the normal physiological pH is maintained for optimum cell growth",
+                "nextCompId": 1002,
+                "previousCompId": 606
+            }
+        },
+        {
+            "component_type": "TransitionComponent",
+            "data": {
+                "id": 1002,
+                "nextCompId": 703,
+                "title": "Thawing the cells"
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 703,
+                "h2": "Thawing the cells",
+                "text_p1": "What do you need to wear in order to take the cells? More than one answer may be correct ",
+                "nextCompId": 704,
+                "previousCompId": 607,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Liquid Nitrogen is dangerous and may burn your skin if little drops reach you",
+                "answers": [
+                    {
+                        "text": "Laboratory goggles",
+                        "isCorrect": false,
+                        "img_url": "assets/img/lab_goggles.png"
+                    },
+                    {
+                        "text": "Face shield",
+                        "isCorrect": true,
+                        "img_url": "assets/img/face_shield.png"
+                    },
+                    {
+                        "text": "Low temperature gloves",
+                        "isCorrect": true,
+                        "img_url": "assets/img/low_temp_gloves.png"
+                    },
+                    {
+                        "text": "Lab coat",
+                        "isCorrect": true,
+                        "img_url": "assets/img/lab_coat.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 704,
+                "h2": "Thawing the cells",
+                "text_p1": "Select the correct place to thaw the cells",
+                "nextCompId": 705,
+                "previousCompId": 703,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Fast thawing will result in greater cell viability",
+                "answers": [
+                    {
+                        "text": "Bench",
+                        "isCorrect": false,
+                        "img_url": "assets/img/lab_min.png"
+                    },
+                    {
+                        "text": "Incubator",
+                        "isCorrect": false,
+                        "img_url": "assets/img/incub.png"
+                    },
+                    {
+                        "text": "Water bath",
+                        "isCorrect": true,
+                        "img_url": "assets/img/water_bath_37.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 705,
+                "h2": "Thawing the cells",
+                "text_p1": "How to process thawn cells?",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Spin at 150-300 g for 5 min to remove freezing medium and dilute 10 x in cell culture medium",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Quick spin at 13000xg for 1min to remove freezing medium",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Dilute 10x in cell culture medium and centrifuge  to remove freezing medium(5 min, 150-300 g, RT)",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Dilute first the cryoprotectant so that is no longer toxic and then spin down in order to get rid of it.",
+                "nextCompId": 706,
+                "previousCompId": 704
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 706,
+                "h2": "Thawing the cells",
+                "text_p1": "Select the correct culture material",
+                "nextCompId": 707,
+                "previousCompId": 705,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Cells are maintained in culture flasks. Cryotubes normally contain low number of cells so a T25 would keep cells closer to each other avoiding low density-related stress.",
+                "answers": [
+                    {
+                        "text": "T25",
+                        "isCorrect": true,
+                        "img_url": "assets/img/T25.png"
+                    },
+                    {
+                        "text": "T75",
+                        "isCorrect": false,
+                        "img_url": "assets/img/T75.png"
+                    },
+                    {
+                        "text": "6 wells plate",
+                        "isCorrect": false,
+                        "img_url": "assets/img/6_wells.png"
+                    },
+                    {
+                        "text": "96 wells plate",
+                        "isCorrect": false,
+                        "img_url": "assets/img/96_wells.png"
+                    },
+                    {
+                        "text": "125 ml erlenmeyer cell culture flask",
+                        "isCorrect": false,
+                        "img_url": "assets/img/125_erlen.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 707,
+                "h2": "Thawing the cells",
+                "text_p1": "Put the correct volume of medium to the T25",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                   
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Final volume of 1 mL",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Final volume of 3 mL",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Final volume of 5 mL",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Lower volumes than 5 mL may result in insufficient nutrients for the cells",
+                "nextCompId": 708,
+                "previousCompId": 706
             }
         }
 

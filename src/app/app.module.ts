@@ -30,6 +30,8 @@ import { QuestionsComponent } from './practical-components/questions/questions.c
 import { ImageMarkerInfosComponent } from './practical-components/image-marker-infos/image-marker-infos.component';
 import { ReorderComponent } from './practical-components/reorder/reorder.component';
 import { QuestionImgComponent } from './practical-components/question-img/question-img.component';
+import { TransitionComponent } from './practical-components/transition/transition.component';
+import { MultipleChoicesComponent } from './practical-components/multiple-choices/multiple-choices.component';
 
 
 
@@ -54,7 +56,9 @@ import { QuestionImgComponent } from './practical-components/question-img/questi
     QuestionsComponent,
     ImageMarkerInfosComponent,
     ReorderComponent,
-    QuestionImgComponent
+    QuestionImgComponent,
+    TransitionComponent,
+    MultipleChoicesComponent
   ],
   imports: [
     BrowserModule,
