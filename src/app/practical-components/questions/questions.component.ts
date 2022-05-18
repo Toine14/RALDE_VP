@@ -16,22 +16,31 @@ export class QuestionsComponent implements OnInit {
   form!: FormGroup;
   choices: any;
   isGoodAnswer!: boolean;
-  answerText: string ='';
+  answerText: string = '';
   isPictureIllustration: boolean = false;
   isAnswerPictureIllustration: boolean = false;
+  isMoreThanOnePictureAnswer: boolean = false;
+
+  size1 = '100em';
+  size2 = '20em'
 
 
   constructor(private practicalService: BasicPracticalComponentService, private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
-    
+
     this.form = this.formBuilder.group({
       answers: ['', [Validators.required]]
     });
     this.choices = this.data.choices;
     this.isPictureIllustration = this.data.isPictureIllustration
     this.isAnswerPictureIllustration = this.data.isAnswerPictureIllustration
+    if (this.data.isAnswerPictureIllustration) {
+      if (this.data.answerIllustrationPicturesUrls.length > 1) {
+        this.isMoreThanOnePictureAnswer = true
+      }
+    }
   }
 
   onNextClick() {
@@ -42,14 +51,14 @@ export class QuestionsComponent implements OnInit {
   }
 
 
-  isGoodAnswered(){
-    if(this.isGoodAnswer==null || 'undefined'){
+  isGoodAnswered() {
+    if (this.isGoodAnswer == null || 'undefined') {
       return false
     }
-    else if(this.isGoodAnswer == false)
-      {return false
+    else if (this.isGoodAnswer == false) {
+      return false
     }
-    else{return true}
+    else { return true }
   }
 
 
@@ -59,13 +68,13 @@ export class QuestionsComponent implements OnInit {
     let answerBool = JSON.parse(answer)
     console.log(typeof (answer))
     if (!answerBool) {
-      this.answerText='false'
-      this.isGoodAnswer=false;
-      
+      this.answerText = 'false'
+      this.isGoodAnswer = false;
+
     }
     else {
-      this.answerText='true'
-      this.isGoodAnswer=true;
+      this.answerText = 'true'
+      this.isGoodAnswer = true;
 
     }
 
@@ -76,6 +85,6 @@ export class QuestionsComponent implements OnInit {
 
 
 
- 
+
 
 }

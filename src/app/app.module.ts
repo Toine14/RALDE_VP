@@ -32,6 +32,7 @@ import { ReorderComponent } from './practical-components/reorder/reorder.compone
 import { QuestionImgComponent } from './practical-components/question-img/question-img.component';
 import { TransitionComponent } from './practical-components/transition/transition.component';
 import { MultipleChoicesComponent } from './practical-components/multiple-choices/multiple-choices.component';
+import { NavDevComponent } from './practical-components/nav-dev/nav-dev.component';
 
 
 
@@ -58,7 +59,8 @@ import { MultipleChoicesComponent } from './practical-components/multiple-choice
     ReorderComponent,
     QuestionImgComponent,
     TransitionComponent,
-    MultipleChoicesComponent
+    MultipleChoicesComponent,
+    NavDevComponent
   ],
   imports: [
     BrowserModule,

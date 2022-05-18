@@ -1,6 +1,8 @@
-<h2 *ngIf="data.h2" class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">{{data.h2}}</h2>
+<h2 *ngIf="data.h2"
+    class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
+    {{data.h2}}</h2>
 
-<div class="basic_component  mb-8">  
+<div class="basic_component  mb-8">
 
     <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
         <p class="font-bold text-2xl">{{data.text_p1}}</p>
@@ -14,7 +16,7 @@
                     </label>
                 </div>
 
-                <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-center">
+                <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-start">
                     <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-9/12">
                 </div>
 
@@ -33,14 +35,14 @@
                     here</a>
             </div>
 
-            <div *ngIf="isAnswerPictureIllustration && answerText=='true'" class="self-start">
-                <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl' class="w-9/12">
-            </div>
 
-            <div *ngIf="answerText=='true'" class="flex-col self-start">
-                <div class="bg-green-300 border border-green-400 flex justify-center  p-4 rounded-md mt-4">
-                    <p>{{data.goodAnswerText}}</p>
+            <div *ngIf="answerText=='true'"
+                class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md" [ngStyle]="{'width' : isMoreThanOnePictureAnswer ? '80%' : '66%'}" [ngClass]="{'flex-col':  isMoreThanOnePictureAnswer}">
+                <div *ngIf="data.isAnswerPictureIllustration" class="self-start flex" [ngClass]="{'justify-center':  isMoreThanOnePictureAnswer}" >
+                    <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl'
+                        class="rounded-sm" [style.width]="isMoreThanOnePictureAnswer ? size2 : size1" [ngClass]="{'mr-2':  isMoreThanOnePictureAnswer}">
                 </div>
+                <p class="mt-2" [ngClass]="{'ml-4':  !isMoreThanOnePictureAnswer, 'w-4/5': isMoreThanOnePictureAnswer}">{{data.goodAnswerText}}</p>
 
 
             </div>

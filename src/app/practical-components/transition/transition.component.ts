@@ -15,7 +15,7 @@ export class TransitionComponent implements OnInit {
 
     setTimeout(() => {
       this.onNextClick();
-    }, 3000);
+    }, 2500);
 
   }
 

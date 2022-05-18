@@ -683,9 +683,7 @@
                 "text_p1": "Put the correct volume of medium to the T25",
                 "text_p2": "",
                 "isPictureIllustration": false,
-                "illustrationPicturesUrls": [
-                   
-                ],
+                "illustrationPicturesUrls": [],
                 "choices": [
                     {
                         "id": "ChoiceNb1",
@@ -709,7 +707,332 @@
                 "nextCompId": 708,
                 "previousCompId": 706
             }
+        },
+        {
+            "component_type": "MultipleChoicesComponent",
+            "data": {
+                "id": 708,
+                "h2": "Thawing the cells",
+                "text_p1": "How will you label the flask? What are the crucial information that needs to be written?",
+                "nextCompId": 709,
+                "previousCompId": 707,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/t25_note_ok.png"
+                ],
+                "goodAnswerText": "The type of medium is cell-line specific so it is sufficient to just write the cell type, cell concentration is not necessary for adherent cell maintenance, volume of medium is the same for every flask size (i.e., 5 mL for T25)",
+                "answers": [
+                    {
+                        "text": "Cell type",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Cell concentration",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Date",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Type of medium",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Your initials",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Passage number",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Volume of medium",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 709,
+                "h2": "Thawing the cells",
+                "text_p1": "Put the cells in the correct incubator",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/incub.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "37° C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "37° C, 5% CO2 and humidity",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "37° C and 5% CO2",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "37° C, 5% CO2 and humidity",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "5% CO2 is needed to balance the pH of the medium and humidity is needed to prevent excessive evaporation of the medium",
+                "nextCompId": 710,
+                "previousCompId": 708
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 710,
+                "h2": "Thawing the cells",
+                "text_p1": "Select the correct position of the cell culture flasks if the cap has no filter in it",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/quarter_turn.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Horizontal - cap closed",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Horizontal - open cap for a quarter turn",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Horizontal - fully opened cap",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Vertical - cap closed",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Vertical - open cap for a quarter turn",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Vertical - fully opened cap",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Caps without filter need to be a little open so that there is gas exchange between the cells and the incubator. The flask must be placed horizontal so that cell will attached to the treated surface of the flask.",
+                "nextCompId": 711,
+                "previousCompId": 709
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 711,
+                "h2": "Thawing the cells",
+                "text_p1": "When will you check how your cells are growing after thawing?",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/round_floating_adh_cell.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "After two hours",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "In the evening of the same day",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "The next day",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "After two days",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Adherent cells need time to attach to the flask. The act of removing the flask from the incubator before they are fully attach may result in breaking the incipient bonds.",
+                "nextCompId": 711,
+                "previousCompId": 709
+            }
+        },
+        {
+            "component_type": "TransitionComponent",
+            "data": {
+                "id": 1003,
+                "nextCompId": 711,
+                "img_url": "",
+                "title": "Subculturing of cells"
+            }
+        },
+        {
+            "component_type": "ImgChoicesComponent",
+            "data": {
+                "id": 711,
+                "compTitle": "",
+                "choices": [
+                    {
+                        "nextCompId": 800,
+                        "img_url": "assets/img/HepG2.png",
+                        "title": "HepG2",
+                        "imgText": "",
+                        "link": "https://www.atcc.org/products/hb-8065"
+                    },
+                    {
+                        "nextCompId": 800,
+                        "img_url": "assets/img/A549.png",
+                        "title": "A549",
+                        "imgText": "",
+                        "link": "https://www.atcc.org/products/ccl-185"
+                    }
+                ],
+                "text_p1": "Before starting subculturing the cells",
+                "text_p2": "Which cells do you want to work with? Click on the link to explore the cell types."
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 800,
+                "h2": "Subculturing of cells",
+                "text_p1": "Check cell confluency. At was confluency should you subculture your cells?",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "50 %",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "80 %",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "100 %",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells should be in an optimal state in order to undergo trypsinization (80% confluency). At higher densities, cells are stressed and their behaviour may change, they can even mutate.",
+                "nextCompId": 801,
+                "previousCompId": 711
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 801,
+                "h2": "Subculturing of cells",
+                "text_p1": "Which of these pictures represents 80% confluency? (answers with pictures)",
+                "nextCompId": 802,
+                "previousCompId": 800,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "100% confluence means that there is no more room for cells to grow, at this state they can only start dying.",
+                "answers": [
+                    {
+                        "text": "",
+                        "isCorrect": false,
+                        "img_url": "assets/img/conf_2.png"
+                    },
+                    {
+                        "text": "",
+                        "isCorrect": true,
+                        "img_url": "assets/img/conf_1.png"
+                    },
+                    {
+                        "text": "",
+                        "isCorrect": false,
+                        "img_url": "assets/img/conf_3.png"
+                    },
+                    {
+                        "text": "",
+                        "isCorrect": false,
+                        "img_url": "assets/img/conf_4.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 802,
+                "h2": "Subculturing of cells",
+                "text_p1": "How does the medium look like?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "assets/img/med_red.png",
+                    "assets/img/med_orange.png",
+                    "assets/img/med_yellow.png"
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Still good",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Partially saturated",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Saturated",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells should be in an optimal state in order to undergo trypsinization (80% confluency). At higher densities, cells are stressed and their behaviour may change, they can even mutate.",
+                "nextCompId": 801,
+                "previousCompId": 711
+            }
         }
-
     ]
 }

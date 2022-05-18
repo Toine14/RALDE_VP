@@ -1,1 +1,59 @@
-<p>multiple-choices works!</p>
+<h2 *ngIf="data.h2"
+  class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
+  {{data.h2}}</h2>
+
+<div class="basic_component  mb-8">
+  <div class="flex justify-center">
+
+    <div class="flex flex-col  bg-slate-100 p-4">
+
+      <h3 class=' text-2xl mb-2'>{{data.text_p1}}</h3>
+
+
+      <form [formGroup]="form" (ngSubmit)="checkOrder()" novalidate>
+        <div class="flex flex-col">
+          <div *ngFor="let answer of data.answers; let i=index" class="m-1">
+            <input type="checkbox" formArrayName="selectedAnswers" [value]="answer.isCorrect"
+              (change)="onCheckboxChange($event)" />
+            {{ answer.text}}
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <button
+            class="self-start  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+            type="submit">Check your answers</button>
+          <div *ngIf="answered" class="mt-2">
+            <div *ngIf="goodAnswer"
+              class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md w-2/3">
+              <div *ngIf="data.isAnswerPictureIllustration" class="self-start">
+                <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl'
+                  class="w-full rounded-sm">
+              </div>
+              <p class="ml-4">{{data.goodAnswerText}}</p>
+            </div>
+            <div *ngIf="!goodAnswer" class="bg-red-300 border border-red-400 flex justify-center p-3 rounded-md ">
+              {{data.badAnswerText}}
+            </div>
+          </div>
+        </div>
+      </form>
+      <div *ngIf="goodAnswer">
+        <hr class="solid mt-4 mb-4">
+        <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2 mx-2">
+          <div (click)="onPreviousClick()"
+            class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
+            previous
+          </div>
+          <div (click)="onNextClick()"
+            class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
+            next
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

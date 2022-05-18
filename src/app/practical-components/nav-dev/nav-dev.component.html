@@ -1,0 +1,15 @@
+<div class="flex items-center justify-center mb-4 p-6">
+<form [formGroup]="componentForm" (ngSubmit)="submit()" class="bg-slate-100">
+ 
+    <p >
+     
+      <select formControlName="component">
+        <option [ngValue]="null" disabled>Select Component id</option>
+        <option *ngFor="let component of practicalsComp" [ngValue]="component.id">{{component.id}}</option>
+      </select>
+     
+      <button type="submit">GO</button>
+    </p>
+     
+</form>
+</div>
