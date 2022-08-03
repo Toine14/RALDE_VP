@@ -261,7 +261,10 @@
                 "nextCompId": 601,
                 "previousCompId": 500,
                 "badAnswerText": "Bad answer, please re-read your notes",
-                "goodAnswerText": "Good job: flow cabinet should be first set at full flow to ... Window should be open at one third to ensure...",
+                "goodAnswerText": "Good job: A full flow will protect cells from external contaminations and opening 1/3rd the window will allow enough air to enter the system without disturbing the laminar flow.",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],               
+                
                 "answers": [
                     {
                         "text": "half flow",
@@ -295,7 +298,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/uv.png",
+                    
                     "assets/img/uv_flow.png"
                 ],
                 "choices": [
@@ -317,7 +320,7 @@
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "This is the time needed to kill of the microbes present in the environment ",
+                "goodAnswerText": "Longer UV light times will not improve cabinet disinfection in routine cell culture cabinets. ",
                 "nextCompId": 602,
                 "previousCompId": 600
             }
@@ -329,8 +332,8 @@
                 "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Put water bath at ___°C and put in the cell culture medium and buffer solutions",
                 "text_p2": "",
-                "isPictureIllustration": false,
-                "illustrationPicturesUrls": [],
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": ["https://imgs.ralde.eu/water_bath_top.jpg"],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
                     "assets/img/water_bath_37.png"
@@ -343,18 +346,18 @@
                     },
                     {
                         "id": "ChoiceNb2",
-                        "answer": "50°C",
+                        "answer": "57°C",
                         "istrue": "false"
                     },
                     {
                         "id": "ChoiceNb3",
-                        "answer": "60°C",
+                        "answer": "67°C",
                         "istrue": "false"
                     }
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "human and mammalian cell lines should be kept at 37ºC for optimal growth, thus it is convenient that all solutions that are in contact with them are around this temperature. Overheating them can cause serious damage",
+                "goodAnswerText": "Explanation: Temperatures greater than 37ºC may result in cell death",
                 "nextCompId": 603,
                 "previousCompId": 602
             }
@@ -389,8 +392,8 @@
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "70% ethanol help in maintaining the environment sterile and clean.",
-                "nextCompId": 604,
+                "goodAnswerText": "100% coagulates membrane proteins so fast that the contaminants get inactive but do not die. 70% ethanol penetrates cell membranes slower so that it can really reach the center of the contaminants and kill them.",
+                "nextCompId": 605,
                 "previousCompId": 602
             }
         },
@@ -459,9 +462,9 @@
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "The sterility is ensured in the middle of the flow cabinet.",
+                "goodAnswerText": "Walls and objects disturb the laminar flow, therefore the best place to work is the middle of the cabinet. Moreover, the front part of the cabinet is the part with the highest contamination risk since it is the closest to the end of the laminar flow and is easily disturbed by slight movements.",
                 "nextCompId": 606,
-                "previousCompId": 604
+                "previousCompId": 603
             }
         },
         {
@@ -474,6 +477,8 @@
                 "previousCompId": 605,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Having the flow cabinet full of things will disturb he flow of the air and thus disrupt the sterile environment",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],              
                 "answers": [
                     {
                         "text": "Full of things",
@@ -548,6 +553,8 @@
                 "previousCompId": 607,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Liquid Nitrogen is dangerous and may burn your skin if little drops reach you",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],
                 "answers": [
                     {
                         "text": "Laboratory goggles",
@@ -582,6 +589,8 @@
                 "previousCompId": 703,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Fast thawing will result in greater cell viability",
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls":["https://imgs.ralde.eu/glove_cold.jpg"],
                 "answers": [
                     {
                         "text": "Bench",
@@ -608,8 +617,8 @@
                 "h2": "Thawing the cells",
                 "text_p1": "How to process thawn cells?",
                 "text_p2": "",
-                "isPictureIllustration": false,
-                "illustrationPicturesUrls": [],
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": ["https://imgs.ralde.eu/centrifuge.jpg"],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [],
                 "choices": [
@@ -646,6 +655,8 @@
                 "previousCompId": 705,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Cells are maintained in culture flasks. Cryotubes normally contain low number of cells so a T25 would keep cells closer to each other avoiding low density-related stress.",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],                
                 "answers": [
                     {
                         "text": "T25",
@@ -859,7 +870,7 @@
                 "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/round_floating_adh_cell.png"
+                    "https://imgs.ralde.eu/round_floating_adh_cell.jpg"
                 ],
                 "choices": [
                     {
@@ -969,6 +980,8 @@
                 "previousCompId": 800,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "100% confluence means that there is no more room for cells to grow, at this state they can only start dying.",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],
                 "answers": [
                     {
                         "text": "",
@@ -1030,9 +1043,43 @@
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
                 "goodAnswerText": "Cells should be in an optimal state in order to undergo trypsinization (80% confluency). At higher densities, cells are stressed and their behaviour may change, they can even mutate.",
-                "nextCompId": 801,
+                "nextCompId": 803,
                 "previousCompId": 711
             }
+        },
+        {
+            "component_type": "ReorderComponent",
+            "data":{
+                "id": 803,
+                "text_p1": "Please put these actions in the correct order",
+                "text_p2": "",
+                "badAnswerText": "Bad order : try again",
+                "badAnswerLink": "you can go to this part of the practical to get the correct answer",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 0,
+                "previousCompId": 0,
+                "choices": [
+                  {
+                    "order": 1,
+                    "answer": "Wash my hands with alcoholic solution"
+                  },
+                  {
+                    "order": 4,
+                    "answer": "Say hello to the cells"
+                  },
+                  {
+                    "order": 3,
+                    "answer": "Turn on the flow cabinet"
+            
+                  },
+                  {
+                    "order": 2,
+                    "answer": "Prepare the medium",
+                    "istrue": "false"
+                  }
+                ]
+            
+              }
         }
     ]
 }

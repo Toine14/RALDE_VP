@@ -15,6 +15,10 @@ export class QuestionImgComponent implements OnInit {
   goodAnswer: boolean = false;
   orderChecked: boolean = false;
   goodAnswerCount: number = 0;
+  isAnswerPictureIllustration: boolean = false;
+  isMoreThanOnePictureAnswer: boolean = false;
+  size1 = '20em';
+  size2 = '20em';
 
 
   constructor(fb: FormBuilder, private practicalService: BasicPracticalComponentService) {
@@ -26,6 +30,11 @@ export class QuestionImgComponent implements OnInit {
   ngOnInit(): void {    
     this.goodAnswerCount = this.howManyGoodAnswers(this.data.answers)
     console.log(this.goodAnswerCount)
+    if (this.data.isAnswerPictureIllustration) {
+      if (this.data.answerIllustrationPicturesUrls.length > 1) {
+        this.isMoreThanOnePictureAnswer = true
+      }
+    }
   }
 
 

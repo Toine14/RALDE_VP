@@ -9,6 +9,7 @@ import { ImageMarkerInfosComponent } from '../practical-components/image-marker-
 import { QuestionImgComponent } from '../practical-components/question-img/question-img.component'
 import { TransitionComponent } from '../practical-components/transition/transition.component';
 import { MultipleChoicesComponent } from '../practical-components/multiple-choices/multiple-choices.component';
+import { ReorderComponent } from '../practical-components/reorder/reorder.component';
 
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -75,6 +76,10 @@ export class BasicPracticalComponentService {
         case 'MultipleChoicesComponent':
           arrayBasicPractical.push(new BasicPracticalItem(MultipleChoicesComponent, component.data, component.data.id))
           break;
+        case 'ReorderComponent':
+            arrayBasicPractical.push(new BasicPracticalItem(ReorderComponent, component.data, component.data.id))
+            break;
+        
 
       }
 

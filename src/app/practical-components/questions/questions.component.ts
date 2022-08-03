@@ -21,7 +21,7 @@ export class QuestionsComponent implements OnInit {
   isAnswerPictureIllustration: boolean = false;
   isMoreThanOnePictureAnswer: boolean = false;
 
-  size1 = '100em';
+  size1 = '50em';
   size2 = '20em'
 
 
