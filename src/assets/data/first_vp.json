@@ -230,7 +230,7 @@
                         "x_pos": 15,
                         "y_pos": 60,
                         "isCorrect": false,
-                        "answer_text": "if you don't work under a flow cabinet you risk contamination"
+                        "answer_text": "Cell culture medium could not be prepared in the bench since it is not an sterile environment."
                     },
                     {
                         "title": "flow cabinet",
@@ -238,7 +238,7 @@
                         "x_pos": 62,
                         "y_pos": 50,
                         "isCorrect": true,
-                        "answer_text": "Working under a flow cabinet helps you to maintain the sterility of your cell cultures "
+                        "answer_text": "Cell culture medium should indeed be prepared in a sterile environment. Working under a flow cabinet helps you to maintain the sterility of your cell cultures"
                     }
                 ]
             }
@@ -1042,15 +1042,96 @@
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "Cells should be in an optimal state in order to undergo trypsinization (80% confluency). At higher densities, cells are stressed and their behaviour may change, they can even mutate.",
+                "goodAnswerText": "Explanation: Na\u2082HCO\u2083 and CO\u2082 need to be balanced in the medium so that pH stays neutral (pH 7=red). When the number of cells increases, the amount of CO\u2082 increases, too, due to their respiration. That shifts the balance to H+ production, decreasing the pH of the medium (yellow).  H\u2082O + CO\u2082 + NaHCO\u2083 \u27F7 H\u207A + Na\u207A + 2HCO\u2083\u208B",
                 "nextCompId": 803,
-                "previousCompId": 711
+                "previousCompId": 801
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 803,
+                "h2": "Subculturing of cells",
+                "text_p1": "What does it mean if you have a sudden turn of color to intense yellow in your medium?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Cells should be fine. It is a normal adjustment of pH inside the incubator",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Cells should be fine. Yellow color only means that the pH has decreased due to normal cell respiration",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Cells may not be fine. There may be a contamination inside the flask",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Sudden acidity of the medium indicate the presence of more living organisms than just the cell line. The release of CO\u2082 increases in great proportion due to the respiration of the cells and the contaminants and it leads to an intense yellow color of the medium.",
+                "nextCompId": 804,
+                "previousCompId": 802
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 804,
+                "h2": "Subculturing of cells",
+                "text_p1": "Regarding contamination, choose the right answer:",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Cells can get multiple types of contaminations at the same time.",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Cells can get multiple types of contaminations but only one at a time",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Cells can only get contaminations of bacteria and yeast but only one at a time",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Cells can only get contaminations of fungi and viruses but only one at a time",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Most microscopic organisms love complete medium and they can all contaminate at the same time",
+                "nextCompId": 805,
+                "previousCompId": 803
             }
         },
         {
             "component_type": "ReorderComponent",
             "data":{
-                "id": 803,
+                "id": 999,
                 "text_p1": "Please put these actions in the correct order",
                 "text_p2": "",
                 "badAnswerText": "Bad order : try again",

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BasicPracticalComponentService } from '../services/basic-practical-component.service';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 
@@ -18,70 +19,79 @@ export class TempComponentComponent implements OnInit {
 
   form!: FormGroup;
 
+  dragable_element!:any;
+  receptor:any=[];
+
   answered: boolean = false;
   goodAnswer: boolean = false;
   orderChecked: boolean = false;
   goodAnswerCount: number = 0;
 
-  tempdata=  {
+  tempdata = {
     "id": 706,
     "h2": "Thawing the cells",
     "text_p1": "Select the correct culture material",
     "nextCompId": 707,
     "previousCompId": 705,
-    "isAnswerPictureIllustration": true,
-    "answerIllustrationPicturesUrls": ["assets/img/t25_note_ok.png"],
+    "possible_answers": [{
+      "text": "No contamination",
+      "id": 1,
+    },{
+      "text": "Bacteria contamination",
+      "id": 2,
+    },{
+      "text": "Yeast contamination",
+      "id": 3,
+    }],
+
     "badAnswerText": "Bad answer, please re-read your notes",
     "goodAnswerText": "Cells are maintained in culture flasks. Cryotubes normally contain low number of cells so a T25 would keep cells closer to each other avoiding low density-related stress.",
-    "answers": [
-        {
-            "text": "T25",
-            "isCorrect": true,
-            
-        },
-        {
-            "text": "T75",
-            "isCorrect": false,
-            
-        },
-        {
-            "text": "6 wells plate",
-            "isCorrect": true,
-            
-        },
-        {
-            "text": "96 wells plate",
-            "isCorrect": false,
-            
-        },
-        {
-            "text": "125 ml erlenmeyer cell culture flask",
-            "isCorrect": false,
-            
-        }
-    ]
-}
- 
+    "picture_box": [
+      {
+        "img_url": "https://imgs.ralde.eu/conta_1_temp.png",
+        "expected_id": 3,
 
-    constructor(private practicalService : BasicPracticalComponentService, fb: FormBuilder) { 
-      this.form = fb.group({
-        selectedAnswers: new FormArray([])
-      });
-    }
-  
+      },
+      {
+        "img_url": "https://imgs.ralde.eu/conta_2_temp.png",
+        "expected_id": 2,
+
+      },
+      {
+        "img_url": "https://imgs.ralde.eu/conta_3_temp.png",
+        "expected_id": 1,
+
+      },
+
+    ]
+  }
+
+
+  constructor(private practicalService: BasicPracticalComponentService, fb: FormBuilder) {
+    this.form = fb.group({
+      selectedAnswers: new FormArray([])
+    });
+  }
+
 
   ngOnInit(): void {
-    this.data = this.tempdata ;
-    this.goodAnswerCount = this.howManyGoodAnswers(this.data.answers)
-    console.log(this.goodAnswerCount) 
+    this.data = this.tempdata;
+    this.dragable_element = this.data.possible_answers
+    for(let box in this.data.picture_box){
+      this.receptor.push([])
+    }
+    console.log(this.receptor)
+    
+    
 
   }
 
 
-  howManyGoodAnswers(answers: any[]) {
+ /* howManyGoodAnswers(answers: any[]) {
     return answers.filter(x => x.isCorrect).length
 
   }
+  */
 
   onCheckboxChange(event: any) {
     const selectedAnswers = (this.form.controls['selectedAnswers'] as FormArray);
@@ -123,7 +133,41 @@ export class TempComponentComponent implements OnInit {
   }
 
 
-  
+  drop(event: CdkDragDrop<any[]>, index:any) {
+
+    console.log('receptor_drop')
+    console.log(this.receptor[index])
+
+    if(this.receptor[index].length>0){
+      this.receptor[index].pop()
+    }
+    //this.receptor[index]=event.container.data
+
+
+    if (event.previousContainer === event.container) { } 
+    else {
+
+      copyArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
+  }
+
+  donorDrop(event: CdkDragDrop<any[]>){
+  //  if (event.previousContainer === event.container) { }
+  //  else {
+console.log('donor_drop')
+      copyArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    //}
+  }
+
+
 
 
 
