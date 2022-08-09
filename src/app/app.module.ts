@@ -33,6 +33,7 @@ import { QuestionImgComponent } from './practical-components/question-img/questi
 import { TransitionComponent } from './practical-components/transition/transition.component';
 import { MultipleChoicesComponent } from './practical-components/multiple-choices/multiple-choices.component';
 import { NavDevComponent } from './practical-components/nav-dev/nav-dev.component';
+import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dragdrop.component';
 
 
 
@@ -60,7 +61,8 @@ import { NavDevComponent } from './practical-components/nav-dev/nav-dev.componen
     QuestionImgComponent,
     TransitionComponent,
     MultipleChoicesComponent,
-    NavDevComponent
+    NavDevComponent,
+    ImgDragdropComponent
   ],
   imports: [
     BrowserModule,

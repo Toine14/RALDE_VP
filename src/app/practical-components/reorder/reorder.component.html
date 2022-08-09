@@ -2,13 +2,16 @@
 
     <h1 class='mt-8 text-2xl'>{{data.text_p1}}</h1>
 
-    <div class=" flex justify-center mt-8 ">
+    <div class=" flex justify-center gap-4 mt-8 ">
         <div cdkDropList class="example-list flex flex-col items-center" (cdkDropListDropped)="drop($event)">
             <div class="example-box " *ngFor="let item of data.choices" cdkDrag>
                 <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
                 {{item.answer}}
             </div>
         </div>
+        <div *ngIf="data.isPictureIllustration" class="self-start">
+            <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="w-full rounded-sm">
+          </div>
     </div>
 
     <div *ngIf="orderChecked box-border">

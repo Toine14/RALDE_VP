@@ -1,14 +1,3 @@
-<!--<video controls #videoPlayer class="center mb-10">
-        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
-
-    </video>
-
-    <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/7X8II6J-6mU" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>-->
-
-
-
 <h2 *ngIf="data.h2"
   class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
   {{data.h2}}</h2>
@@ -22,7 +11,7 @@
 
 
       <div *ngFor="let item of data.picture_box; index as i"
-        class="flex flex-col items-center gap-4 p-10 shadow-md bg-raldelightblue-300 rounded-md"
+        class="flex flex-col items-center gap-4 p-10 shadow-md bg-indigo-300 rounded-md"
         id="{{'picture_box_'+i}}">
         <span>
           <img [src]='item.img_url' alt="">
@@ -33,8 +22,7 @@
         <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="receptor[i]" [cdkDropListConnectedTo]="[]"
           class="example-list " (cdkDropListDropped)="drop($event, i)">
           <div class="flex justify-center pt-2 " *ngIf="receptor_place_holder_visibility[i]">
-            
-            <span class="border-2 p-2 border-dashed" id="{{'custom_placeholder_'+i}}">
+            <span class="border-2 p-2 border-dashed bg-raldeorange-500" id="{{'custom_placeholder_'+i}}">
               place a label among the proposals in the list
             </span>
           </div>
@@ -67,7 +55,7 @@
         </div>
         <p class="ml-4">{{data.goodAnswerText}}</p>
       </div>
-      <div *ngIf="!goodAnswer" class="bg-red-300 border border-red-400 flex justify-center p-3 rounded-md ">
+      <div *ngIf="!goodAnswer" class="bg-red-300 border border-red-400 flex justify-center p-3 rounded-md w-2/3 my-4 ">
         {{data.badAnswerText}}
       </div>
     </div>

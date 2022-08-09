@@ -543,6 +543,7 @@
                 "title": "Thawing the cells"
             }
         },
+        
         {
             "component_type": "QuestionImgComponent",
             "data": {
@@ -1128,39 +1129,343 @@
                 "previousCompId": 803
             }
         },
-        {
-            "component_type": "ReorderComponent",
+        {"component_type":"ImgDragdropComponent",
             "data":{
-                "id": 999,
-                "text_p1": "Please put these actions in the correct order",
-                "text_p2": "",
-                "badAnswerText": "Bad order : try again",
-                "badAnswerLink": "you can go to this part of the practical to get the correct answer",
-                "goodAnswerText": "Good job you can continue the practical",
-                "nextCompId": 0,
-                "previousCompId": 0,
-                "choices": [
+                "id": 805,
+                "h2": "Subculturing of cells",
+                "text_p1": "Do you have a contamination? Match the contamination type with the right picture, if applicable",
+                "nextCompId": 806,
+                "previousCompId": 804,
+                "possible_answers": [{
+                  "text": "No contamination",
+                  "id": 1
+                }, {
+                  "text": "Bacteria contamination",
+                  "id": 2
+                }, {
+                  "text": "Yeast contamination",
+                  "id": 3
+                },
+                {
+                  "text": "Fungi contamination",
+                  "id": 4
+                },
+                {
+                  "text": "No contamination but cells are dying",
+                  "id": 5
+                }
+              ],
+            
+                "badAnswerText": "Bad answer, at least one picture is bad labelled",
+                "goodAnswerText": "All pictures where matched with the correct label",
+                "picture_box": [
                   {
-                    "order": 1,
-                    "answer": "Wash my hands with alcoholic solution"
-                  },
-                  {
-                    "order": 4,
-                    "answer": "Say hello to the cells"
-                  },
-                  {
-                    "order": 3,
-                    "answer": "Turn on the flow cabinet"
+                    "img_url": "https://imgs.ralde.eu/conta_1_temp.png",
+                    "expected_id": 3
             
                   },
                   {
+                    "img_url": "https://imgs.ralde.eu/conta_2_temp.png",
+                    "expected_id": 2
+            
+                  },
+                  {
+                    "img_url": "https://imgs.ralde.eu/conta_3_temp.png",
+                    "expected_id": 1
+            
+                  }
+            
+                ]
+              }
+        },
+        {
+            "component_type": "MultipleChoicesComponent",
+            "data": {
+                "id": 806,
+                "h2": "Subculturing of cells",
+                "text_p1": "How will you proceed if you have a bacteria/yeast/fungi contamination? More than one answer may be correct",
+                "nextCompId": 807,
+                "previousCompId": 805,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                    ""
+                ],
+                "goodAnswerText": "Aerosols of all the contaminants from inside and outside the flask may contaminate the incubator/cabinet and infect other people’s flasks. Everybody should be aware of a contamination on anyone’s cells in order to keep a close eye on their cells. Medium would normally also be contaminated if cells are but it won’t show signs of contamination until much later since it is kept at 4ºC, a temperature that decreases growth of any living organism",
+                "answers": [
+                    {
+                        "text": "I’d discard the cells and disinfect the incubator if bacteria or yeast are in he flask, but I’ll only change the medium in case of fungi contamination since they are big and easy to remove",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard my cells and everybody else’s and disinfect the incubator",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard my cells and disinfect the incubator and cabinets. The rest of cells will go to a quarantine incubator",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "I’d discard the medium if I see turbidity or any kind of contamination signs inside it",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard the medium regardless",
+                        "isCorrect": true
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "ReorderComponent",
+            "data":{
+                "id": 807,
+                "text_p1": "If cells are at 80% confluency a passage should be performed. How would you do it? Order all the steps you’d take. (All steps shown may not be necessary)",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "assets/img/conf_1.png"
+                ],
+                "badAnswerText": "Bad order : try again",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 808,
+                "previousCompId": 806,
+                "choices": [
+                  {
+                    "order": 1,
+                    "answer": "Remove the medium"
+                  },
+                  {
                     "order": 2,
-                    "answer": "Prepare the medium",
-                    "istrue": "false"
+                    "answer": "Remove the medium"
+                  },
+                  {
+                    "order": 3,
+                    "answer": "Add fresh medium (37ºC) into a flask (T25 ot T75) (We can explain why one or other)"            
+                  },
+                  {
+                    "order": 4,
+                    "answer": "Add PBS (37ºC) to the flask and wash the cell monolayer"                   
+                  },
+                  {
+                    "order": 5,
+                    "answer": "Check if the cells are detached under the microscope"
+                  },
+                  {
+                    "order": 6,
+                    "answer": "Collect the cells in a tube"
+                  },
+                  {
+                    "order": 7,
+                    "answer": "If detached: add fresh medium (37ºC) on top of the trypsin"
+            
+                  },
+                  {
+                    "order": 8,
+                    "answer": "Place the cells in the incubator for 5-15 min"
+                  },
+                  {
+                    "order": 9,
+                    "answer": "Place the flask with the cells in the incubator"
+                  },
+                  {
+                    "order": 10,
+                    "answer": "Remove the PBS"
+                  },
+                  {
+                    "order": 11,
+                    "answer": "Transfer an aliquot of the cell suspension (l) to the falsk (m)"
+            
+                  },
+                  {
+                    "order": 12,
+                    "answer": "Take an aliquot to count"
                   }
                 ]
             
               }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 808,
+                "h2": "Subculturing of cells",
+                "text_p1": "How would you perform a passage if your cells are in 5 mL and you want to subculture them at 1:5 in a T75?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/under_hood.jpg"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Add 5 mL medium to the cells, transfer 3 mL to a new T75 and add 10 mL to the new flask",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Take the 5 mL of the flask and transfer them to a new T75. Then add 10 mL complete medium",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Add 10 mL complete medium to the flask and transfer 3 mL to anew T75",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Add 14 mL complete medium to a new T75 and transfer 1 mL from the original flask",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Sudden acidity of the medium indicate the presence of more living organisms than just the cell line. The release of CO\u2082 increases in great proportion due to the respiration of the cells and the contaminants and it leads to an intense yellow color of the medium.",
+                "nextCompId": 1004,
+                "previousCompId": 807
+            }
+        },
+        {
+            "component_type": "TransitionComponent",
+            "data": {
+                "id": 1004,
+                "nextCompId": 900,
+                "title": "Freezing the cells",
+                "img_url": "https://imgs.ralde.eu/frozen_cells.jpg"
+
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 900,
+                "h2": "Freezing the cells",
+                "text_p1": "Prepare reagents for cryopreservation. Choose the most appropriate answer",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/frozen_cells.jpg"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Complete growth medium supplemented with 5-10% (v/v) DMSO",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Complete growth medium containing 10% FBS",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Growth medium with 40% FBS and 10% DMSO",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "FBS with 20% of DMSO ",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells can be frozen in FBS or medium but always with a cryoprotectant such as DMSO to remove water from the inside of the cells and prevent membrane rupture after freezing. Percentages greater than 10% DMSO may result in cell death",
+                "nextCompId": 901,
+                "previousCompId": 807
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 901,
+                "h2": "Freezing the cells",
+                "text_p1": "Count the cells. How do you do it? Choose the most appropriate answer.",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/automat_counter.jpg",
+                    "https://imgs.ralde.eu/manual_counter.jpg"
+
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "I can only count them under a microscope, automatic counting leads to too many errors",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "I can only count them with an automatic counter, manual counting leads to too many errors",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Cells can be counted indistinctly under the microscope or with an automatic counter. The only difference is the price of the automatic chambers",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Both methods are valid, as long as you maintain the method used through experiments of the same type ",
+                        "istrue": "true"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells can be frozen in FBS or medium but always with a cryoprotectant such as DMSO to remove water from the inside of the cells and prevent membrane rupture after freezing. Percentages greater than 10% DMSO may result in cell death",
+                "nextCompId": 902,
+                "previousCompId": 807
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 902,
+                "h2": "Freezing the cells",
+                "text_p1": "What do you see when you use Trypan blue for cell counting?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/trypan_blue.jpg"
+                   
+
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Blue cells are the living ones",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Blue cells are the dead ones",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Blue cells have the membrane damaged.",
+                        "istrue": "true"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Trypan blue can only enter the cells if the membrane is damaged. Therefore, although damaged membranes normally result in cell death, it is not correct to say that blue cells are dead since there may be a population that is just damaged but that may recover",
+                "nextCompId": 901,
+                "previousCompId": 807
+            }
         }
     ]
 }

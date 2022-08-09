@@ -5,10 +5,6 @@ import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from '
 
 
 
-
-
-
-
 @Component({
   selector: 'app-temp-component',
   templateUrl: './temp-component.component.html',
@@ -19,8 +15,10 @@ export class TempComponentComponent implements OnInit {
 
   form!: FormGroup;
 
-  dragable_element!:any;
-  receptor:any=[];
+  dragable_element!: any;
+  receptor: any = [];
+  receptor_place_holder_visibility: boolean[] = [];
+  answer_data: any = [];
 
   answered: boolean = false;
   goodAnswer: boolean = false;
@@ -29,23 +27,32 @@ export class TempComponentComponent implements OnInit {
 
   tempdata = {
     "id": 706,
-    "h2": "Thawing the cells",
-    "text_p1": "Select the correct culture material",
+    "h2": "Subculturing of cells",
+    "text_p1": "Do you have a contamination? Match the contamination type with the right picture, if applicable",
     "nextCompId": 707,
     "previousCompId": 705,
     "possible_answers": [{
       "text": "No contamination",
       "id": 1,
-    },{
+    }, {
       "text": "Bacteria contamination",
       "id": 2,
-    },{
+    }, {
       "text": "Yeast contamination",
       "id": 3,
-    }],
+    },
+    {
+      "text": "Fungi contamination",
+      "id": 4,
+    },
+    {
+      "text": "No contamination but cells are dying",
+      "id": 5,
+    }
+  ],
 
-    "badAnswerText": "Bad answer, please re-read your notes",
-    "goodAnswerText": "Cells are maintained in culture flasks. Cryotubes normally contain low number of cells so a T25 would keep cells closer to each other avoiding low density-related stress.",
+    "badAnswerText": "Bad answer, at least one picture is bad labelled",
+    "goodAnswerText": "All pictures where matched with the correct label",
     "picture_box": [
       {
         "img_url": "https://imgs.ralde.eu/conta_1_temp.png",
@@ -77,52 +84,30 @@ export class TempComponentComponent implements OnInit {
   ngOnInit(): void {
     this.data = this.tempdata;
     this.dragable_element = this.data.possible_answers
-    for(let box in this.data.picture_box){
+    for (let box of this.data.picture_box) {
+
       this.receptor.push([])
+      this.receptor_place_holder_visibility.push(true);
+      this.answer_data.push({ "expected_id": box.expected_id, "answered_id": null })
     }
-    console.log(this.receptor)
+    console.log(this.answer_data)
+  }
+
+
+
+  checkAnswers() {
+    console.log(this.answer_data)
+    var result = true
+    this.answer_data.forEach((data:any)=> (data.expected_id == data.answered_id) ? null
+    : result=false)
+    console.log(result)
     
-    
-
-  }
-
-
- /* howManyGoodAnswers(answers: any[]) {
-    return answers.filter(x => x.isCorrect).length
-
-  }
-  */
-
-  onCheckboxChange(event: any) {
-    const selectedAnswers = (this.form.controls['selectedAnswers'] as FormArray);
-    if (event.target.checked) {
-      selectedAnswers.push(new FormControl(event.target.value));
-    } else {
-      const index = selectedAnswers.controls.findIndex(x => x.value === event.target.value);
-      selectedAnswers.removeAt(index);
+    if(result){
+      this.goodAnswer=true
     }
-  }
+    else{this.goodAnswer=false}
+    this.answered = true
 
-  checkOrder() {
-    this.answered = true;
-    const selectedAnswers = this.form.value.selectedAnswers
-    console.log(selectedAnswers)
-    let countOfTrue = 0
-    let totalTicked = 0
-    for (let answer of selectedAnswers) {
-      totalTicked++
-      if (answer === 'true') {
-        countOfTrue++
-      }
-    }
-    if (this.goodAnswerCount == countOfTrue && totalTicked == countOfTrue) {
-      this.goodAnswer = true;
-      console.log("good")
-    }
-    else {
-      console.log("bad");
-      this.goodAnswer = false;
-    }
   }
 
   onNextClick() {
@@ -133,20 +118,18 @@ export class TempComponentComponent implements OnInit {
   }
 
 
-  drop(event: CdkDragDrop<any[]>, index:any) {
+  drop(event: CdkDragDrop<any[]>, index: any) {
 
-    console.log('receptor_drop')
-    console.log(this.receptor[index])
+    this.answer_data[index].answered_id = event.previousContainer.data[event.previousIndex].id
 
-    if(this.receptor[index].length>0){
+    this.receptor_place_holder_visibility[index] = false
+
+    if (this.receptor[index].length > 0) {
       this.receptor[index].pop()
+
     }
-    //this.receptor[index]=event.container.data
-
-
-    if (event.previousContainer === event.container) { } 
+    if (event.previousContainer === event.container) { }
     else {
-
       copyArrayItem(
         event.previousContainer.data,
         event.container.data,
@@ -155,16 +138,16 @@ export class TempComponentComponent implements OnInit {
     }
   }
 
-  donorDrop(event: CdkDragDrop<any[]>){
-  //  if (event.previousContainer === event.container) { }
-  //  else {
-console.log('donor_drop')
+  donorDrop(event: CdkDragDrop<any[]>) {
+    if (event.previousContainer === event.container) { }
+    else {
+      //console.log('donor_drop')
       copyArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex);
-    //}
+    }
   }
 
 

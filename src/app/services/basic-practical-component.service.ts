@@ -10,6 +10,8 @@ import { QuestionImgComponent } from '../practical-components/question-img/quest
 import { TransitionComponent } from '../practical-components/transition/transition.component';
 import { MultipleChoicesComponent } from '../practical-components/multiple-choices/multiple-choices.component';
 import { ReorderComponent } from '../practical-components/reorder/reorder.component';
+import { ImgDragdropComponent } from '../practical-components/img-dragdrop/img-dragdrop.component';
+
 
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -79,6 +81,9 @@ export class BasicPracticalComponentService {
         case 'ReorderComponent':
             arrayBasicPractical.push(new BasicPracticalItem(ReorderComponent, component.data, component.data.id))
             break;
+        case 'ImgDragdropComponent':
+              arrayBasicPractical.push(new BasicPracticalItem(ImgDragdropComponent, component.data, component.data.id))
+              break;
         
 
       }
