@@ -2,6 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BasicPracticalComponentService } from '../services/basic-practical-component.service';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+//import * as pannellum from 'pannellum'
+
+
+
+
+
 
 
 
@@ -15,15 +21,14 @@ export class TempComponentComponent implements OnInit {
 
   form!: FormGroup;
 
-  dragable_element!: any;
-  receptor: any = [];
-  receptor_place_holder_visibility: boolean[] = [];
-  answer_data: any = [];
 
-  answered: boolean = false;
-  goodAnswer: boolean = false;
-  orderChecked: boolean = false;
-  goodAnswerCount: number = 0;
+
+
+
+
+
+
+
 
   tempdata = {
     "id": 706,
@@ -49,7 +54,7 @@ export class TempComponentComponent implements OnInit {
       "text": "No contamination but cells are dying",
       "id": 5,
     }
-  ],
+    ],
 
     "badAnswerText": "Bad answer, at least one picture is bad labelled",
     "goodAnswerText": "All pictures where matched with the correct label",
@@ -82,33 +87,54 @@ export class TempComponentComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.data = this.tempdata;
-    this.dragable_element = this.data.possible_answers
-    for (let box of this.data.picture_box) {
+    (window as any).pannellum.viewer('panorama', {
+      "type": "equirectangular",
+      "panorama": "https://imgs.ralde.eu/360_lab.jpg",
+      "autoLoad": true,
+      //"hotSpotDebug": true,
+      "hotSpots": [{
+        "pitch": -9.4,
+        "yaw": 222.6,
+        "type": "info",
+        "text": "glove box"
+      },
+      {
+        "pitch": -15.74,
+        "yaw": 90.76,
+        "type": "info",
+        "text": "centrifuge"
+      },
+      {
+        "pitch": -12.30,
+        "yaw": 52.07,
+        "type": "info",
+        "text": "water-bath"
+      },
+      {
+        "pitch": -2.79,
+        "yaw": 32.88,
+        "type": "info",
+        "text": "microscope"
+      },
+      {
+        "pitch": 2.73,
+        "yaw": -21.73,
+        "type": "info",
+        "text": "CO\u2082 incubator"
+      },
+      {
+        "pitch": -11.21,
+        "yaw": -69.24,
+        "type": "info",
+        "text": "Bio safety cabinet incubator"
+      },
 
-      this.receptor.push([])
-      this.receptor_place_holder_visibility.push(true);
-      this.answer_data.push({ "expected_id": box.expected_id, "answered_id": null })
-    }
-    console.log(this.answer_data)
+      ],
+    });
   }
 
 
 
-  checkAnswers() {
-    console.log(this.answer_data)
-    var result = true
-    this.answer_data.forEach((data:any)=> (data.expected_id == data.answered_id) ? null
-    : result=false)
-    console.log(result)
-    
-    if(result){
-      this.goodAnswer=true
-    }
-    else{this.goodAnswer=false}
-    this.answered = true
-
-  }
 
   onNextClick() {
     this.practicalService.set_component_id(this.data.nextCompId)
@@ -118,37 +144,8 @@ export class TempComponentComponent implements OnInit {
   }
 
 
-  drop(event: CdkDragDrop<any[]>, index: any) {
 
-    this.answer_data[index].answered_id = event.previousContainer.data[event.previousIndex].id
 
-    this.receptor_place_holder_visibility[index] = false
-
-    if (this.receptor[index].length > 0) {
-      this.receptor[index].pop()
-
-    }
-    if (event.previousContainer === event.container) { }
-    else {
-      copyArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
-    }
-  }
-
-  donorDrop(event: CdkDragDrop<any[]>) {
-    if (event.previousContainer === event.container) { }
-    else {
-      //console.log('donor_drop')
-      copyArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
-    }
-  }
 
 
 

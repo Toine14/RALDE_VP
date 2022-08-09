@@ -38,6 +38,7 @@ import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dr
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dr
     TableModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+ 
 
   ],
   providers: [],
