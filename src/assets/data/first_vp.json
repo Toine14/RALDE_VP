@@ -18,6 +18,7 @@
             "component_type": "ImgChoicesComponent",
             "data": {
                 "id": 1,
+                "h2": "Introduction",
                 "compTitle": "",
                 "choices": [
                     {
@@ -43,6 +44,7 @@
             "component_type": "ImgChoicesComponent",
             "data": {
                 "id": 20,
+                "h2": "Introduction",
                 "compTitle": "",
                 "choices": [
                     {
@@ -68,6 +70,7 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 200,
+                "h2": "Introduction",
                 "text_p1": "What medium is suitable for HepG2 cells ?",
                 "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
                 "isPictureIllustration": false,
@@ -107,6 +110,7 @@
             "component_type": "QuestionsComponent",
             "data": {
                 "id": 201,
+                "h2": "Introduction",
                 "text_p1": "What medium is suitable for A549 cells ?",
                 "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
                 "choices": [
@@ -142,7 +146,8 @@
             "component_type": "ImageMarkerInfosComponent",
             "data": {
                 "id": 4,
-                "img_url": "assets/img/lab.png",
+                "h2": "Introduction",
+                "img_url": "https://imgs.ralde.eu/lab.png",
                 "img_size": "",
                 "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
                 "text_p2": "(click on every single marker to continue)",
@@ -216,13 +221,14 @@
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
                 "id": 500,
-                "img_url": "assets/img/lab.png",
+                "img_url": "https://imgs.ralde.eu/lab.png",
+                "h2": "Introduction",
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
                 "nextCompId": 1001,
                 "previousCompId": 3,
-                "goodAnswerImgUrl": "assets/img/flow_cabinet.png",
+                "goodAnswerImgUrl": "https://imgs.ralde.eu/flow_cabinet.png",
                 "markers": [
                     {
                         "title": "Bench",
@@ -248,43 +254,47 @@
             "data": {
                 "id": 1001,
                 "nextCompId": 600,
-                "img_url": "assets/img/lab_min.png",
+                "img_url": "https://imgs.ralde.eu/lab_min.png",
                 "title": "Preparing the cell culture room/conditions "
             }
         },
         {
-            "component_type": "QuestionImgComponent",
+            "component_type": "MultipleChoicesComponent",
             "data": {
                 "id": 600,
                 "h2": "Preparing the cell culture room/conditions ",
-                "text_p1": "Start the flow cabinet",
+                "text_p1": "Start the flow cabinet (more than one answer possible)",
                 "nextCompId": 601,
                 "previousCompId": 500,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Good job: A full flow will protect cells from external contaminations and opening 1/3rd the window will allow enough air to enter the system without disturbing the laminar flow.",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/third_open.png"
+                ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls":[],               
                 
                 "answers": [
                     {
                         "text": "half flow",
-                        "isCorrect": false,
-                        "img_url": "assets/img/half_flow.png"
+                        "isCorrect": false
+                        
                     },
                     {
                         "text": "full flow",
-                        "isCorrect": true,
-                        "img_url": "assets/img/full_flow.png"
+                        "isCorrect": true
+                        
                     },
                     {
                         "text": "open the window till half-way",
-                        "isCorrect": false,
-                        "img_url": "assets/img/half_open.png"
+                        "isCorrect": false
+                        
                     },
                     {
                         "text": "open window about one third",
-                        "isCorrect": true,
-                        "img_url": "assets/img/third_open.png"
+                        "isCorrect": true
+                        
                     }
                 ]
             }
@@ -294,12 +304,12 @@
             "data": {
                 "id": 601,
                 "h2": "Preparing the cell culture room/conditions ",
-                "text_p1": "How long should the UV lamp be left on for ?",
+                "text_p1": "Switch on UV-lamp for",
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
                     
-                    "assets/img/uv_flow.png"
+                    "https://imgs.ralde.eu/uv_on_cabinet.png"
                 ],
                 "choices": [
                     {
@@ -333,10 +343,10 @@
                 "text_p1": "Put water bath at ___°C and put in the cell culture medium and buffer solutions",
                 "text_p2": "",
                 "isPictureIllustration": true,
-                "illustrationPicturesUrls": ["https://imgs.ralde.eu/water_bath_top.jpg"],
+                "illustrationPicturesUrls": ["https://imgs.ralde.eu/water_bath.png"],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/water_bath_37.png"
+                    "https://imgs.ralde.eu/water_bath_37.png"
                 ],
                 "choices": [
                     {
@@ -371,7 +381,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/alcool.png"
+                    "https://imgs.ralde.eu/alcool.png"
                 ],
                 "choices": [
                     {
@@ -406,7 +416,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/alcool.png"
+                    "https://imgs.ralde.eu/alcool.png"
                 ],
                 "choices": [
                     {
@@ -439,9 +449,11 @@
                 "h2": "Preparing the cell culture room/conditions ",
                 "text_p1": "Select the correct position to work in the flow cabinet",
                 "text_p2": "",
-                "isPictureIllustration": true,
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls":["https://imgs.ralde.eu/under_hood.png"], 
+                "isPictureIllustration": false,
                 "illustrationPicturesUrls": [
-                    "assets/img/alcool.png"
+                    
                 ],
                 "choices": [
                     {
@@ -483,12 +495,12 @@
                     {
                         "text": "Full of things",
                         "isCorrect": false,
-                        "img_url": "assets/img/full_thing.png"
+                        "img_url": "https://imgs.ralde.eu/full_thing.png"
                     },
                     {
                         "text": "The things we need plus a container/s to put the 'garbage', tips",
                         "isCorrect": true,
-                        "img_url": "assets/img/right_thing.png"
+                        "img_url": "https://imgs.ralde.eu/right_thing.png"
                     }
                 ]
             }
@@ -504,7 +516,7 @@
                 "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/incub.png"
+                    "https://imgs.ralde.eu/incub.png"
                 ],
                 "choices": [
                     {
@@ -539,8 +551,100 @@
             "component_type": "TransitionComponent",
             "data": {
                 "id": 1002,
-                "nextCompId": 703,
+                "nextCompId": 70001,
                 "title": "Thawing the cells"
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 70001,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Prepare everything you need for thawing the cells. More than one answer is correct. More than one answer may be correct",
+                "nextCompId": 70002,
+                "previousCompId": 607,
+                "badAnswerText": "Bad answer, please re-read your notes",
+                "goodAnswerText": "Cell thawing should be fast, everything that will be needed should already be inside the cabinet. You’ll need warm medium and a tube to remove the cryoprotectant and the micropipette to transfer the cells and the medium. Besides, everything that will enter the cabinet will need to be first sprayed with ethanol.",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":[],              
+                "answers": [
+                    {
+                        "text": "Place medium in the water bath",
+                        "isCorrect": true,
+                        "img_url": "https://imgs.ralde.eu/medium_bottle.png"
+                    },
+                    {
+                        "text": "Place a sterile tube in a rack inside the cabinet",
+                        "isCorrect": true,
+                        "img_url": "https://imgs.ralde.eu/medium_bottle.png"
+                    },
+                    {
+                        "text": "Place micropipette and pipette tips inside the cabinet",
+                        "isCorrect": true,
+                        "img_url": "https://imgs.ralde.eu/micropipette_tips.png"
+                    },
+                    {
+                        "text": "Place FBS in the water bath",
+                        "isCorrect": false,
+                        "img_url": "https://imgs.ralde.eu/fbs_bottle.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "ImageMarkerChoiceComponent",
+            "data": {
+                "id": 70002,
+                "h2": "Thawing the cells",
+                "img_url": "https://imgs.ralde.eu/lab.png",
+                "img_size": "",
+                "text_p1": "Where to get the cells?",
+                "text_p2": "",
+                "nextCompId": 703,
+                "previousCompId": 70001,
+                "goodAnswerImgUrl": "https://imgs.ralde.eu/cell_storage.png",
+                "markers": [
+                    {
+                        "title": "Liquid nitrogen tank",
+                        "text": "",
+                        "x_pos": 12,
+                        "y_pos": 80,
+                        "isCorrect": true,
+                        "answer_text": "Temperatures warmer than 135ºC result in cell death and increase contamination risk"
+                    },
+                    {
+                        "title": "Lab closet",
+                        "text": "",
+                        "x_pos": 35,
+                        "y_pos": 65,
+                        "isCorrect": false,
+                        "answer_text": "Lab closet is not suitable for cells storage"
+                    },
+                    {
+                        "title": "flow cabinet",
+                        "text": "",
+                        "x_pos": 62,
+                        "y_pos": 50,
+                        "isCorrect": false,
+                        "answer_text": "Flow cabinet is not the place to store cells"
+                    },
+                    {
+                        "title": "Incubator",
+                        "text": "",
+                        "x_pos": 75,
+                        "y_pos": 50,
+                        "isCorrect": false,
+                        "answer_text": "Incubator is not suitable for long-term storage of cells"
+                    },
+                    {
+                        "title": "fridge",
+                        "text": "",
+                        "x_pos": 85,
+                        "y_pos": 50,
+                        "isCorrect": false,
+                        "answer_text": "Fridge is not the place to store cells"
+                    }
+                ]
             }
         },
         
@@ -560,22 +664,22 @@
                     {
                         "text": "Laboratory goggles",
                         "isCorrect": false,
-                        "img_url": "assets/img/lab_goggles.png"
+                        "img_url": "https://imgs.ralde.eu/lab_goggles.png"
                     },
                     {
                         "text": "Face shield",
                         "isCorrect": true,
-                        "img_url": "assets/img/face_shield.png"
+                        "img_url": "https://imgs.ralde.eu/face_shield.png"
                     },
                     {
                         "text": "Low temperature gloves",
                         "isCorrect": true,
-                        "img_url": "assets/img/low_temp_gloves.png"
+                        "img_url": "https://imgs.ralde.eu/low_temp_gloves.png"
                     },
                     {
                         "text": "Lab coat",
                         "isCorrect": true,
-                        "img_url": "assets/img/lab_coat.png"
+                        "img_url": "https://imgs.ralde.eu/lab_coat.png"
                     }
                 ]
             }
@@ -591,22 +695,22 @@
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "Fast thawing will result in greater cell viability",
                 "isAnswerPictureIllustration": true,
-                "answerIllustrationPicturesUrls":["https://imgs.ralde.eu/glove_cold.jpg"],
+                "answerIllustrationPicturesUrls":["https://imgs.ralde.eu/glove.png"],
                 "answers": [
                     {
                         "text": "Bench",
                         "isCorrect": false,
-                        "img_url": "assets/img/lab_min.png"
+                        "img_url": "https://imgs.ralde.eu/lab_min.png"
                     },
                     {
                         "text": "Incubator",
                         "isCorrect": false,
-                        "img_url": "assets/img/incub.png"
+                        "img_url": "https://imgs.ralde.eu/incub.png"
                     },
                     {
                         "text": "Water bath",
                         "isCorrect": true,
-                        "img_url": "assets/img/water_bath_37.png"
+                        "img_url": "https://imgs.ralde.eu/water_bath_37.png"
                     }
                 ]
             }
@@ -619,7 +723,7 @@
                 "text_p1": "How to process thawn cells?",
                 "text_p2": "",
                 "isPictureIllustration": true,
-                "illustrationPicturesUrls": ["https://imgs.ralde.eu/centrifuge.jpg"],
+                "illustrationPicturesUrls": ["https://imgs.ralde.eu/centrifuge.png"],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [],
                 "choices": [
@@ -662,27 +766,27 @@
                     {
                         "text": "T25",
                         "isCorrect": true,
-                        "img_url": "assets/img/T25.png"
+                        "img_url": "https://imgs.ralde.eu/T25.png"
                     },
                     {
                         "text": "T75",
                         "isCorrect": false,
-                        "img_url": "assets/img/T75.png"
+                        "img_url": "https://imgs.ralde.eu/T75.png"
                     },
                     {
                         "text": "6 wells plate",
                         "isCorrect": false,
-                        "img_url": "assets/img/6_wells.png"
+                        "img_url": "https://imgs.ralde.eu/6_wells.png"
                     },
                     {
                         "text": "96 wells plate",
                         "isCorrect": false,
-                        "img_url": "assets/img/96_wells.png"
+                        "img_url": "https://imgs.ralde.eu/95_wells.png"
                     },
                     {
                         "text": "125 ml erlenmeyer cell culture flask",
                         "isCorrect": false,
-                        "img_url": "assets/img/125_erlen.png"
+                        "img_url": "https://imgs.ralde.eu/125_erlen.png"
                     }
                 ]
             }
@@ -729,9 +833,13 @@
                 "nextCompId": 709,
                 "previousCompId": 707,
                 "badAnswerText": "Bad answer, please re-read your notes",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                    ""
+                ],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/t25_note_ok.png"
+                    "https://imgs.ralde.eu/t25_note_ok.png"
                 ],
                 "goodAnswerText": "The type of medium is cell-line specific so it is sufficient to just write the cell type, cell concentration is not necessary for adherent cell maintenance, volume of medium is the same for every flask size (i.e., 5 mL for T25)",
                 "answers": [
@@ -777,7 +885,7 @@
                 "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/incub.png"
+                    "https://imgs.ralde.eu/incub.png"
                 ],
                 "choices": [
                     {
@@ -819,7 +927,7 @@
                 "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/quarter_turn.png"
+                    "https://imgs.ralde.eu/quarter_turn.png"
                 ],
                 "choices": [
                     {
@@ -871,7 +979,7 @@
                 "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/round_floating_adh_cell.jpg"
+                    "https://imgs.ralde.eu/round_floating_adh.png"
                 ],
                 "choices": [
                     {
@@ -898,15 +1006,15 @@
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
                 "goodAnswerText": "Adherent cells need time to attach to the flask. The act of removing the flask from the incubator before they are fully attach may result in breaking the incipient bonds.",
-                "nextCompId": 711,
-                "previousCompId": 709
+                "nextCompId": 1003,
+                "previousCompId": 710
             }
         },
         {
             "component_type": "TransitionComponent",
             "data": {
                 "id": 1003,
-                "nextCompId": 711,
+                "nextCompId": 8000,
                 "img_url": "",
                 "title": "Subculturing of cells"
             }
@@ -914,7 +1022,7 @@
         {
             "component_type": "ImgChoicesComponent",
             "data": {
-                "id": 711,
+                "id": 8000,
                 "compTitle": "",
                 "choices": [
                     {
@@ -987,22 +1095,22 @@
                     {
                         "text": "",
                         "isCorrect": false,
-                        "img_url": "assets/img/conf_2.png"
+                        "img_url": "https://imgs.ralde.eu/conf_2.png"
                     },
                     {
                         "text": "",
                         "isCorrect": true,
-                        "img_url": "assets/img/conf_1.png"
+                        "img_url": "https://imgs.ralde.eu/conf_1.png"
                     },
                     {
                         "text": "",
                         "isCorrect": false,
-                        "img_url": "assets/img/conf_3.png"
+                        "img_url": "https://imgs.ralde.eu/conf_3.png"
                     },
                     {
                         "text": "",
                         "isCorrect": false,
-                        "img_url": "assets/img/conf_4.png"
+                        "img_url": "https://imgs.ralde.eu/conf_4.png"
                     }
                 ]
             }
@@ -1016,13 +1124,13 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/med_yellow.png"
+                    "https://imgs.ralde.eu/med_yellow.png"
                 ],
                 "isAnswerPictureIllustration": true,
                 "answerIllustrationPicturesUrls": [
-                    "assets/img/med_red.png",
-                    "assets/img/med_orange.png",
-                    "assets/img/med_yellow.png"
+                    "https://imgs.ralde.eu/med_red.png",
+                    "https://imgs.ralde.eu/med_orange.png",
+                    "https://imgs.ralde.eu/med_yellow.png"
                 ],
                 "choices": [
                     {
@@ -1057,7 +1165,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/med_yellow.png"
+                    "https://imgs.ralde.eu/med_yellow.png"
                 ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [
@@ -1095,7 +1203,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/med_yellow.png"
+                    "https://imgs.ralde.eu/med_yellow.png"
                 ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [
@@ -1157,7 +1265,7 @@
               ],
             
                 "badAnswerText": "Bad answer, at least one picture is bad labelled",
-                "goodAnswerText": "All pictures where matched with the correct label",
+                "goodAnswerText": "All pictures were matched with the correct label",
                 "picture_box": [
                   {
                     "img_url": "https://imgs.ralde.eu/conta_1_temp.png",
@@ -1187,6 +1295,10 @@
                 "nextCompId": 807,
                 "previousCompId": 805,
                 "badAnswerText": "Bad answer, please re-read your notes",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                    ""
+                ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [
                     ""
@@ -1224,61 +1336,56 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "assets/img/conf_1.png"
+                    "https://imgs.ralde.eu/conf_1.png"
                 ],
                 "badAnswerText": "Bad order : try again",
                 "goodAnswerText": "Good job you can continue the practical",
                 "nextCompId": 808,
                 "previousCompId": 806,
                 "choices": [
+
                   {
                     "order": 1,
                     "answer": "Remove the medium"
                   },
                   {
                     "order": 2,
-                    "answer": "Remove the medium"
-                  },
-                  {
-                    "order": 3,
                     "answer": "Add fresh medium (37ºC) into a flask (T25 ot T75) (We can explain why one or other)"            
                   },
                   {
-                    "order": 4,
+                    "order": 3,
                     "answer": "Add PBS (37ºC) to the flask and wash the cell monolayer"                   
                   },
                   {
-                    "order": 5,
+                    "order": 4,
                     "answer": "Check if the cells are detached under the microscope"
                   },
                   {
-                    "order": 6,
+                    "order": 5,
                     "answer": "Collect the cells in a tube"
                   },
                   {
-                    "order": 7,
-                    "answer": "If detached: add fresh medium (37ºC) on top of the trypsin"
-            
+                    "order": 6,
+                    "answer": "If detached: add fresh medium (37ºC) on top of the trypsin"            
                   },
                   {
-                    "order": 8,
+                    "order": 7,
                     "answer": "Place the cells in the incubator for 5-15 min"
                   },
                   {
-                    "order": 9,
+                    "order": 8,
                     "answer": "Place the flask with the cells in the incubator"
                   },
                   {
-                    "order": 10,
+                    "order": 9,
                     "answer": "Remove the PBS"
                   },
                   {
-                    "order": 11,
-                    "answer": "Transfer an aliquot of the cell suspension (l) to the falsk (m)"
-            
+                    "order": 10,
+                    "answer": "Transfer an aliquot of the cell suspension (l) to the falsk (m)"            
                   },
                   {
-                    "order": 12,
+                    "order": 11,
                     "answer": "Take an aliquot to count"
                   }
                 ]
@@ -1294,7 +1401,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/under_hood.jpg"
+                    "https://imgs.ralde.eu/under_hood.png"
                 ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [
@@ -1334,7 +1441,7 @@
                 "id": 1004,
                 "nextCompId": 900,
                 "title": "Freezing the cells",
-                "img_url": "https://imgs.ralde.eu/frozen_cells.jpg"
+                "img_url": "https://imgs.ralde.eu/cell_storage.png"
 
             }
         },
@@ -1347,7 +1454,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/frozen_cells.jpg"
+                    "https://imgs.ralde.eu/cell_storage.png"
                 ],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [
@@ -1390,8 +1497,8 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/automat_counter.jpg",
-                    "https://imgs.ralde.eu/manual_counter.jpg"
+                    "https://imgs.ralde.eu/automat_counter.png",
+                    "https://imgs.ralde.eu/manual_counter.png"
 
                 ],
                 "isAnswerPictureIllustration": false,
@@ -1435,7 +1542,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/trypan_blue.jpg"
+                    "https://imgs.ralde.eu/trypan_square.png"
                    
 
                 ],
@@ -1463,8 +1570,184 @@
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
                 "goodAnswerText": "Trypan blue can only enter the cells if the membrane is damaged. Therefore, although damaged membranes normally result in cell death, it is not correct to say that blue cells are dead since there may be a population that is just damaged but that may recover",
-                "nextCompId": 901,
-                "previousCompId": 807
+                "nextCompId": 903,
+                "previousCompId": 901
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 903,
+                "h2": "Freezing the cells",
+                "text_p1": "What would be the result of this counting?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/cell_count_micro.png"
+                   
+
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "160.000 cells/mL",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "170.000 cells/mL",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "320.000 cells/mL",
+                        "istrue": "true"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "The blue cell is damaged and should not be counted as a healthy one. Since there has been a 1:2 dilution with trypan blue, the scoring has to be multiplied by 2. (16 cells \u00d7 2 = 32 cells. 32 cells \u00d7  10\u2074 cells/mL = 320.000 cells/mL",
+                "nextCompId": 904,
+                "previousCompId": 902
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 904,
+                "h2": "Freezing the cells",
+                "text_p1": "How to mix cells with freezing medium. Choose the most appropriate answer",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                    
+                   
+
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "First mix with plain medium and then gently add medium with 10% of DMSO while mixing",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Prepare complete growth medium with 5-10% DMSO beforehand and then resuspend the pellet in it",
+                        "istrue": "true"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Prepare growth medium with 40% FBS, 10% DMSO beforehand and then resuspend the pellet in it.",
+                        "istrue": "false"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "DMSO should not be added directly on top of the cells with medium since each drop of it will kill the cells it touches until it dissolves",
+                "nextCompId": 905,
+                "previousCompId": 903
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 905,
+                "h2": "Freezing the cells",
+                "text_p1": "How to freeze the cells",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/cryobox.png"
+                   
+
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Place them at -80°C as quickly as possible",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "Snap freeze in liquid nitrogen",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Slow freeze in polystyrene box (wall at least 1cm thick) in -20°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "Slow freeze in polystyrene box (wall at least 5mm thick) in -80°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb5",
+                        "answer": "Slow freeze in polystyrene box (wall at least 1cm thick) in -80°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb6",
+                        "answer": "Slow freeze in Mr Frosty container containing isopropanol",
+                        "istrue": "true"
+                    }
+
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Isopropanol decreases 1ºC/hour after putting it in the freezer. Freezing in a Mr. Frosty results in a slow freezing procedure that increases cell surviving",
+                "nextCompId": 906,
+                "previousCompId": 903
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 906,
+                "h2": "Freezing the cells",
+                "text_p1": "Once frozen, cells can be stored at ___°C for reculturing at later point",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                                     
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "-20°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "-80°C",
+                        "istrue": "false"
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "\u2264 -130°C",
+                        "istrue": "true"
+                    }        
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Temperatures above 130ºC for long term storage may result in cell death",
+                "nextCompId": 0,
+                "previousCompId": 905
             }
         }
     ]

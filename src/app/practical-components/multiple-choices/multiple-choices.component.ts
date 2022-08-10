@@ -17,6 +17,7 @@ export class MultipleChoicesComponent implements OnInit {
   goodAnswer: boolean = false;
   orderChecked: boolean = false;
   goodAnswerCount: number = 0;
+  isPictureIllustration: boolean = false;
 
   constructor(private practicalService : BasicPracticalComponentService, fb: FormBuilder) {
     this.form = fb.group({
@@ -26,6 +27,7 @@ export class MultipleChoicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.goodAnswerCount = this.howManyGoodAnswers(this.data.answers)
+    this.isPictureIllustration = this.data.isPictureIllustration
   }
 
   howManyGoodAnswers(answers: any[]) {

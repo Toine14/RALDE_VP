@@ -15,18 +15,18 @@ export class CategoriesComponent implements OnInit {
   cards = [{
     title: "Biology",
     img_src: "./../../assets/img/bio.png",
-    text: "",
+    text: "Explore all the virtual practicals in biology field",
     nav_to:"/practicals/1"
   }, {
     title: "Physics",
     img_src: "./../../assets/img/phy.png",
-    text:"",
+    text:"Explore all the virtual practicals in physic field",
     nav_to: "/practicals/2",
   },
   {
     title: "Chemistry",
     img_src: "./../../assets/img/chemistry.png",
-    text:"",
+    text:"Explore all the virtual practicals in chemistry field",
     nav_to: "/practicals/3",
   },
 ]

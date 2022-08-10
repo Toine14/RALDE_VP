@@ -11,7 +11,7 @@
 
 
       <div *ngFor="let item of data.picture_box; index as i"
-        class="flex flex-col items-center gap-4 p-10 shadow-md bg-indigo-300 rounded-md"
+        class="flex flex-col items-center gap-4 p-10 shadow-md bg-slate-300 rounded-md"
         id="{{'picture_box_'+i}}">
         <span>
           <img [src]='item.img_url' alt="">
@@ -22,7 +22,7 @@
         <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="receptor[i]" [cdkDropListConnectedTo]="[]"
           class="example-list " (cdkDropListDropped)="drop($event, i)">
           <div class="flex justify-center pt-2 " *ngIf="receptor_place_holder_visibility[i]">
-            <span class="border-2 p-2 border-dashed bg-raldeorange-500" id="{{'custom_placeholder_'+i}}">
+            <span class="border-2 p-2 border-dashed bg-raldeblue-100" id="{{'custom_placeholder_'+i}}">
               place a label among the proposals in the list
             </span>
           </div>

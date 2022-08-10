@@ -2,10 +2,10 @@
   class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
   {{data.h2}}</h2>
 
-<div class="basic_component  mb-8">
+<div class="basic_component  mb-8 min-w-full">
   <div class="flex justify-center">
 
-    <div class="flex flex-col  bg-slate-100 p-4">
+    <div class="flex flex-col  bg-slate-100 p-4 ">
 
       <h3 class=' text-2xl mb-2'>{{data.text_p1}}</h3>
 
@@ -17,14 +17,20 @@
               (change)="onCheckboxChange($event)" />
             {{ answer.text}}
           </div>
+
+          <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-start">
+            <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-9/12">
+        </div>
+
+
         </div>
         <div class="flex flex-col">
           <button
             class="self-start  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
             type="submit">Check your answers</button>
-          <div *ngIf="answered" class="mt-2">
+          <div *ngIf="answered" class="mt-2 w-1/2">
             <div *ngIf="goodAnswer"
-              class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md w-2/3">
+              class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md ">
               <div *ngIf="data.isAnswerPictureIllustration" class="self-start">
                 <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl'
                   class="w-full rounded-sm">

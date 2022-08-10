@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Columns, Config, DefaultConfig } from 'ngx-easy-table';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-practical-list',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./practical-list.component.scss']
 })
 export class PracticalListComponent implements OnInit {
-  constructor(private dataservice : DataService, private router: Router) { }
+  constructor(private dataservice : DataService, private router: Router, private route: ActivatedRoute) { }
   @ViewChild('detailsTemplate') detailsTemplateRef: TemplateRef<any> | undefined;
 
 
@@ -22,23 +23,48 @@ export class PracticalListComponent implements OnInit {
     title: 'Animal cell culture intro',
     field: 'cellular biology',
     creator: 'RALDE team',
-    description: 'full description of the cell culture virtual practical',
+    description: 'In this virtual tp we will explore the different steps required to grow a mammalian cell strain',
     id:1
   },
-  {
+/*  {
     title: 'fish dissection',
     field: 'animal biology',
     creator: 'RALDE team',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore',
     id:2
-  }];
+  }*/
+];
+
+  public phys_vp=[];
+  public chem_vp=[];
+
+  public table_data!:any;
 
   public isOneSelected: boolean = false;
   public placeHolderText: string ='Please Select a virtual practical in the bellow table'
 
-
+  vp_categories_id! :number;
 
   ngOnInit(): void {
+
+    var route_id= this.route.snapshot.paramMap.get('practicalid');
+    this.vp_categories_id= Number(route_id)
+
+    switch (this.vp_categories_id) {
+      case 1:
+        this.table_data = this.vp
+        break;
+      case 2:
+        this.table_data = this.phys_vp
+        break;
+      case 3:
+        this.table_data=this.chem_vp
+        break;
+      default:
+        this.table_data=this.vp} 
+      
+
+
     this.configuration = { ...DefaultConfig };
     this.configuration.searchEnabled = true;
     this.configuration.selectRow = true;

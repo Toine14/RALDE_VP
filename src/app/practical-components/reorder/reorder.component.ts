@@ -25,8 +25,11 @@ export class ReorderComponent implements OnInit {
   orderChecked: boolean = false;
 
   ngOnInit(): void {
-
   }
+
+  constructor(private practicalService : BasicPracticalComponentService) { 
+    };
+   
 
   drop(event: CdkDragDrop<BasicToSortItem[]>) { moveItemInArray(this.data.choices, event.previousIndex, event.currentIndex); 
   this.orderChecked=false;
@@ -43,6 +46,14 @@ export class ReorderComponent implements OnInit {
       }
       this.orderChecked=true;
     }
+  }
+
+
+  onNextClick() {
+    this.practicalService.set_component_id(this.data.nextCompId)
+  }
+  onPreviousClick() {
+    this.practicalService.set_component_id(this.data.previousCompId)
   }
 
 }
