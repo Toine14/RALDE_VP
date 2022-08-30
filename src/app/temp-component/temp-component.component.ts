@@ -90,7 +90,7 @@ export class TempComponentComponent implements OnInit {
     (window as any).pannellum.viewer('panorama', {
       "type": "equirectangular",
       "panorama": "https://imgs.ralde.eu/360_lab.jpg",
-      "autoLoad": true,
+      "autoLoad": false,
       //"hotSpotDebug": true,
       "hotSpots": [{
         "pitch": -9.4,

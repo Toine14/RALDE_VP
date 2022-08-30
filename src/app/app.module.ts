@@ -34,6 +34,7 @@ import { TransitionComponent } from './practical-components/transition/transitio
 import { MultipleChoicesComponent } from './practical-components/multiple-choices/multiple-choices.component';
 import { NavDevComponent } from './practical-components/nav-dev/nav-dev.component';
 import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dragdrop.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -63,7 +64,8 @@ import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dr
     TransitionComponent,
     MultipleChoicesComponent,
     NavDevComponent,
-    ImgDragdropComponent
+    ImgDragdropComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
