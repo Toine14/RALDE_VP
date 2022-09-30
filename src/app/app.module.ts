@@ -35,6 +35,8 @@ import { MultipleChoicesComponent } from './practical-components/multiple-choice
 import { NavDevComponent } from './practical-components/nav-dev/nav-dev.component';
 import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dragdrop.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MenuImgComponent } from './practical-components/menu-img/menu-img.component';
+import { ThreeSixtyComponent } from './practical-components/three-sixty/three-sixty.component';
 
 
 
@@ -65,7 +67,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     MultipleChoicesComponent,
     NavDevComponent,
     ImgDragdropComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    MenuImgComponent,
+    ThreeSixtyComponent
   ],
   imports: [
     BrowserModule,

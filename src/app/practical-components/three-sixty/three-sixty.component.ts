@@ -1,34 +1,17 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BasicPracticalComponentService } from '../services/basic-practical-component.service';
-import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
-//import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-//import * as pannellum from 'pannellum'
-
-
-
-
-
-
-
+import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
+//import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-temp-component',
-  templateUrl: './temp-component.component.html',
-  styleUrls: ['./temp-component.component.scss'],
+  selector: 'app-three-sixty',
+  templateUrl: './three-sixty.component.html',
+  styleUrls: ['./three-sixty.component.scss']
 })
-export class TempComponentComponent implements OnInit {
+export class ThreeSixtyComponent implements OnInit {
+
+  constructor(private practicalService: BasicPracticalComponentService) { }
+
   @Input() data: any
-
-  form!: FormGroup;
-
-
-
-
-
-
-
-
-
 
   tempdata = {
     "id": 706,
@@ -78,14 +61,6 @@ export class TempComponentComponent implements OnInit {
     ]
   }
 
-
-  constructor(private practicalService: BasicPracticalComponentService, fb: FormBuilder) {
-    this.form = fb.group({
-      selectedAnswers: new FormArray([])
-    });
-  }
-
-
   ngOnInit(): void {
     (window as any).pannellum.viewer('panorama', {
       "type": "equirectangular",
@@ -134,30 +109,11 @@ export class TempComponentComponent implements OnInit {
     });
   }
 
-
-
-
   onNextClick() {
     this.practicalService.set_component_id(this.data.nextCompId)
   }
   onPreviousClick() {
     this.practicalService.set_component_id(this.data.previousCompId)
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
