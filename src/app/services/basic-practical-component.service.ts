@@ -11,6 +11,7 @@ import { TransitionComponent } from '../practical-components/transition/transiti
 import { MultipleChoicesComponent } from '../practical-components/multiple-choices/multiple-choices.component';
 import { ReorderComponent } from '../practical-components/reorder/reorder.component';
 import { ImgDragdropComponent } from '../practical-components/img-dragdrop/img-dragdrop.component';
+import { MenuImgComponent } from '../practical-components/menu-img/menu-img.component';
 
 
 import { BehaviorSubject } from 'rxjs';
@@ -79,12 +80,15 @@ export class BasicPracticalComponentService {
           arrayBasicPractical.push(new BasicPracticalItem(MultipleChoicesComponent, component.data, component.data.id))
           break;
         case 'ReorderComponent':
-            arrayBasicPractical.push(new BasicPracticalItem(ReorderComponent, component.data, component.data.id))
-            break;
+          arrayBasicPractical.push(new BasicPracticalItem(ReorderComponent, component.data, component.data.id))
+          break;
         case 'ImgDragdropComponent':
-              arrayBasicPractical.push(new BasicPracticalItem(ImgDragdropComponent, component.data, component.data.id))
-              break;
-        
+          arrayBasicPractical.push(new BasicPracticalItem(ImgDragdropComponent, component.data, component.data.id))
+          break;
+        case 'MenuImgComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(MenuImgComponent, component.data, component.data.id))
+          break;
+
 
       }
 

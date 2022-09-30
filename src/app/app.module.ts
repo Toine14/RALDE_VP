@@ -37,6 +37,8 @@ import { ImgDragdropComponent } from './practical-components/img-dragdrop/img-dr
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MenuImgComponent } from './practical-components/menu-img/menu-img.component';
 import { ThreeSixtyComponent } from './practical-components/three-sixty/three-sixty.component';
+import { VideoComponent } from './practical-components/video/video.component';
+import { InfoLinksComponent } from './practical-components/info-links/info-links.component';
 
 
 
@@ -69,7 +71,9 @@ import { ThreeSixtyComponent } from './practical-components/three-sixty/three-si
     ImgDragdropComponent,
     PagenotfoundComponent,
     MenuImgComponent,
-    ThreeSixtyComponent
+    ThreeSixtyComponent,
+    VideoComponent,
+    InfoLinksComponent
   ],
   imports: [
     BrowserModule,

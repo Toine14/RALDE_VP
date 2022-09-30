@@ -1,0 +1,36 @@
+{
+    "title": "Mammalian cell culture virtual practical",
+    "components": [
+        {
+            "component_type": "StartComponent",
+            "data": {
+                "id": 0,
+                "aims": "to learn culture cell basics",
+                "creator": "RALDE team",
+                "text_p1": "This virtuel practical aims to teach you the basics of cell culture. It is composed of a set of interactive elements that will introduce you to the different steps and knowledge required to master this field of expertise.",
+                "text_p2": "You will have to interact with the different components of this VP",
+                "text_p3": "",
+                "nextCompId": 1,
+                "previousCompId": 0
+            }
+        },
+        {
+            "component_type": "MenuImgComponent",
+            "data": {
+                "id": 1,
+                "h2": "",
+                "text_p1": "",
+                "menu_items": [{ "title": "Exploring the cell culture lab ", "img_src": "https://imgs.ralde.eu/lab_compressedx500.png", "nextCompId": 20 }, { "title": "Cells type & Medium", "img_src": "https://imgs.ralde.eu/menu_cell.png", "nextCompId": 30 }, { "title": "Thawing and freezing the cells", "img_src": "https://imgs.ralde.eu/to_froze_cells.png", "nextCompId": 40 }, { "title": "Subculturing the cells", "img_src": "https://imgs.ralde.eu/under_hood.png", "nextCompId": 50 }]
+                }
+        },
+        {
+            "component_type": "TransitionComponent",
+            "data": {
+                "id": 20,
+                "nextCompId": 21,
+                "img_url": "https://imgs.ralde.eu/lab_min.png",
+                "title": "Exploring the cell culture lab"
+            }
+        }
+    ]
+}
