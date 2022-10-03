@@ -20,8 +20,29 @@
                 "id": 1,
                 "h2": "",
                 "text_p1": "",
-                "menu_items": [{ "title": "Exploring the cell culture lab ", "img_src": "https://imgs.ralde.eu/lab_compressedx500.png", "nextCompId": 20 }, { "title": "Cells type & Medium", "img_src": "https://imgs.ralde.eu/menu_cell.png", "nextCompId": 30 }, { "title": "Thawing and freezing the cells", "img_src": "https://imgs.ralde.eu/to_froze_cells.png", "nextCompId": 40 }, { "title": "Subculturing the cells", "img_src": "https://imgs.ralde.eu/under_hood.png", "nextCompId": 50 }]
-                }
+                "menu_items": [
+                    {
+                        "title": "Exploring the cell culture lab ",
+                        "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
+                        "nextCompId": 20
+                    },
+                    {
+                        "title": "Cells type & Medium",
+                        "img_src": "https://imgs.ralde.eu/menu_cell.png",
+                        "nextCompId": 30
+                    },
+                    {
+                        "title": "Thawing and freezing the cells",
+                        "img_src": "https://imgs.ralde.eu/to_froze_cells.png",
+                        "nextCompId": 40
+                    },
+                    {
+                        "title": "Subculturing the cells",
+                        "img_src": "https://imgs.ralde.eu/under_hood.png",
+                        "nextCompId": 50
+                    }
+                ]
+            }
         },
         {
             "component_type": "TransitionComponent",
@@ -31,6 +52,51 @@
                 "img_url": "https://imgs.ralde.eu/lab_min.png",
                 "title": "Exploring the cell culture lab"
             }
+        },
+        {
+            "component_type": "VideoComponent",
+            "data": {
+                "id": 21,
+                "h2": "Exploring the cell culture lab",
+                "isSelfHosted": false,
+                "isYoutube": false,
+                "isOther": true,
+                "video_url": "//players.brightcove.net/3663210762001/XCI1AMd08_default/index.html?videoId=5765965627001",
+                "h3": "Please watch the video before continuing the practical",
+                "nextCompId": 22,
+                "previousCompId": 20
+            }
+        },
+        {
+            "component_type": "InfoLinksComponent",
+            "data": {
+                "id": 22,
+                "h2": "Exploring the cell culture lab",
+                "text_p1": "Please read the contents of the following resources",
+                "links": [
+                    {
+                        "resource_url": "https://handling-solutions.eppendorf.com/cell-handling/contamination/workflow/ ",
+                        "resource_title": "Eppendorf: prevent contamination in lab"
+                    },
+                    {
+                        "resource_url": "https://blog.addgene.org/10-basic-tips-for-mammalian-cell-culture",
+                        "resource_title": "Addgene: 10 tips for mammalian cell culture"
+                    },
+                    {
+                        "resource_url": "https://www.technologynetworks.com/cell-science/how-to-guides/how-to-prevent-cell-culture-contamination-htg-299231",
+                        "resource_title": "Technology Network: How to prevent cell culture contamination ?"
+                    },
+                    {
+                        "resource_url": "https://www.technologynetworks.com/cell-science/infographics/how-to-prevent-cell-culture-contamination-318304",
+                        "resource_title": "Technology Network: How To Prevent Cell Culture Contamination ? (Infographic)"
+                    }
+                ],
+                "nextCompId": 23,
+                "previousCompId": 21
+            }
+        },
+        {
+
         }
     ]
 }

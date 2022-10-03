@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-info-links',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-links.component.scss']
 })
 export class InfoLinksComponent implements OnInit {
+
+  @Input() data : any;
 
   constructor() { }
 

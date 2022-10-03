@@ -1,1 +1,21 @@
-<p>info-links works!</p>
+<h2 *ngIf="data.h2"
+    class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
+    {{data.h2}}</h2>
+
+
+<div class="basic_component  mb-8">
+
+    <div class="pt-8 pb-16 px-16 bg-slate-100 mt-8 h-full rounded-md">
+        <p *ngIf="data.text_p1" class="font-bold text-2xl mb-4">{{data.text_p1}}</p>
+        <div class="flex flex-col">
+            <div *ngFor="let link of data.links" class="flex mb-4">
+                <span>🔗</span>
+                <a [href]="link.resource_url" target="_blank" class="text-xl underline text-blue-600 hover:text-blue-800 visited:text-purple-600">{{link.resource_title}}</a>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+</div>

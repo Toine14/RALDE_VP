@@ -39,6 +39,7 @@ import { MenuImgComponent } from './practical-components/menu-img/menu-img.compo
 import { ThreeSixtyComponent } from './practical-components/three-sixty/three-sixty.component';
 import { VideoComponent } from './practical-components/video/video.component';
 import { InfoLinksComponent } from './practical-components/info-links/info-links.component';
+import { SafePipe } from './safe.pipe';
 
 
 
@@ -73,7 +74,8 @@ import { InfoLinksComponent } from './practical-components/info-links/info-links
     MenuImgComponent,
     ThreeSixtyComponent,
     VideoComponent,
-    InfoLinksComponent
+    InfoLinksComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

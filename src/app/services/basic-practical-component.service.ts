@@ -12,10 +12,13 @@ import { MultipleChoicesComponent } from '../practical-components/multiple-choic
 import { ReorderComponent } from '../practical-components/reorder/reorder.component';
 import { ImgDragdropComponent } from '../practical-components/img-dragdrop/img-dragdrop.component';
 import { MenuImgComponent } from '../practical-components/menu-img/menu-img.component';
+import { VideoComponent } from '../practical-components/video/video.component';
+import { InfoLinksComponent } from '../practical-components/info-links/info-links.component';
 
 
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -88,7 +91,12 @@ export class BasicPracticalComponentService {
         case 'MenuImgComponent':
           arrayBasicPractical.push(new BasicPracticalItem(MenuImgComponent, component.data, component.data.id))
           break;
-
+        case 'VideoComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(VideoComponent, component.data, component.data.id))
+          break;
+        case 'InfoLinksComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(InfoLinksComponent, component.data, component.data.id))
+          break;
 
       }
 
