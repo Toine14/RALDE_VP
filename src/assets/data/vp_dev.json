@@ -7,7 +7,7 @@
                 "id": 0,
                 "aims": "to learn culture cell basics",
                 "creator": "RALDE team",
-                "text_p1": "This virtuel practical aims to teach you the basics of cell culture. It is composed of a set of interactive elements that will introduce you to the different steps and knowledge required to master this field of expertise.",
+                "text_p1": "This virtual practical aims to teach you the basics of cell culture. It is composed of a set of interactive elements that will introduce you to the different steps and knowledge required to master this field of expertise.",
                 "text_p2": "You will have to interact with the different components of this VP",
                 "text_p3": "",
                 "nextCompId": 1,
@@ -96,7 +96,232 @@
             }
         },
         {
-
+            "component_type": "ThreeSixtyComponent",
+            "data": {
+                "id": 23,
+                "nextCompId": 24,
+                "previousCompId": 22,
+                "pano_data": {
+                    "type": "equirectangular",
+                    "panorama": "../../assets/img/360_lab.jpg",
+                    "autoLoad": true,
+                    "hotSpots": [
+                        {
+                            "pitch": -9.4,
+                            "yaw": 222.6,
+                            "type": "info",
+                            "text": "glove box"
+                        },
+                        {
+                            "pitch": -15.74,
+                            "yaw": 90.76,
+                            "type": "info",
+                            "text": "centrifuge"
+                        },
+                        {
+                            "pitch": -12.30,
+                            "yaw": 52.07,
+                            "type": "info",
+                            "text": "water-bath"
+                        },
+                        {
+                            "pitch": -2.79,
+                            "yaw": 32.88,
+                            "type": "info",
+                            "text": "microscope"
+                        },
+                        {
+                            "pitch": 2.73,
+                            "yaw": -21.73,
+                            "type": "info",
+                            "text": "CO\u2082 incubator"
+                        },
+                        {
+                            "pitch": -11.21,
+                            "yaw": -69.24,
+                            "type": "info",
+                            "text": "Bio safety cabinet"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "component_type": "QuestionImgComponent",
+            "data": {
+                "id": 24,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Start the flow cabinet",
+                "nextCompId": 25,
+                "previousCompId": 23,
+                "badAnswerText": "Bad answer, please re-read the provided information or re-watch the film",
+                "goodAnswerText": "Good job: A full flow will protect cells from external contaminations and opening 1/3rd the window will allow enough air to enter the system without disturbing the laminar flow.",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "answers": [
+                    {
+                        "text": "half flow",
+                        "isCorrect": false,
+                        "img_url": "https://imgs.ralde.eu/half_flow_new.png"
+                    },
+                    {
+                        "text": "full flow",
+                        "isCorrect": true,
+                        "img_url": "https://imgs.ralde.eu/full_flow.png"
+                    },
+                    {
+                        "text": "open the window till half-way",
+                        "isCorrect": false,
+                        "img_url": "https://imgs.ralde.eu/half_open.png"
+                    },
+                    {
+                        "text": "open window about one third",
+                        "isCorrect": true,
+                        "img_url": "https://imgs.ralde.eu/third_open.png"
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 25,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Switch on UV-lamp for",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/uv_on_cabinet.png"
+                ],
+                "choices": [
+                    {
+                        "answer": "5-10 minutes",
+                        "istrue": "false"
+                    },
+                    {
+                        "answer": "15-30 minutes",
+                        "istrue": "true"
+                    },
+                    {
+                        "answer": "40-60 minutes",
+                        "istrue": "false"
+                    },
+                    {
+                        "answer": "overnight",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Leaving them on for longer can lead to the breakdown of any plastics in the hood, as well as affect people working in the area. Using a UV light over an hour or overnight is massive overkill.",
+                "badAnswerLink": "https://safety.fsu.edu/safety_manual/supporting_docs/Pro-UV%20Light%20Use.pdf",
+                "goodAnswerText": "Explanation: UV sterilizers need only be on for 15-30 minutes at most in tissue culture hoods, depending on the intensity of the UV-lamp. This is the time needed to kill of the bacteria and inactivate spore forming organisms present in the environment. Longer UV light times will not improve cabinet disinfection in routine cell culture cabinets.",
+                "nextCompId": 26,
+                "previousCompId": 24
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 26,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Put water bath at ___°C and put in the cell culture medium and buffer solutions",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": ["https://imgs.ralde.eu/water_bath.png"],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/water_bath_37.png"
+                ],
+                "choices": [
+                    {                       
+                        "answer": "22°C",
+                        "istrue": "false"
+                    },
+                    {                      
+                        "answer": "37°C",
+                        "istrue": "true"
+                    },
+                    {                        
+                        "answer": "40°C",
+                        "istrue": "false"
+                    },
+                    {                      
+                        "answer": "50°C",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death",
+                "badAnswerLink": "",
+                "goodAnswerText": "Explanation: human and mammalian cell lines should be kept at 37°C for optimal growth, thus it is convenient that all solutions that are in contact with them are around this temperature. Overheating them can cause serious damage and can lead to cell death.",
+                "nextCompId": 27,
+                "previousCompId": 25
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 27,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Just before starting: Wipe the surface area with a tissue with ... ",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/alcool.png"
+                ],
+                "choices": [
+                    {
+                        
+                        "answer": "Water with detergent",
+                        "istrue": "false"
+                    },
+                    {
+                        
+                        "answer": "70% ethanol",
+                        "istrue": "true"
+                    },
+                    {
+                        
+                        "answer": "100% ethanol",
+                        "istrue": "false"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "70% ethanol penetrates cell membranes slower so that it can really reach the center of the contaminants and kill them. 100% ethanol coagulates membrane proteins so fast that the contaminants get inactive but do not die. ",
+                "nextCompId": 28,
+                "previousCompId": 26
+            }
+        },
+        {
+            "component_type": "ImageMarkerChoiceComponent",
+            "data": {
+                "id": 36,
+                "img_url": "https://imgs.ralde.eu/lab.png",
+                "h2": "Introduction",
+                "img_size": "",
+                "text_p1": "What is the correct spot to prepare the medium?",
+                "text_p2": "",
+                "nextCompId": 37,
+                "previousCompId": 35,
+                "goodAnswerImgUrl": "https://imgs.ralde.eu/flow_cabinet.png",
+                "markers": [
+                    {
+                        "title": "Bench",
+                        "text": "A",
+                        "x_pos": 15,
+                        "y_pos": 60,
+                        "isCorrect": false,
+                        "answer_text": "Cell culture medium could not be prepared in the bench since it is not an sterile environment."
+                    },
+                    {
+                        "title": "flow cabinet",
+                        "text": "B",
+                        "x_pos": 62,
+                        "y_pos": 50,
+                        "isCorrect": true,
+                        "answer_text": "Cell culture medium should indeed be prepared in a sterile environment. Working under a flow cabinet helps you to maintain the sterility of your cell cultures"
+                    }
+                ]
+            }
         }
     ]
 }

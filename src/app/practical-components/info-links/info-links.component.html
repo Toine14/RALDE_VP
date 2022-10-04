@@ -11,11 +11,17 @@
             <div *ngFor="let link of data.links" class="flex mb-4">
                 <span>🔗</span>
                 <a [href]="link.resource_url" target="_blank" class="text-xl underline text-blue-600 hover:text-blue-800 visited:text-purple-600">{{link.resource_title}}</a>
-
-            </div>
-            
-
+            </div>           
         </div>
 
+        <div class="flex flex-col sm:flex-row sm:space-x-4 mt-4">
+            <div (click)="onPreviousClick()"
+                class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
+                previous
+            </div>
+            <div (click)="onNextClick()"
+                class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
+                next
+            </div>
     </div>
 </div>

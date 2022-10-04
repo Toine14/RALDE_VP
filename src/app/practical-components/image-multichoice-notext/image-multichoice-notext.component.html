@@ -4,8 +4,6 @@
   <div class="flex flex-col  bg-slate-100 p-4">
 
     <h3 class=' text-2xl mb-2'>{{data.text_p1}}</h3>
-
-
     <form [formGroup]="form" (ngSubmit)="checkOrder()" novalidate>
       <div class="flex">
         <div *ngFor="let answer of data.answers; let i=index" class="m-1">
@@ -16,7 +14,6 @@
             </div>
             <input type="checkbox" formArrayName="selectedAnswers" [value]="answer.isCorrect"
               (change)="onCheckboxChange($event)" id="{{'imageToSelect_'+i}}"/>
-              {{ answer.text}}
 
           </div>
 

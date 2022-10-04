@@ -3,11 +3,12 @@ import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 
 @Component({
-  selector: 'app-question-img',
-  templateUrl: './question-img.component.html',
-  styleUrls: ['./question-img.component.scss']
+  selector: 'app-image-multichoice-notext',
+  templateUrl: './image-multichoice-notext.component.html',
+  styleUrls: ['./image-multichoice-notext.component.scss']
 })
-export class QuestionImgComponent implements OnInit {
+export class ImageMultichoiceNotextComponent implements OnInit {
+
   @Input() data: any
   form!: FormGroup;
 
@@ -40,6 +41,7 @@ export class QuestionImgComponent implements OnInit {
 
   howManyGoodAnswers(answers: any[]) {
     return answers.filter(x => x.isCorrect).length
+
   }
 
   onNextClick() {
@@ -74,10 +76,12 @@ export class QuestionImgComponent implements OnInit {
   }
 
 
+
+
   checkOrder() {
     this.answered = true;
     const selectedAnswers = this.form.value.selectedAnswers
-    //console.log(selectedAnswers)
+    console.log(selectedAnswers)
     let countOfTrue = 0
     let totalTicked = 0
     for (let answer of selectedAnswers) {
@@ -88,12 +92,12 @@ export class QuestionImgComponent implements OnInit {
     }
     if (this.goodAnswerCount == countOfTrue && totalTicked == countOfTrue) {
       this.goodAnswer = true;
-      //console.log("good")
+      console.log("good")
     }
     else {
-      //console.log("bad");
+      console.log("bad");
       this.goodAnswer = false;
-
     }
   }
+
 }

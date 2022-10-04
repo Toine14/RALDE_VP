@@ -14,6 +14,8 @@ import { ImgDragdropComponent } from '../practical-components/img-dragdrop/img-d
 import { MenuImgComponent } from '../practical-components/menu-img/menu-img.component';
 import { VideoComponent } from '../practical-components/video/video.component';
 import { InfoLinksComponent } from '../practical-components/info-links/info-links.component';
+import { ThreeSixtyComponent } from '../practical-components/three-sixty/three-sixty.component';
+import { ImageMultichoiceNotextComponent } from '../practical-components/image-multichoice-notext/image-multichoice-notext.component';
 
 
 import { BehaviorSubject } from 'rxjs';
@@ -97,6 +99,13 @@ export class BasicPracticalComponentService {
         case 'InfoLinksComponent':
           arrayBasicPractical.push(new BasicPracticalItem(InfoLinksComponent, component.data, component.data.id))
           break;
+        case 'ThreeSixtyComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(ThreeSixtyComponent, component.data, component.data.id))
+          break;
+        case 'ImageMultichoiceNotextComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(ImageMultichoiceNotextComponent, component.data, component.data.id))
+          break;
+
 
       }
 

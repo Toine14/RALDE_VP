@@ -1,6 +1,6 @@
 
-    <div class="shadow-xl p-5 bg-raldeblue-50 ">
-      <div class="grid grid-cols-2 gap-2">
+    <div class="shadow-xl p-5 bg-raldeblue-50 mb-8 ">
+      <div class="grid grid-cols-2 gap-8">
         <div *ngFor='let item of data.menu_items' class="flex items-center justify-center ">
           <div class="relative hover:-translate-y-1 hover:translate-x-1 flex items-center justify-center" (click)="onNextClick(item.nextCompId)" >
             <img [src]="item.img_src" class="w-96 shadow-xl rounded-md ">
