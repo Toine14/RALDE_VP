@@ -1,85 +1,78 @@
+<h2 *ngIf="data.h2"
+    class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
+    {{data.h2}}</h2>
 
-    <h2 *ngIf="data.h2"
-        class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
-        {{data.h2}}</h2>
+<div class="basic_component  mb-8">
 
-    <div class="basic_component  mb-8">
-
-        <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
-            <p class="font-bold text-2xl">{{data.text_p1}}</p>
-            <p>{{data.text_p2}}</p>
-            <div class="flex justify-between">
-                <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
-                    <div class="flex flex-col  my-2 ">
-                        <label *ngFor="let choice of data.choices;" class="my-1">
-                            <input formControlName="answers" type="radio" name="answers" [value]="choice" />
+    <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
+        <p class="font-bold text-2xl">{{data.text_p1}}</p>
+        <p>{{data.text_p2}}</p>
+        <div class="flex justify-between">
+            <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
+                <div class="flex flex-col  my-2 ">
+                    <div *ngFor="let choice of data.choices;" class="my-1">
+                        <label>
+                            <img [src]="choice.img_url" class="mx-1 w-9/12">
+                            <input formControlName="answer" type="radio" name="answer" [value]="choice" />
                             {{choice.answer}}
                         </label>
                     </div>
+                </div>
 
-                    <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-start">
-                        <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-9/12">
-                    </div>
-
-
-                    <button
-                        class="mt-5 mb-4 self-start  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
-                        [disabled]="!form.valid">Check answer</button>
-                </form>
-
-            </div>
-            <div class="flex mt-2">
-                <div *ngIf="answerText=='false'"
-                    class="bg-red-300 border border-red-400  p-4 rounded-md mt-4 self-start">
-                    <p>{{data.badAnswerText}}</p>
-                    <!--<span>&#160;</span>-->
-                    <p  *ngIf="data.badAnswerLink">
-                        Additional informations could be found 
-                        <a 
-                        [href]="data.badAnswerLink | safe" class='underline ' target="_blank">
-                        here</a>
-
-                    </p>
-
+                <div *ngIf="isPictureIllustration" class="my-2 flex items-center justify-start">
+                    <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="mx-1 w-9/12">
                 </div>
 
 
-                <div *ngIf="answerText=='true'"
-                    class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md"
-                    [ngStyle]="{'width' : isMoreThanOnePictureAnswer ? '80%' : '66%'}"
-                    [ngClass]="{'flex-col':  isMoreThanOnePictureAnswer}">
-                    <div *ngIf="data.isAnswerPictureIllustration" class="self-start flex"
-                        [ngClass]="{'justify-center':  isMoreThanOnePictureAnswer}">
-                        <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl'
-                            class="rounded-sm" [style.width]="isMoreThanOnePictureAnswer ? size2 : size1"
-                            [ngClass]="{'mr-2':  isMoreThanOnePictureAnswer}">
-                    </div>
-                    <p class="mt-2"
-                        [ngClass]="{'ml-4':  !isMoreThanOnePictureAnswer, 'w-4/5': isMoreThanOnePictureAnswer}">
-                        {{data.goodAnswerText}}</p>
+                <button
+                    class="mt-5 mb-4 self-start  flex items-start-start justify-start px-6 py-3 font-medium text-white bg-raldeblue-400 hover:bg-gray-200 hover:text-gray-600 rounded"
+                    [disabled]="!form.valid">Check answer</button>
+            </form>
+
+        </div>
+        <div class="flex mt-2">
 
 
-                </div>
+            <div *ngIf="answerText=='false'">
+                <app-bad-answer [data_bad_answer]='bad_answer_object'></app-bad-answer>
 
             </div>
 
-            <div *ngIf="answerText=='true'">
-                <hr class="solid mt-4 mb-4">
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
-                    <div (click)="onPreviousClick()"
-                        class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
-                        previous
-                    </div>
-                    <div (click)="onNextClick()"
-                        class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
-                        next
-                    </div>
-
+            <div *ngIf="answerText=='true'"
+                class="bg-green-300 border border-green-400 flex justify-center p-3 rounded-md"
+                [ngStyle]="{'width' : isMoreThanOnePictureAnswer ? '80%' : '66%'}"
+                [ngClass]="{'flex-col':  isMoreThanOnePictureAnswer}">
+                <div *ngIf="data.isAnswerPictureIllustration" class="self-start flex"
+                    [ngClass]="{'justify-center':  isMoreThanOnePictureAnswer}">
+                    <img *ngFor="let imgUrl of data.answerIllustrationPicturesUrls" [src]='imgUrl' class="rounded-sm"
+                        [style.width]="isMoreThanOnePictureAnswer ? size2 : size1"
+                        [ngClass]="{'mr-2':  isMoreThanOnePictureAnswer}">
                 </div>
+                <p class="mt-2" [ngClass]="{'ml-4':  !isMoreThanOnePictureAnswer, 'w-4/5': isMoreThanOnePictureAnswer}">
+                    {{data.goodAnswerText}}</p>
+
+
             </div>
 
+        </div>
 
+        <div *ngIf="answerText=='true'">
+            <hr class="solid mt-4 mb-4">
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
+                <div (click)="onPreviousClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
+                    previous
+                </div>
+                <div (click)="onNextClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
+                    next
+                </div>
+
+            </div>
         </div>
 
 
     </div>
+
+
+</div>

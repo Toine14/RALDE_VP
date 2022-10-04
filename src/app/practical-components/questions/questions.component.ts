@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { BadAnswerComponent } from '../bad-answer/bad-answer.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -12,6 +13,11 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class QuestionsComponent implements OnInit {
 
   @Input() data: any;
+
+  bad_answer_object = {
+    "badAnswerText":"",
+    "badAnswerLink":""
+  }
 
   form!: FormGroup;
   choices: any;
@@ -31,7 +37,7 @@ export class QuestionsComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = this.formBuilder.group({
-      answers: ['', [Validators.required]]
+      answer: ['', [Validators.required]]
     });
     this.choices = this.data.choices;
     this.isPictureIllustration = this.data.isPictureIllustration
@@ -41,6 +47,9 @@ export class QuestionsComponent implements OnInit {
         this.isMoreThanOnePictureAnswer = true
       }
     }
+
+    this.bad_answer_object.badAnswerText = this.data.badAnswerText
+    this.bad_answer_object.badAnswerLink = this.data.badAnswerLink
   }
 
   onNextClick() {
@@ -64,21 +73,27 @@ export class QuestionsComponent implements OnInit {
 
 
   submit() {
-    let answer = this.form.value.answers.istrue
-    let answerBool = JSON.parse(answer)
-    console.log(typeof (answer))
-    if (!answerBool) {
-      this.answerText = 'false'
+    let bad_answer_special_text = this.form.value.answer.bad_answer_special_text
+    let answer = this.form.value.answer.istrue
+    console.log(answer)    
+
+   
+    if (!answer) {      
       this.isGoodAnswer = false;
-
+      this.answerText='false';
+      if(bad_answer_special_text){
+        this.bad_answer_object.badAnswerText=bad_answer_special_text
+      }
+      
+      
     }
-    else {
-      this.answerText = 'true'
+    else {     
       this.isGoodAnswer = true;
-
+      this.answerText='true';
+    
     }
 
-    console.log(answer)
+    
 
 
   }

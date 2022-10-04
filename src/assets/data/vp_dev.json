@@ -234,19 +234,19 @@
                 "choices": [
                     {                       
                         "answer": "22°C",
-                        "istrue": "false"
+                        "istrue": false
                     },
                     {                      
                         "answer": "37°C",
-                        "istrue": "true"
+                        "istrue": true
                     },
                     {                        
                         "answer": "40°C",
-                        "istrue": "false"
+                        "istrue": false
                     },
                     {                      
                         "answer": "50°C",
-                        "istrue": "false"
+                        "istrue": false
                     }
                 ],
                 "badAnswerText": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death",
@@ -268,20 +268,19 @@
                     "https://imgs.ralde.eu/alcool.png"
                 ],
                 "choices": [
-                    {
-                        
+                    {                        
                         "answer": "Water with detergent",
-                        "istrue": "false"
+                        "istrue": false,
+                        "bad_answer_special_text":"Please re-read the provided information or re-watch the film"
                     },
-                    {
-                        
+                    {                        
                         "answer": "70% ethanol",
-                        "istrue": "true"
+                        "istrue": true
                     },
-                    {
-                        
+                    {                        
                         "answer": "100% ethanol",
-                        "istrue": "false"
+                        "istrue": false,
+                        "bad_answer_special_text":"100% ethanol coagulates membrane proteins so fast that the contaminants get inactive but do not die"
                     }
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",
@@ -289,6 +288,76 @@
                 "goodAnswerText": "70% ethanol penetrates cell membranes slower so that it can really reach the center of the contaminants and kill them. 100% ethanol coagulates membrane proteins so fast that the contaminants get inactive but do not die. ",
                 "nextCompId": 28,
                 "previousCompId": 26
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 28,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "To spray the ethanol it is best to use",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/alcool.png"
+                ],
+                "choices": [
+                    {                      
+                        "answer": "Spray bottle",
+                        "istrue": false
+                    },
+                    {                       
+                        "answer": "Glass bottle with big opening",
+                        "istrue": false
+                    },
+                    {                        
+                        "answer": "Squeeze bottle",
+                        "istrue": true
+                    }
+                ],
+                "badAnswerText": "Bad answer : Bad answer: Please check the guide the provided information or re-watch the film. Think about a way to deliver the correct amount of ethanol in a safe way.",
+                "badAnswerLink": "",
+                "goodAnswerText": "Explanation: Spray bottles were used a lot in the past and are still in use, but for health safety measures are advised against. The aerosols that are create with spray bottles can be inhaled by the user. So currently squeeze bottles are the best to use.",
+                "nextCompId": 29,
+                "previousCompId": 27
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 29,
+                "h2": "Preparing the cell culture room/conditions ",
+                "text_p1": "Select the correct position to work in the flow cabinet",
+                "text_p2": "",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls":["https://imgs.ralde.eu/under_hood.png"], 
+                "isPictureIllustration": false,
+                "isAnswerWithPictures":true,
+                "illustrationPicturesUrls": [
+                    
+                ],
+                "choices": [
+                    {                        
+                        "answer": "In the front",
+                        "istrue": false,
+                        "img_url": "https://imgs.ralde.eu/half_flow_new.png"
+                    },
+                    {                        
+                        "answer": "In the middle",
+                        "istrue": true,
+                        "img_url": "https://imgs.ralde.eu/half_flow_new.png"
+                    },
+                    {                        
+                        "answer": "In the back",
+                        "istrue": false,
+                        "img_url": "https://imgs.ralde.eu/half_flow_new.png"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Walls and objects disturb the laminar flow, therefore the best place to work is the middle of the cabinet. Moreover, the front part of the cabinet is the part with the highest contamination risk since it is the closest to the end of the laminar flow and is easily disturbed by slight movements.",
+                "nextCompId": 290,
+                "previousCompId": 28
             }
         },
         {

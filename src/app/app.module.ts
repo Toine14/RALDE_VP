@@ -41,6 +41,7 @@ import { VideoComponent } from './practical-components/video/video.component';
 import { InfoLinksComponent } from './practical-components/info-links/info-links.component';
 import { SafePipe } from './safe.pipe';
 import { ImageMultichoiceNotextComponent } from './practical-components/image-multichoice-notext/image-multichoice-notext.component';
+import { BadAnswerComponent } from './practical-components/bad-answer/bad-answer.component';
 
 
 
@@ -77,7 +78,8 @@ import { ImageMultichoiceNotextComponent } from './practical-components/image-mu
     VideoComponent,
     InfoLinksComponent,
     SafePipe,
-    ImageMultichoiceNotextComponent
+    ImageMultichoiceNotextComponent,
+    BadAnswerComponent
   ],
   imports: [
     BrowserModule,
