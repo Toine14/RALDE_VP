@@ -520,17 +520,17 @@
                 ],
                 "choices": [
                     {
-                        "id": "ChoiceNb1",
+                        
                         "answer": "37° C and 5% CO2",
                         "istrue": "true"
                     },
                     {
-                        "id": "ChoiceNb2",
+                       
                         "answer": "37° C and 10% CO2",
                         "istrue": "false"
                     },
                     {
-                        "id": "ChoiceNb3",
+                        
                         "answer": "45° C and 5% CO2",
                         "istrue": "false"
                     },
@@ -560,7 +560,7 @@
             "data": {
                 "id": 70001,
                 "h2": "Preparing the cell culture room/conditions ",
-                "text_p1": "Prepare everything you need for thawing the cells. More than one answer is correct. More than one answer may be correct",
+                "text_p1": "Prepare everything you need for thawing the cells. More than one answer is correct",
                 "nextCompId": 70002,
                 "previousCompId": 607,
                 "badAnswerText": "Bad answer, please re-read your notes",
@@ -1665,7 +1665,7 @@
                 "text_p2": "",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
-                    "https://imgs.ralde.eu/cryobox.png"
+                    "https://imgs.ralde.eu/cryobox.png","https://imgs.ralde.eu/cryo_box_2.png"
                    
 
                 ],

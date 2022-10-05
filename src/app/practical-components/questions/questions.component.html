@@ -9,13 +9,19 @@
         <p>{{data.text_p2}}</p>
         <div class="flex justify-between">
             <form class="flex flex-col " [formGroup]="form" (ngSubmit)="submit()">
-                <div class="flex flex-col  my-2 ">
-                    <div *ngFor="let choice of data.choices;" class="my-1">
-                        <label>
-                            <img [src]="choice.img_url" class="mx-1 w-9/12">
-                            <input formControlName="answer" type="radio" name="answer" [value]="choice" />
-                            {{choice.answer}}
-                        </label>
+                <div [ngClass]="data.isAnswerWithPictures ? 'flex-row' : 'flex-col'" class="flex  my-2 gap-2 ">
+                    <div *ngFor="let choice of data.choices; ; let i=index">
+
+                        <div [ngClass]="data.isAnswerWithPictures ? 'flex-row' : 'flex-col'"  >
+                            <label  [ngClass]="data.isAnswerWithPictures ? 'flex flex-col items-center justify-center' : 'flex flex-row self-start'">
+                                <img *ngIf="data.isAnswerWithPictures" [src]="choice.img_url" class="mb-1">
+                                <input formControlName="answer" type="radio" name="answer" [value]="choice"
+                                    id="{{'imageToSelect_'+i}}" />
+
+                                {{choice.answer}}
+                            </label>
+                        </div>
+
                     </div>
                 </div>
 

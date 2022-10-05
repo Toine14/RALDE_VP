@@ -75,7 +75,9 @@ export class QuestionsComponent implements OnInit {
   submit() {
     let bad_answer_special_text = this.form.value.answer.bad_answer_special_text
     let answer = this.form.value.answer.istrue
-    console.log(answer)    
+    //console.log(answer)   
+    let all = this.form.value
+    console.log(all)
 
    
     if (!answer) {      
