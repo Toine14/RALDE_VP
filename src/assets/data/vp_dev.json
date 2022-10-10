@@ -99,6 +99,8 @@
             "component_type": "ThreeSixtyComponent",
             "data": {
                 "id": 23,
+                "h2": "Exploring the cell culture lab",
+                "text_p1": "Click on the marker to explore the different items of a cell culture laboratory",
                 "nextCompId": 24,
                 "previousCompId": 22,
                 "pano_data": {
@@ -151,7 +153,7 @@
             "data": {
                 "id": 24,
                 "h2": "Preparing the cell culture room/conditions ",
-                "text_p1": "Start the flow cabinet",
+                "text_p1": "Start the flow cabinet (answers with picture, several responses required)",
                 "nextCompId": 25,
                 "previousCompId": 23,
                 "badAnswerText": "Bad answer, please re-read the provided information or re-watch the film",
@@ -308,7 +310,8 @@
                 "choices": [
                     {                      
                         "answer": "Spray bottle",
-                        "istrue": false
+                        "istrue": false,
+                        "bad_answer_special_text":"Spray bottles were used a lot in the past and are still in use, but for health safety measures are advised against. The aerosols that are create with spray bottles can be inhaled by the user."
                     },
                     {                       
                         "answer": "Glass bottle with big opening",
@@ -462,28 +465,42 @@
             "component_type": "InfoLinksComponent",
             "data": {
                 "id": 31,
-                "h2": "Exploring the cell culture lab",
+                "h2": "Cell types & medium",
                 "text_p1": "Please read the contents of the following resources as a preparation",
                 "links": [
                     {
-                        "resource_url": "https://handling-solutions.eppendorf.com/cell-handling/contamination/workflow/ ",
-                        "resource_title": "Eppendorf: prevent contamination in lab"
-                    },
+                        "resource_url": "https://www.technologynetworks.com/tn/articles/which-cell-culture-media-is-right-for-you-331552 ",
+                        "resource_title": "Technology Network : Which cell media is right for you?"
+                    }],
+
+                "nextCompId": 32,
+                "previousCompId": 1
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 32,
+                "h2": "Cell types & medium",
+                "text_p1": "The next questions are about",
+                "menu_main_items": [
                     {
-                        "resource_url": "https://blog.addgene.org/10-basic-tips-for-mammalian-cell-culture",
-                        "resource_title": "Addgene: 10 tips for mammalian cell culture"
-                    },
-                    {
-                        "resource_url": "https://www.technologynetworks.com/cell-science/how-to-guides/how-to-prevent-cell-culture-contamination-htg-299231",
-                        "resource_title": "Technology Network: How to prevent cell culture contamination ?"
-                    },
-                    {
-                        "resource_url": "https://www.technologynetworks.com/cell-science/infographics/how-to-prevent-cell-culture-contamination-318304",
-                        "resource_title": "Technology Network: How To Prevent Cell Culture Contamination ? (Infographic)"
+                        "title": "Adherent cells",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
+                        
+                        "menu_sub_items": [
+                            {
+                                "title": "strain : HepG2",
+                                "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
+                                "nextCompId": 20
+                            }]
                     }
                 ],
                 "nextCompId": 23,
                 "previousCompId": 21
+
+
             }
         },
 
@@ -535,7 +552,7 @@
                 "h2": "Thawing the cells",
                 "text_p1": "Prepare everything you need for thawing the cells. More than one answer is correct",
                 "nextCompId": 42,
-                "previousCompId": 40,
+                "previousCompId": 1,
                 "badAnswerText": "Bad answer: Please check ATTC instructions again",
                 "goodAnswerText": "Cell thawing should be fast, everything that will be needed should already be inside the cabinet. You’ll need warm medium and a tube to remove the cryoprotectant and the micropipette to transfer the cells and the medium. Besides, everything that will enter the cabinet will need to be first sprayed with ethanol.",
                 "isAnswerPictureIllustration": false,
@@ -1304,17 +1321,17 @@
                     {
                         "id": "ChoiceNb1",
                         "answer": "-20°C",
-                        "istrue": "false"
+                        "istrue":false
                     },
                     {
                         "id": "ChoiceNb2",
                         "answer": "-80°C",
-                        "istrue": "false"
+                        "istrue": false
                     },
                     {
                         "id": "ChoiceNb3",
                         "answer": "\u2264 -130°C",
-                        "istrue": "true"
+                        "istrue": true
                     }        
                 ],
                 "badAnswerText": "Bad answer : please re read your notes",

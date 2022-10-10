@@ -42,6 +42,7 @@ import { InfoLinksComponent } from './practical-components/info-links/info-links
 import { SafePipe } from './safe.pipe';
 import { ImageMultichoiceNotextComponent } from './practical-components/image-multichoice-notext/image-multichoice-notext.component';
 import { BadAnswerComponent } from './practical-components/bad-answer/bad-answer.component';
+import { SubMenuPresentationComponent } from './practical-components/sub-menu-presentation/sub-menu-presentation.component';
 
 
 
@@ -79,7 +80,8 @@ import { BadAnswerComponent } from './practical-components/bad-answer/bad-answer
     InfoLinksComponent,
     SafePipe,
     ImageMultichoiceNotextComponent,
-    BadAnswerComponent
+    BadAnswerComponent,
+    SubMenuPresentationComponent
   ],
   imports: [
     BrowserModule,

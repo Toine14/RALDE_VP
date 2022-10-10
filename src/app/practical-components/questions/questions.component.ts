@@ -15,8 +15,8 @@ export class QuestionsComponent implements OnInit {
   @Input() data: any;
 
   bad_answer_object = {
-    "badAnswerText":"",
-    "badAnswerLink":""
+    "badAnswerText": "",
+    "badAnswerLink": ""
   }
 
   form!: FormGroup;
@@ -78,25 +78,38 @@ export class QuestionsComponent implements OnInit {
     //console.log(answer)   
     let all = this.form.value
     console.log(all)
-
-   
-    if (!answer) {      
+    if (!answer) {
       this.isGoodAnswer = false;
-      this.answerText='false';
-      if(bad_answer_special_text){
-        this.bad_answer_object.badAnswerText=bad_answer_special_text
+      this.answerText = 'false';
+      if (bad_answer_special_text) {
+        this.bad_answer_object.badAnswerText = bad_answer_special_text
       }
-      
-      
     }
-    else {     
+    else {
       this.isGoodAnswer = true;
-      this.answerText='true';
-    
+      this.answerText = 'true';
     }
+  }
 
-    
+  clear_style(){    
+    for(let i in this.data.choices){
+      let id = "imageToSelect_" + i
+      let to_style = document.getElementById(id)
+      to_style!.style.setProperty('border-style', 'none');
+    } 
+  }
 
+  onCheckboxChange(event: any, i: any) {
+
+    this.clear_style()
+    if (this.data.isAnswerWithPictures) {
+      let id = "imageToSelect_" + i
+      let to_style = document.getElementById(id)
+      if (event.target.checked) {
+        to_style!.style.setProperty('border', '10px solid #3ae08d')
+        console.log(i)
+      }
+    }
 
   }
 

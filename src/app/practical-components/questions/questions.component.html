@@ -12,11 +12,11 @@
                 <div [ngClass]="data.isAnswerWithPictures ? 'flex-row' : 'flex-col'" class="flex  my-2 gap-2 ">
                     <div *ngFor="let choice of data.choices; ; let i=index">
 
-                        <div [ngClass]="data.isAnswerWithPictures ? 'flex-row' : 'flex-col'"  >
+                        <div [ngClass]="data.isAnswerWithPictures ? 'flex-row' : 'flex-col'"  id="{{'imageToSelect_'+i}}" >
                             <label  [ngClass]="data.isAnswerWithPictures ? 'flex flex-col items-center justify-center' : 'flex flex-row self-start'">
                                 <img *ngIf="data.isAnswerWithPictures" [src]="choice.img_url" class="mb-1">
-                                <input formControlName="answer" type="radio" name="answer" [value]="choice"
-                                    id="{{'imageToSelect_'+i}}" />
+                                <input formControlName="answer" type="radio" name="answer" [value]="choice"  (change)="onCheckboxChange($event, i)"
+                                    />
 
                                 {{choice.answer}}
                             </label>

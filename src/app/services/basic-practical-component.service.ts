@@ -16,10 +16,12 @@ import { VideoComponent } from '../practical-components/video/video.component';
 import { InfoLinksComponent } from '../practical-components/info-links/info-links.component';
 import { ThreeSixtyComponent } from '../practical-components/three-sixty/three-sixty.component';
 import { ImageMultichoiceNotextComponent } from '../practical-components/image-multichoice-notext/image-multichoice-notext.component';
+import { SubMenuPresentationComponent } from '../practical-components/sub-menu-presentation/sub-menu-presentation.component';
 
 
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -105,6 +107,10 @@ export class BasicPracticalComponentService {
         case 'ImageMultichoiceNotextComponent':
           arrayBasicPractical.push(new BasicPracticalItem(ImageMultichoiceNotextComponent, component.data, component.data.id))
           break;
+        case 'SubMenuPresentationComponent':
+          arrayBasicPractical.push(new BasicPracticalItem(SubMenuPresentationComponent, component.data, component.data.id))
+          break;
+
 
 
       }
