@@ -20,11 +20,18 @@ export class PracticalListComponent implements OnInit {
 
 
   public vp = [{
-    title: 'Animal cell culture intro',
+    title: 'Animal cell culture intro (old version)',
     field: 'cellular biology',
     creator: 'RALDE team',
     description: 'In this virtual tp we will explore the different steps required to grow a mammalian cell strain',
     id:1
+  },
+  {
+    title: 'Animal cell culture intro (new version)',
+    field: 'cellular biology',
+    creator: 'RALDE team',
+    description: 'In this virtual tp we will explore the different steps required to grow a mammalian cell strain',
+    id:2
   },
 /*  {
     title: 'fish dissection',

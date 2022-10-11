@@ -482,39 +482,182 @@
             "data": {
                 "id": 32,
                 "h2": "Cell types & medium",
-                "text_p1": "The next questions are about",
+                "text_p1": "The next section and questions are about:",
                 "menu_main_items": [
                     {
                         "title": "Adherent cells",
                         "sub_title": "",
-                        "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
+                        "img_src": "https://imgs.ralde.eu/adherent_cells.png",
                         
                         "menu_sub_items": [
                             {
                                 "title": "strain : HepG2",
-                                "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
+                                "img_src": "https://imgs.ralde.eu/hepg2.png",
                                 "nextCompId": 20
                             }]
                     }
                 ],
-                "nextCompId": 23,
-                "previousCompId": 21
+                "nextCompId": 33,
+                "previousCompId": 31
 
 
             }
         },
-
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 33,
+                "h2": "Cell types & medium",
+                "text_p1": "What medium is suitable for HepG2 cells ?",
+                "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                    ""
+                ],
+                "choices": [
+                    {
+                        "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": true
+                    },
+                    {
+                        "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    },
+                    {
+                        "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    },
+                    {
+                        "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    }
+                ],
+                "badAnswerText": "Bad answer : the correct answer can be found",
+                "badAnswerLink": "https://www.atcc.org/products/hb-8065",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 34,
+                "previousCompId": 32
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 34,
+                "h2": "Cell types & medium",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Adherent cells",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/adherent_cells.png",
+                        
+                        "menu_sub_items": [
+                            {
+                                "title": "strain : A549",
+                                "img_src": "https://imgs.ralde.eu/a549.png",
+                                "nextCompId": 20
+                            }]
+                    }
+                ],
+                "nextCompId": 35,
+                "previousCompId": 33
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 35,
+                "h2": "Introduction",
+                "text_p1": "What medium is suitable for A549 cells ?",
+                "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
+                "choices": [
+                    {
+                        "id": "ChoiceNb1",
+                        "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    },
+                    {
+                        "id": "ChoiceNb2",
+                        "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": true
+                    },
+                    {
+                        "id": "ChoiceNb3",
+                        "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    },
+                    {
+                        "id": "ChoiceNb4",
+                        "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
+                        "istrue": false
+                    }
+                ],
+                "badAnswerText": "Bad answer : the correct answer can be found",
+                "badAnswerLink": "https://www.atcc.org/products/ccl-185",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 36,
+                "previousCompId": 34
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 36,
+                "h2": "Cell types & medium",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Cells in suspension",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/adherent_cells.png",
+                        
+                        "menu_sub_items": [
+                            {
+                                "title": "strain : THP-1",
+                                "img_src": "https://imgs.ralde.eu/thp1.png",
+                                "nextCompId": 20
+                            }]
+                    }
+                ],
+                "nextCompId": 38,
+                "previousCompId": 35
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 38,
+                "h2": "Cell types & medium",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Cells in suspension",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/adherent_cells.png",
+                        
+                        "menu_sub_items": [
+                            {
+                                "title": "strain : TK6",
+                                "img_src": "https://imgs.ralde.eu/thp1.png",
+                                "nextCompId": 20
+                            }]
+                    }
+                ],
+                "nextCompId": 300,
+                "previousCompId": 35
+            }
+        },
         {
             "component_type": "ImageMarkerChoiceComponent",
             "data": {
-                "id": 36,
+                "id": 300,
                 "img_url": "https://imgs.ralde.eu/lab.png",
                 "h2": "Introduction",
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
-                "nextCompId": 37,
-                "previousCompId": 35,
+                "nextCompId": 1,
+                "previousCompId": 38,
                 "goodAnswerImgUrl": "https://imgs.ralde.eu/flow_cabinet.png",
                 "markers": [
                     {
@@ -540,9 +683,29 @@
             "component_type": "TransitionComponent",
             "data": {
                 "id": 40,
-                "nextCompId": 41,
+                "nextCompId": 4000,
                 "img_url": "https://imgs.ralde.eu/menu_cell.png",
                 "title": "Thawing and freezing the cells"
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 4000,
+                "h2": "Thawing and freezing the cells",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Thawing the cells",
+                        "sub_title": "",
+                        "img_src": "",
+                        
+                        "menu_sub_items": [
+                            ]
+                    }
+                ],
+                "nextCompId": 41,
+                "previousCompId": 40
             }
         },
         {
@@ -1023,20 +1186,31 @@
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
                 "goodAnswerText": "Adherent cells need time to attach to the flask. The act of removing the flask from the incubator before they are fully attach may result in breaking the incipient bonds.",
-                "nextCompId": 450,
+                "nextCompId": 4001,
                 "previousCompId": 400
             }
         },
         {
-            "component_type": "TransitionComponent",
+            "component_type": "SubMenuPresentationComponent",
             "data": {
-                "id": 450,
+                "id": 4001,
+                "h2": "Thawing and freezing the cells",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Freezing the cells",
+                        "sub_title": "",
+                        "img_src": "",
+                        
+                        "menu_sub_items": [
+                            ]
+                    }
+                ],
                 "nextCompId": 451,
-                "title": "Freezing the cells",
-                "img_url": "https://imgs.ralde.eu/cell_storage.png"
-
+                "previousCompId": 401
             }
         },
+
         {
             "component_type": "QuestionsComponent",
             "data": {

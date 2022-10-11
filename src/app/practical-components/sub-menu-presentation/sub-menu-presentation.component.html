@@ -5,38 +5,50 @@
 
     <div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
         <div *ngFor="let main_item of data.menu_main_items">
+            <div class='text-xl font-semibold mb-2'>
+                {{data.text_p1}}
+            </div>
 
-            <h3 class=' text-2xl font-bold mb-2'>
+            <h3 class='text-2xl font-bold mb-2'>
                 {{main_item.title}}
             </h3>
 
             <img *ngIf="main_item.img_src" [src]="main_item.img_src" class="w-72 shadow-xl rounded-md ">
             <div *ngIf="main_item.menu_sub_items" class="mt-8 ml-8">
                 <div *ngFor="let sub_item of main_item.menu_sub_items ">
-                    <div class="flex items-baseline">
+                    <div class="flex items-start">
                         <img src="assets/img/arrow.png" style="width: 50px;">
 
-                        <h4 class=' text-xl font-semibold mb-2'>
-                            {{sub_item.title}}
-                        </h4>
+                        <div class='ml-4'>
+                            <h4 class='text-xl font-semibold '>
+                                {{sub_item.title}}
+                            </h4>
+                            <img *ngIf="sub_item.img_src" [src]="sub_item.img_src" class="w-48 shadow-xl rounded-md ">
+
+                        </div>
+
+
                     </div>
-                    <img *ngIf="sub_item.img_src" [src]="sub_item.img_src" class="w-48 shadow-xl rounded-md ">
+
 
                 </div>
             </div>
 
         </div>
+       
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mt-16">
+                <div (click)="onPreviousClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
+                    previous
+                </div>
+                <div (click)="onNextClick()"
+                    class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
+                    next
+                </div>
+            </div>
 
-        <div class="flex flex-col sm:flex-row sm:space-x-4 mt-4">
-            <div (click)="onPreviousClick()"
-                class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
-                previous
-            </div>
-            <div (click)="onNextClick()"
-                class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
-                next
-            </div>
-        </div>
+
+       
 
 
 

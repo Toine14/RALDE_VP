@@ -28,9 +28,23 @@ export class PracticalsGeneratorComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     
     //TODO get the right URL
+    //HEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     
     //let url = '/assets/data/first_vp.json';
-    let url = '/assets/data/vp_dev.json';
+
+
+    let urls = [{'id':1, 'url':'/assets/data/first_vp.json'},{'id':2, 'url':'/assets/data/vp_dev.json'}];
+
+    let url = urls.find(x => x.id === this.Vp_id)!.url
+
+  //TODO get the right URL
+    //HEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+
+
+
+
+
     
     this.practicalService.get_practical_data(url).subscribe((data:any)=>{ this.practicalsComp = this.practicalService.getPracticals(data); this.general_title=data.title ;this.loading=false});
     //this.practicalsComp = this.practicalService.getPracticals();
