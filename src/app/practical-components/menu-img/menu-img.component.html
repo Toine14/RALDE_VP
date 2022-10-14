@@ -4,7 +4,7 @@
         <div *ngFor='let item of data.menu_items' class="flex items-center justify-center ">
           <div class="relative hover:-translate-y-1 hover:translate-x-1 flex items-center justify-center" (click)="onNextClick(item.nextCompId)" >
             <img [src]="item.img_src" class="w-96 shadow-xl rounded-md ">
-            <div class="absolute top-32 p-4 bg-slate-100 rounded-md opacity-80 text-2xl font-bold"><p>{{item.title}}</p></div>
+            <div class="absolute title_menu p-4 bg-slate-100 rounded-md opacity-80 text-2xl font-bold text-center">{{item.title}}</div>
           </div>        
         </div>
       </div>

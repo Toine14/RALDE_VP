@@ -22,7 +22,7 @@
                 "text_p1": "",
                 "menu_items": [
                     {
-                        "title": "Exploring the cell culture lab ",
+                        "title": "Exploring the cell culture lab & Preparing the cell culture room/conditions ",
                         "img_src": "https://imgs.ralde.eu/lab_compressedx500.png",
                         "nextCompId": 20
                     },
@@ -448,7 +448,7 @@
                 "badAnswerText": "Bad answer : please re read your notes",
                 "badAnswerLink": "",
                 "goodAnswerText": "human and mammalian cell lines should be kept at 37ºC for optimal growth, 5% CO2 is needed to buffer the system to ensure that the normal physiological pH is maintained for optimum cell growth",
-                "nextCompId": 30,
+                "nextCompId": 1,
                 "previousCompId": 290
             }
         },
@@ -652,7 +652,7 @@
             "data": {
                 "id": 300,
                 "img_url": "https://imgs.ralde.eu/lab.png",
-                "h2": "Introduction",
+                "h2": "Cell types & medium",
                 "img_size": "",
                 "text_p1": "What is the correct spot to prepare the medium?",
                 "text_p2": "",
@@ -1521,8 +1521,8 @@
                 "id": 50,
                 "h2": "Subculturing of cells",
                 "text_p1": "Which of these pictures represents 80% confluency? (answers with pictures)",
-                "nextCompId": 0,
-                "previousCompId": 0,
+                "nextCompId": 1,
+                "previousCompId": 457,
                 "badAnswerText": "Bad answer, please re-read your notes",
                 "goodAnswerText": "100% confluence means that there is no more room for cells to grow, at this state they can only start dying.",
                 "isAnswerPictureIllustration": false,
