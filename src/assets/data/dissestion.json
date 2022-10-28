@@ -1,0 +1,49 @@
+{
+    "title": "Dissection",
+    "components": [
+
+        {
+            "component_type": "StartComponent",
+            "data": {
+                "id": 0,
+                "aims": "to learn dissexction of animals",
+                "creator": "RALDE team",
+                "text_p1": "This virtual practical aims to teach you the basics of animal dissection.",
+                "text_p2": "You will have to interact with the different components of this VP",
+                "text_p3": "",
+                "nextCompId": 1,
+                "previousCompId": 0
+            }
+        },
+        {
+            "component_type": "MenuImgComponent",
+            "data": {
+                "id": 1,
+                "h2": "",
+                "text_p1": "",
+                "menu_items": [
+                    {
+                        "title": "part 1: killing technics",
+                        "img_src": "",
+                        "nextCompId": 20
+                    },
+                    {
+                        "title": "part 2: ...",
+                        "img_src": "",
+                        "nextCompId": 30
+                    },
+                    {
+                        "title": "part 3: ...",
+                        "img_src": "",
+                        "nextCompId": 40
+                    },
+                    {
+                        "title": "part 4: ...",
+                        "img_src": "",
+                        "nextCompId": 50
+                    }
+                ]
+            }
+        }
+    ]
+}

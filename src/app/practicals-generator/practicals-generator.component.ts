@@ -33,7 +33,7 @@ export class PracticalsGeneratorComponent implements OnInit, OnDestroy {
     //let url = '/assets/data/first_vp.json';
 
 
-    let urls = [{'id':1, 'url':'/assets/data/first_vp.json'},{'id':2, 'url':'/assets/data/vp_dev.json'}];
+    let urls = [{'id':1, 'url':'/assets/data/first_vp.json'},{'id':2, 'url':'/assets/data/vp_dev.json'},{'id':3, 'url':'/assets/data/dissection.json'} ];
 
     let url = urls.find(x => x.id === this.Vp_id)!.url
 

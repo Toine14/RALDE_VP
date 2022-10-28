@@ -33,13 +33,13 @@ export class PracticalListComponent implements OnInit {
     description: 'In this virtual tp we will explore the different steps required to grow a mammalian cell strain',
     id:2
   },
-/*  {
-    title: 'fish dissection',
+ {
+    title: 'dissection',
     field: 'animal biology',
     creator: 'RALDE team',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore',
-    id:2
-  }*/
+    id:3
+  }
 ];
 
   public phys_vp=[];
