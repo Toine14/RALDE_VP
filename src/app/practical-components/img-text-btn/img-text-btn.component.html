@@ -1,24 +1,28 @@
-<div class="basic_component">
-  <div class="overflow-hidden shadow-lg pb-3 w-4/5">
-    <img class="w-full" [src]='data.img_url' alt="Mountain">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">{{data.id}}</div>
-      <p class="text-gray-700 text-base">
-        {{data.text_p1}}
-      </p>
-      <p class="text-gray-700 text-base">
-        {{data.text_p2}}
-      </p>
+<h2 *ngIf="data.h2"
+  class="text-2xl font-semibold text-raldeblue-900 py-2 shadow-sm w-fit bg-slate-100 mb-2 px-2 rounded-md border-2 border-raldeblue-800">
+  {{data.h2}}</h2>
+
+
+<div class="py-4 px-16 bg-slate-100 mt-8 h-full rounded-md">
+  <div class="flex gap-8 justify-center">
+    <div *ngFor="let img_text of data.imgs_texts" class="flex flex-col items-center w-96 relative">
+      <img [src]="img_text.img_src" >
+      <span class="absolute top-32 font-bold decoration-sky-500 text-2xl">
+        {{img_text.title}}
+      </span>
+      {{img_text.text}}
     </div>
-    <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
-      <div (click)="onPreviousClick()"
-        class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
-        previous
-      </div>
-      <div (click)="onNextClick()"
+  </div>
+
+  <hr class="solid mt-4 mb-4">
+  <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
+    <div (click)="onPreviousClick()" 
+      class="flex items-center px-6 py-3 font-medium text-white bg-raldeorange-700 hover:bg-raldeorange-300 hover:text-gray-600 rounded">
+      previous
+    </div>
+    <div (click)="onNextClick()"
       class="flex items-center px-6 py-3 font-medium text-white bg-raldesurf-400 hover:bg-raldesurf-700 hover:text-gray-600 rounded">
       next
-    </div>
     </div>
   </div>
 </div>

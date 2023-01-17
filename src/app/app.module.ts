@@ -43,6 +43,7 @@ import { SafePipe } from './safe.pipe';
 import { ImageMultichoiceNotextComponent } from './practical-components/image-multichoice-notext/image-multichoice-notext.component';
 import { BadAnswerComponent } from './practical-components/bad-answer/bad-answer.component';
 import { SubMenuPresentationComponent } from './practical-components/sub-menu-presentation/sub-menu-presentation.component';
+import{ImgTextBtnComponent } from './practical-components/img-text-btn/img-text-btn.component';
 
 
 
@@ -81,7 +82,8 @@ import { SubMenuPresentationComponent } from './practical-components/sub-menu-pr
     SafePipe,
     ImageMultichoiceNotextComponent,
     BadAnswerComponent,
-    SubMenuPresentationComponent
+    SubMenuPresentationComponent,
+    ImgTextBtnComponent
   ],
   imports: [
     BrowserModule,

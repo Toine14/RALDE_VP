@@ -34,7 +34,7 @@ export class ImageMarkerInfosComponent implements OnInit {
   ngOnInit(): void {
     
     this.markerCount = this.data.markers.length
-    console.log(this.markerCount)
+    //console.log(this.markerCount)
   }
 
   onSpotClick(event: any) {

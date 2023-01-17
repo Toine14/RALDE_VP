@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { BasicPracticalComponentService } from 'src/app/services/basic-practical-component.service';
+import { EqualStencilFunc } from 'three';
 
 @Component({
   selector: 'app-question-img',
@@ -19,6 +20,7 @@ export class QuestionImgComponent implements OnInit {
   isMoreThanOnePictureAnswer: boolean = false;
   size1 = '20em';
   size2 = '20em';
+  partialAnswer: boolean =false;
 
 
   constructor(fb: FormBuilder, private practicalService: BasicPracticalComponentService) {
@@ -29,7 +31,7 @@ export class QuestionImgComponent implements OnInit {
 
   ngOnInit(): void {    
     this.goodAnswerCount = this.howManyGoodAnswers(this.data.answers)
-    console.log(this.goodAnswerCount)
+    //console.log(this.goodAnswerCount)
     if (this.data.isAnswerPictureIllustration) {
       if (this.data.answerIllustrationPicturesUrls.length > 1) {
         this.isMoreThanOnePictureAnswer = true
@@ -37,6 +39,18 @@ export class QuestionImgComponent implements OnInit {
     }
   }
 
+
+
+  //pas utiliser pour le moment
+//   ClickOnInput(event: any, index:number){
+//     let checkboxToSelect = document.getElementById('CheckboxToSelect_' + index) as HTMLInputElement;
+// if(checkboxToSelect){
+//   checkboxToSelect.checked = !checkboxToSelect.checked;
+//   this.onCheckboxChange(event)
+// }    
+//  }
+
+  //write me a function to check a checbox in typescript in angular
 
   howManyGoodAnswers(answers: any[]) {
     return answers.filter(x => x.isCorrect).length
@@ -50,6 +64,7 @@ export class QuestionImgComponent implements OnInit {
   }
 
   onCheckboxChange(event: any) {
+    
     const selectedAnswers = (this.form.controls['selectedAnswers'] as FormArray);
     let event_id = event.target.id.split('_')[1]
     let id_to_border = 'imageToSelect_'+event_id
@@ -74,25 +89,36 @@ export class QuestionImgComponent implements OnInit {
   }
 
 
+
+
   checkOrder() {
     this.answered = true;
     const selectedAnswers = this.form.value.selectedAnswers
     //console.log(selectedAnswers)
     let countOfTrue = 0
+    let countOfFalse = 0
     let totalTicked = 0
     for (let answer of selectedAnswers) {
       totalTicked++
       if (answer === 'true') {
         countOfTrue++
       }
+      else(countOfFalse++)
     }
     if (this.goodAnswerCount == countOfTrue && totalTicked == countOfTrue) {
       this.goodAnswer = true;
-      //console.log("good")
+      console.log("good")
+    }
+    else if(countOfTrue > 0 && countOfFalse == 0 && totalTicked < this.goodAnswerCount ){
+      this.goodAnswer = false;
+      this.partialAnswer = true;
+      console.log("partial")
     }
     else {
       //console.log("bad");
+      this.partialAnswer = false;
       this.goodAnswer = false;
+      console.log("false")
 
     }
   }

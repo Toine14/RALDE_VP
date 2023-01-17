@@ -16,7 +16,7 @@ export class QuestionsComponent implements OnInit {
 
   bad_answer_object = {
     "badAnswerText": "",
-    "badAnswerLink": ""
+    "badAnswerLink": [],
   }
 
   form!: FormGroup;
@@ -26,10 +26,8 @@ export class QuestionsComponent implements OnInit {
   isPictureIllustration: boolean = false;
   isAnswerPictureIllustration: boolean = false;
   isMoreThanOnePictureAnswer: boolean = false;
-
   size1 = '50em';
-  size2 = '20em'
-
+  size2 = '20em';
 
   constructor(private practicalService: BasicPracticalComponentService, private formBuilder: FormBuilder) {
   }
@@ -49,14 +47,15 @@ export class QuestionsComponent implements OnInit {
     }
 
     this.bad_answer_object.badAnswerText = this.data.badAnswerText
-    this.bad_answer_object.badAnswerLink = this.data.badAnswerLink
+
+
   }
 
   onNextClick() {
-    this.practicalService.set_component_id(this.data.nextCompId)
+    this.practicalService.set_component_id(this.data.nextCompId);
   }
   onPreviousClick() {
-    this.practicalService.set_component_id(this.data.previousCompId)
+    this.practicalService.set_component_id(this.data.previousCompId);
   }
 
 
@@ -73,16 +72,29 @@ export class QuestionsComponent implements OnInit {
 
 
   submit() {
-    let bad_answer_special_text = this.form.value.answer.bad_answer_special_text
-    let answer = this.form.value.answer.istrue
-    //console.log(answer)   
-    let all = this.form.value
-    console.log(all)
-    if (!answer) {
+
+    this.bad_answer_object.badAnswerLink = [];
+    this.bad_answer_object.badAnswerText = "";
+
+
+
+    let bad_answer_special_text = this.form.value.answer.bad_answer_special_text;
+    let badAnswerLink = this.form.value.answer.badAnswerLink;
+    let answer = this.form.value.answer.istrue;
+    //console.log(answer)
+    //let all = this.form.value
+    //console.log(all)
+    if (answer == false) {
       this.isGoodAnswer = false;
       this.answerText = 'false';
       if (bad_answer_special_text) {
-        this.bad_answer_object.badAnswerText = bad_answer_special_text
+        if (this.data.badAnswerText != "") {
+          this.bad_answer_object.badAnswerText = this.data.badAnswerText
+        }
+        this.bad_answer_object.badAnswerText = bad_answer_special_text;
+      }
+      if (badAnswerLink) {
+        this.bad_answer_object.badAnswerLink = badAnswerLink;
       }
     }
     else {
@@ -91,12 +103,12 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
-  clear_style(){    
-    for(let i in this.data.choices){
+  clear_style() {
+    for (let i in this.data.choices) {
       let id = "imageToSelect_" + i
       let to_style = document.getElementById(id)
       to_style!.style.setProperty('border-style', 'none');
-    } 
+    }
   }
 
   onCheckboxChange(event: any, i: any) {
@@ -110,11 +122,5 @@ export class QuestionsComponent implements OnInit {
         console.log(i)
       }
     }
-
   }
-
-
-
-
-
 }

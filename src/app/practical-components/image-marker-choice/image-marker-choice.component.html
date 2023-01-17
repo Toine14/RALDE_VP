@@ -10,11 +10,12 @@
 
     <div *ngFor="let marker of data.markers, let i = index" class="hotspot" [style.left.%]="marker.x_pos" id={{i}}
         [style.top.%]="marker.y_pos" [title]="marker.title" (click)="onSpotClick($event, marker.isCorrect)">
+       <!--<span class="text_spot" id={{i}}>{{marker.title}}</span>--> 
         <div id="{{'marker_'+i}}" class="hotspotImg rounded-full bg-blue-500"></div>
-        <span class="text_spot" id={{i}}>{{marker.text}}</span>
+        
     </div>
 
-    <div *ngIf="show_tips_false" class="tip_container border-2 bg-red-200 border-red-400  px-10 py-2 h-10 rounded-sm">
+    <div *ngIf="show_tips_false" class="tip_container border-2 bg-red-200 border-red-400  px-10 py-2  rounded-sm">
         <p class="text-gray-700 text-base">
             {{answer_text_false}}
         </p>

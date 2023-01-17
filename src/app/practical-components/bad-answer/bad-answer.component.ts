@@ -12,6 +12,8 @@ export class BadAnswerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.data_bad_answer)
   }
 
 }

@@ -5,8 +5,21 @@
     {{data.text_p1}}
   </h3>
 <div class="flex justify-center items-center mb-4">
-  <div style="width:1120px; height:630px" id="panorama" crossorigin="anonymous"></div>
+  <div style="width:1120px; height:630px" id="panorama" crossorigin="anonymous" class="relative"></div>
 
+</div>
+
+<div *ngIf="show_tips" class="tip_container" @fade >
+
+  <div class="border-2 bg-blue-200 border-blue-400 px-32 py-10 w-full rounded-sm absolute">
+    <div class="tip_close" (click)="onTipCloseClick()"></div>
+    <h2 class="text-gray-700 text-2xl font bold">
+        {{tipTitle}}
+    </h2>
+    <p>
+        {{tipText}}
+    </p>
+</div>
 </div>
 
 
