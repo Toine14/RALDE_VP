@@ -888,32 +888,32 @@
                     {
                         "text": "Warm the complete medium in the water bath and put it in the flow cabinet",
                         "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/medium_bottle.png"
+                        "img_url": "https://imgs.ralde.eu/medium_in_waterbath.jpg"
                     },
                     {
                         "text": "Place a sterile tube in a rack inside the cabinet",
                         "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/medium_bottle.png"
+                        "img_url": "https://imgs.ralde.eu/sterile_tube_rack.jpg"
                     },
                     {
                         "text": "Place micropipette and pipette tips inside the cabinet",
                         "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/micropipette_tips.png"
+                        "img_url": "https://imgs.ralde.eu/micro_pipette_cabinet.jpg"
                     },
                     {
                         "text": "Place FBS in the water bath",
                         "isCorrect": false,
-                        "img_url": "https://imgs.ralde.eu/fbs_bottle.png"
+                        "img_url": "https://imgs.ralde.eu/fbs_water_bath.jpg"
                     },
                     {
                         "text": "Place a sterile cell culture flask in the flow cabinet",
                         "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/fbs_bottle.png"
+                        "img_url": "https://imgs.ralde.eu/T25_square.png"
                     },
                     {
                         "text": "Place sterile serological pipettes and pipettor in the flow cabinet",
                         "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/fbs_bottle.png"
+                        "img_url": "https://imgs.ralde.eu/pipetor.jpg"
                     }
                 ]
             }
@@ -2119,7 +2119,7 @@
             "component_type": "ReorderComponent",
             "data": {
                 "id": 55,
-                "text_p1": "If cells are at 80% confluency a passage should be performed. How would you do it? Order all the steps you’d take. (All steps shown may not be necessary)",
+                "text_p1": "If cells are at 80% confluency a passage should be performed. How would you do it? Order all the steps you'd take. (All steps shown may not be necessary)",
                 "text_p2": "reorder sentence and put non necessary steps in the trash zone",
                 "isPictureIllustration": true,
                 "illustrationPicturesUrls": [
@@ -2227,26 +2227,21 @@
                     "https://imgs.ralde.eu/under_hood.png"
                 ],
                 "isAnswerPictureIllustration": false,
-                "answerIllustrationPicturesUrls": [
-                ],
+                "answerIllustrationPicturesUrls": [],
                 "choices": [
                     {
-                      
                         "answer": "Add 5 mL medium to the cells, transfer 3 mL to a new T75 and add 10 mL to the new flask",
                         "istrue": false
                     },
                     {
-                       
                         "answer": "Take the 5 mL of the flask and transfer them to a new T75. Then add 10 mL complete medium",
                         "istrue": false
                     },
                     {
-                       
                         "answer": "Add 10 mL complete medium to the flask and transfer 3 mL to anew T75",
                         "istrue": false
                     },
                     {
-                      
                         "answer": "Add 14 mL complete medium to a new T75 and transfer 1 mL from the original flask",
                         "istrue": true
                     }
@@ -2311,29 +2306,356 @@
                     {
                         "answer": "When the cell concentration is above 200.000 cells/mL",
                         "istrue": false,
-                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                        "bad_answer_special_text": "Bad answer : Please check the ATTC instructions"
                     },
                     {
                         "answer": "When the cell concentration is above 500.000 cells/mL",
                         "istrue": false,
-                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                        "bad_answer_special_text": "Bad answer : Please check the ATTC instructions"
                     },
                     {
                         "answer": "When the cell concentration is above 800.000 cells/mL",
                         "istrue": true
-                        
                     },
                     {
                         "answer": "When the cell concentration is above 1.000.000 cells/mL",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : Please check the ATTC instructions"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells should be in an optimal state in order to be subcultured; at higher concentrations cells are stressed and their behaviour may change, they can even mutate. TK6 and THP-1 cells should be maintained between 2 x10\u2075 and 1 X 10\u2076 cells/mL",
+                "nextCompId": 591,
+                "previousCompId": 52
+            }
+        },
+        {
+            "component_type": "ReorderComponent",
+            "data": {
+                "id": 591,
+                "text_p1": "If after counting cells are at a concentration above 800.000 cells/mL a subcultivation should be performed. Cultures can be maintained by addition or replacement of fresh medium. How would you do it by addition of fresh medium? Order all the steps you’d take. (All steps shown may not be necessary)",
+                "text_p2": "reorder sentence and put non necessary steps in the trash zone",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/conf_1.png"
+                ],
+                "badAnswerText": "Bad order : try again",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 592,
+                "previousCompId": 59,
+                "choices": [
+                    {
+                        "order": 2,
+                        "answer": "Add fresh medium to dilute the cell suspension to 2x10\u2075 cells/mL in a certain volume ",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Remove the medium",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Add 0.25% Trypsin (37ºC)",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Collect the cells in a tube",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 1,
+                        "answer": "Take an aliquote of the cell suspension with the required amount of cells and tranfer it to a new flask",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Add fresh medium to dilute the cell suspension to 2x105 cells/mL in a certain volume",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 0,
+                        "answer": "If detached: add fresh medium (37ºC) on top of the trypsin",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 3,
+                        "answer": "Place the flask with the cells in the incubator",
+                        "is_bad_step": false
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 592,
+                "h2": "Subculturing of cells",
+                "text_p1": "How would you subcultivate the cells by replacing the medium if your cells are in a 125 ml erlenmeyer flask in 20 mL, the concentration of the cell suspension is 1.000.000 cells/mL, and you want to prepare 10 mL at 200.000 cells/mL in a T25 flask?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/under_hood.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "answer": "Take 10 mL of the  flask in a tube, centrifuge it, resuspend the pellet of cells in 10 mL of fresh medium and transfer it to a 125 mL erlenmeyer flask.",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes or check your calculation"
+                    },
+                    {
+                        "answer": "Take 5 mL of the  flask in a tube, centrifuge it, resuspend the pellet of cells in 10 mL of fresh medium and transfer it to a 125 mL erlenmeyer flask.",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes or check your calculation"
+                    },
+                    {
+                        "answer": "Take 2 mL of the  flask in a tube, centrifuge it, resuspend the pellet of cells in 10 mL of fresh medium and transfer it to a 125 mL erlenmeyer flask.",
+                        "istrue": true,
+                        "bad_answer_special_text": "Bad answer : please reread your notes or check your calculation"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 593,
+                "previousCompId": 591
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 593,
+                "h2": "Cell types & medium",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Both adherent cells and cells in suspension",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/susp_adh_cells.png",
+                        "menu_sub_items": []
+                    }
+                ],
+                "nextCompId": 594,
+                "previousCompId": 592
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 594,
+                "h2": "Subculturing of cells",
+                "text_p1": "How does the medium look like?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": true,
+                "answerIllustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/med_red.png",
+                    "https://imgs.ralde.eu/med_orange.png",
+                    "https://imgs.ralde.eu/med_yellow.png"
+                ],
+                "choices": [
+                    {
+                        "answer": "Still good",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Partially saturated",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Saturated",
+                        "istrue": true
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Explanation: Na\u2082HCO\u2083 and CO\u2082 need to be balanced in the medium so that pH stays neutral (pH 7=red). When the number of cells increases, the amount of CO\u2082 increases, too, due to their respiration. That shifts the balance to H+ production, decreasing the pH of the medium (yellow).  H\u2082O + CO\u2082 + NaHCO\u2083 \u27F7 H\u207A + Na\u207A + 2HCO\u2083\u208B",
+                "nextCompId": 595,
+                "previousCompId": 593
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 595,
+                "h2": "Subculturing of cells",
+                "text_p1": "What does it mean if you have a sudden turn of color to intense yellow in your medium?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "answer": "Cells should be fine. It is a normal adjustment of pH inside the incubator",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Cells should be fine. Yellow color only means that the pH has decreased due to normal cell respiration",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Cells may not be fine. There may be a contamination inside the flask",
+                        "istrue": true
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Sudden acidity of the medium indicate the presence of more living organisms than just the cell line. The release of CO\u2082 increases in great proportion due to the respiration of the cells and the contaminants and it leads to an intense yellow color of the medium.",
+                "nextCompId": 596,
+                "previousCompId": 594
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 596,
+                "h2": "Subculturing of cells",
+                "text_p1": "Regarding contamination, choose the right answer:",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/med_yellow.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "answer": "Cells can get multiple types of contaminations at the same time.",
+                        "istrue": true,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Cells can get multiple types of contaminations but only one at a time",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Cells can only get contaminations of bacteria and yeast but only one at a time",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "Cells can only get contaminations of fungi and viruses but only one at a time",
                         "istrue": false,
                         "bad_answer_special_text": "Bad answer : please reread your notes"
                     }
                 ],
                 "badAnswerText": "Bad answer : please reread your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "ells should be in an optimal state in order to be subcultured; at higher concentrations cells are stressed and their behaviour may change, they can even mutate. TK6 and THP-1 cells should be maintained between 2 x10\u2075 and 1 X 10\u2076 cells/mL-",
-                "nextCompId": 54,
-                "previousCompId": 52
+                "goodAnswerText": "Most microscopic organisms love complete medium and they can all contaminate at the same time",
+                "nextCompId": 597,
+                "previousCompId": 595
+            }
+        },
+        {
+            "component_type": "ImgDragdropComponent",
+            "data": {
+                "id": 597,
+                "h2": "Subculturing of cells",
+                "text_p1": "Do you have a contamination? Match the contamination type with the right picture, if applicable",
+                "nextCompId": 598,
+                "previousCompId": 596,
+                "possible_answers": [
+                    {
+                        "text": "No contamination",
+                        "id": 1
+                    },
+                    {
+                        "text": "Bacteria contamination",
+                        "id": 2
+                    },
+                    {
+                        "text": "Yeast contamination",
+                        "id": 3
+                    },
+                    {
+                        "text": "Fungi contamination",
+                        "id": 4
+                    },
+                    {
+                        "text": "No contamination but cells are dying",
+                        "id": 5
+                    }
+                ],
+                "badAnswerText": "Bad answer, at least one picture is bad labelled",
+                "goodAnswerText": "All pictures were matched with the correct label",
+                "picture_box": [
+                    {
+                        "img_url": "https://imgs.ralde.eu/conta_1_temp.png",
+                        "expected_id": 4
+                    },
+                    {
+                        "img_url": "https://imgs.ralde.eu/conta_2_temp.png",
+                        "expected_id": 2
+                    },
+                    {
+                        "img_url": "https://imgs.ralde.eu/conta_3_temp.png",
+                        "expected_id": 1
+                    },
+                    {
+                        "img_url": "https://imgs.ralde.eu/conta_yeast_temp.png",
+                        "expected_id": 3
+                    },
+                    {
+                        "img_url": "https://imgs.ralde.eu/conta_dying_temp.png",
+                        "expected_id": 5
+                    }
+                ]
+            }
+        },
+        {
+            "component_type": "MultipleChoicesComponent",
+            "data": {
+                "id": 598,
+                "h2": "Subculturing of cells",
+                "text_p1": "How will you proceed if you have a bacteria/yeast/fungi contamination? More than one answer may be correct",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "answers": [
+                    {
+                        "text": "I’d discard the cells and disinfect the incubator if bacteria or yeast are in he flask, but I’ll only change the medium in case of fungi contamination since they are big and easy to remove",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard my cells and everybody else’s and disinfect the incubator",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard my cells and disinfect the incubator and cabinets. The rest of cells will go to a quarantine incubator",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "I’d discard the medium if I see turbidity or any kind of contamination signs inside it",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "I’d discard the medium regardless",
+                        "isCorrect": true
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Aerosols of all the contaminants from inside and outside the flask may contaminate the incubator/cabinet and infect other people’s flasks. Everybody should be aware of a contamination on anyone’s cells in order to keep a close eye on their cells. Medium would normally also be contaminated if cells are but it won’t show signs of contamination until much later since it is kept at 4ºC, a temperature that decreases growth of any living organism.",
+                "nextCompId": 1,
+                "previousCompId": 597
             }
         }
     ]
