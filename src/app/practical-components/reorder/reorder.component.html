@@ -4,14 +4,45 @@
         <h1 class='mt-8 text-2xl'>{{data.text_p1}}</h1>
 
         <div class=" flex justify-center gap-4 mt-8 ">
-            <div cdkDropList class="example-list flex flex-col items-center" (cdkDropListDropped)="drop($event)">
+            <!-- <div cdkDropList #origin="cdkDropList" class="example-list flex flex-col items-center"
+                (cdkDropListDropped)="drop($event)">
                 <div class="example-box " *ngFor="let item of data.choices" cdkDrag>
                     <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
                     {{item.answer}}
                 </div>
             </div>
+
+            <div class="example-list flex flex-col items-center" cdkDropList #inProgress="cdkDropList"
+                [cdkDropListData]="trash_items" [cdkDropListConnectedTo]="[origin]" (cdkDropListDropped)="drop($event)">
+                <div *ngFor="let item of trash_items" class="task" cdkDrag>
+                    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                    {{item.answer}}
+                </div>
+            </div>-->
+
+
+            <div cdkDropList #pendingList="cdkDropList" [cdkDropListData]="base_items"
+                [cdkDropListConnectedTo]="[doneList]" class="example-list flex flex-col items-center"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of data.choices" cdkDrag>{{item.answer}}</div>
+            </div>
+
+            <div>Trash zone : drop non necessariy steps here
+                <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="trash_items"
+                    [cdkDropListConnectedTo]="[pendingList]" class="example-list flex flex-col items-center"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of trash_items" cdkDrag>{{item.answer}}</div>
+                </div>
+            </div>
+
+
+
+
+
+
+
             <div *ngIf="data.isPictureIllustration" class="self-start">
-                <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="w-full rounded-sm">
+                <img *ngFor="let imgUrl of data.illustrationPicturesUrls" [src]='imgUrl' class="w-1/2 rounded-sm">
             </div>
         </div>
 

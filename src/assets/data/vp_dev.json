@@ -276,25 +276,24 @@
                     {
                         "answer": "22°C",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
+                        "bad_answer_special_text": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
                     },
                     {
                         "answer": "37°C",
                         "istrue": true,
-                        "bad_answer_special_text":"Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
+                        "bad_answer_special_text": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
                     },
                     {
                         "answer": "40°C",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
+                        "bad_answer_special_text": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
                     },
                     {
                         "answer": "50°C",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
+                        "bad_answer_special_text": "Bad answer, please re-read the provided information or re-watch the film. High temperatures may result in cell death"
                     }
                 ],
-               
                 "badAnswerLink": "",
                 "goodAnswerText": "Explanation: human and mammalian cell lines should be kept at 37°C for optimal growth, thus it is convenient that all solutions that are in contact with them are around this temperature. Overheating them can cause serious damage and can lead to cell death.",
                 "nextCompId": 27,
@@ -388,34 +387,34 @@
                         "answer": "",
                         "istrue": false,
                         "img_url": "https://imgs.ralde.eu/position_right.png",
-                        "bad_answer_special_text":"Please re-read the guidlines or re-watch the instruction film"
+                        "bad_answer_special_text": "Please re-read the guidelines or re-watch the instruction film"
                     },
                     {
                         "answer": "",
                         "istrue": false,
                         "img_url": "https://imgs.ralde.eu/position_left.png",
-                        "bad_answer_special_text":"Please re-read the guidlines or re-watch the instruction film"
+                        "bad_answer_special_text": "Please re-read the guidelines or re-watch the instruction film"
                     },
                     {
                         "answer": "",
                         "istrue": true,
                         "img_url": "https://imgs.ralde.eu/position_center.png",
-                        "bad_answer_special_text":"Please re-read the guidlines or re-watch the instruction film"
+                        "bad_answer_special_text": "Please re-read the guidelines or re-watch the instruction film"
                     },
                     {
                         "answer": "",
                         "istrue": false,
                         "img_url": "https://imgs.ralde.eu/position_back.png",
-                        "bad_answer_special_text":"Please re-read the guidlines or re-watch the instruction film"
+                        "bad_answer_special_text": "Please re-read the guidelines or re-watch the instruction film"
                     },
                     {
                         "answer": "",
                         "istrue": false,
                         "img_url": "https://imgs.ralde.eu/position_front.png",
-                        "bad_answer_special_text":"Please re-read the guidlines or re-watch the instruction film"
+                        "bad_answer_special_text": "Please re-read the guidelines or re-watch the instruction film"
                     }
                 ],
-                "badAnswerText": "Please re-read the guidlines or re-watch the instruction film",
+                "badAnswerText": "Please re-read the guidelines or re-watch the instruction film",
                 "badAnswerLink": "",
                 "goodAnswerText": "Walls and objects disturb the laminar flow, therefore the best place to work is the middle of the cabinet. Moreover, the front part of the cabinet is the part with the highest contamination risk since it is the closest to the end of the laminar flow and is easily disturbed by slight movements.",
                 "nextCompId": 290,
@@ -489,7 +488,6 @@
                         "bad_answer_special_text": "Bad answer : Please check the guide the provided information or re-watch the film"
                     }
                 ],
-               
                 "badAnswerLink": "",
                 "goodAnswerText": "human and mammalian cell lines should be kept at 37ºC for optimal growth, 5% CO2 is needed to buffer the system to ensure that the normal physiological pH is maintained for optimum cell growth",
                 "nextCompId": 1,
@@ -557,7 +555,6 @@
                             {
                                 "title": "strain : HepG2",
                                 "img_src": "https://imgs.ralde.eu/hepg2.png"
-                                
                             }
                         ]
                     }
@@ -581,12 +578,11 @@
                     {
                         "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": true
-
                     },
                     {
                         "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/hb-8065"
                         ]
@@ -594,7 +590,7 @@
                     {
                         "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/hb-8065"
                         ]
@@ -602,12 +598,12 @@
                     {
                         "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/hb-8065"
                         ]
                     }
-                ],                
+                ],
                 "goodAnswerText": "Good job you can continue the practical",
                 "nextCompId": 34,
                 "previousCompId": 32
@@ -628,7 +624,6 @@
                             {
                                 "title": "strain : A549",
                                 "img_src": "https://imgs.ralde.eu/a549.png"
-                                
                             }
                         ]
                     }
@@ -646,40 +641,34 @@
                 "text_p2": "Note: Antibiotics (penicillin and streptomycin) are optional, but commonly added to prevent bacterial infections",
                 "choices": [
                     {
-                      
                         "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/ccl-185"
                         ]
                     },
                     {
-                      
                         "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": true
                     },
                     {
-                     
                         "answer": "Dulbecco's Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/ccl-185"
                         ]
                     },
                     {
-                     
                         "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/ccl-185"
                         ]
                     }
                 ],
-               
-      
                 "goodAnswerText": "Good job you can continue the practical",
                 "nextCompId": 36,
                 "previousCompId": 34
@@ -700,7 +689,6 @@
                             {
                                 "title": "strain : THP-1",
                                 "img_src": "https://imgs.ralde.eu/thp1.png"
-                              
                             }
                         ]
                     }
@@ -724,16 +712,15 @@
                     {
                         "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/tib-202"
                         ]
-
                     },
                     {
                         "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/tib-202"
                         ]
@@ -741,7 +728,7 @@
                     {
                         "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/tib-202"
                         ]
@@ -749,9 +736,8 @@
                     {
                         "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": true
-
                     }
-                ],                
+                ],
                 "goodAnswerText": "Good job you can continue the practical",
                 "nextCompId": 38,
                 "previousCompId": 36
@@ -772,7 +758,6 @@
                             {
                                 "title": "strain : TK6",
                                 "img_src": "https://imgs.ralde.eu/tk6.png"
-                                
                             }
                         ]
                     }
@@ -796,16 +781,15 @@
                     {
                         "answer": "Minimum Essential Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/crl-8015"
                         ]
-
                     },
                     {
                         "answer": "F-12K Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/crl-8015"
                         ]
@@ -813,7 +797,7 @@
                     {
                         "answer": "Dulbecco’s Modified Eagles Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer",
+                        "bad_answer_special_text": "Bad answer",
                         "badAnswerLink": [
                             "https://www.atcc.org/products/crl-8015"
                         ]
@@ -821,9 +805,8 @@
                     {
                         "answer": "RPMI-1640 Medium, fetal bovine serum 10%, pen/strep 1%",
                         "istrue": true
-
                     }
-                ],                
+                ],
                 "goodAnswerText": "Good job you can continue the practical",
                 "nextCompId": 300,
                 "previousCompId": 38
@@ -1094,13 +1077,13 @@
                         "id": "ChoiceNb1",
                         "answer": "Spin at 150-300 g for 5 min to remove freezing medium and dilute 10 x in cell culture medium",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer : please reread your notes"
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
                         "id": "ChoiceNb2",
                         "answer": "Quick spin at 13000xg for 1min to remove freezing medium",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer : please reread your notes"
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
                         "id": "ChoiceNb3",
@@ -1126,9 +1109,7 @@
                         "title": "Adherent cells",
                         "sub_title": "",
                         "img_src": "https://imgs.ralde.eu/adherent_cells.png",
-                        "menu_sub_items": [
-       
-                        ]
+                        "menu_sub_items": []
                     }
                 ],
                 "nextCompId": 46,
@@ -1182,7 +1163,6 @@
                 ]
             }
         },
-
         {
             "component_type": "MultipleChoicesComponent",
             "data": {
@@ -1328,16 +1308,13 @@
                         "title": "Cells in suspension",
                         "sub_title": "",
                         "img_src": "https://imgs.ralde.eu/suspen_cells.png",
-                        "menu_sub_items": [
-       
-                        ]
+                        "menu_sub_items": []
                     }
                 ],
                 "nextCompId": 40003,
                 "previousCompId": 400
             }
         },
-
         {
             "component_type": "QuestionsComponent",
             "data": {
@@ -1528,9 +1505,6 @@
                 "previousCompId": 40005
             }
         },
-
-
-
         {
             "component_type": "SubMenuPresentationComponent",
             "data": {
@@ -1542,9 +1516,7 @@
                         "title": "Both adherent cells and cells in suspension",
                         "sub_title": "",
                         "img_src": "https://imgs.ralde.eu/susp_adh_cells.png",
-                        "menu_sub_items": [
-       
-                        ]
+                        "menu_sub_items": []
                     }
                 ],
                 "nextCompId": 40008,
@@ -1598,24 +1570,20 @@
                 ],
                 "choices": [
                     {
-                        
                         "answer": "After two hours",
                         "istrue": false,
                         "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
-                     
                         "answer": "In the evening of the same day",
                         "istrue": false,
                         "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
-                        
                         "answer": "The next day",
                         "istrue": true
                     },
                     {
-                       
                         "answer": "After two days",
                         "istrue": false,
                         "bad_answer_special_text": "Bad answer : please reread your notes"
@@ -1674,15 +1642,6 @@
                 "previousCompId": 4001
             }
         },
-
-
-
-
-
-
-
-
-
         {
             "component_type": "QuestionsComponent",
             "data": {
@@ -1833,7 +1792,7 @@
                     },
                     {
                         "answer": "Blue cells have the membrane damaged.",
-                        "istrue": true                       
+                        "istrue": true
                     }
                 ],
                 "badAnswerText": "Bad answer : please reread your notes",
@@ -1893,9 +1852,7 @@
                     ""
                 ],
                 "isAnswerPictureIllustration": false,
-                "answerIllustrationPicturesUrls": [
-                    
-                ],
+                "answerIllustrationPicturesUrls": [],
                 "goodAnswerText": "Freezing 1 million of cells in a too small volume will make the solution too dense and this is disadvantageous for the cell viability.",
                 "answers": [
                     {
@@ -1914,27 +1871,9 @@
                         "text": "1.5 mL",
                         "isCorrect": true
                     }
-
                 ]
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
             "component_type": "QuestionsComponent",
             "data": {
@@ -1950,7 +1889,7 @@
                     {
                         "answer": "First mix with plain medium and then gently add medium with 10% of DMSO while mixing",
                         "istrue": false,
-                        "bad_answer_special_text": "Bad answer : please reread your notes or check your calculation"
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
                         "answer": "Prepare complete growth medium with 5-10% DMSO beforehand and then resuspend the pellet in it",
@@ -1958,7 +1897,8 @@
                     },
                     {
                         "answer": "Prepare growth medium with 40% FBS, 10% DMSO beforehand and then resuspend the pellet in it.",
-                        "istrue": false
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     }
                 ],
                 "badAnswerText": "Bad answer : please reread your notes",
@@ -2028,27 +1968,23 @@
                 "answerIllustrationPicturesUrls": [],
                 "choices": [
                     {
-                        
                         "answer": "-20°C",
                         "istrue": false,
                         "bad_answer_special_text": "Storing at -20°C is to warm to guarantee the viability of the cells, even for short term."
                     },
                     {
-                        
                         "answer": "-80°C",
                         "istrue": false,
-                        "bad_answer_special_text":"Bad answer: for short term storage -80°C can be OK but not for long term storage"
-
+                        "bad_answer_special_text": "Bad answer: for short term storage -80°C can be OK but not for long term storage"
                     },
                     {
-                        
                         "answer": "\u2264 -130°C",
                         "istrue": true
                     }
                 ],
                 "badAnswerText": "Bad answer : please reread your notes",
                 "badAnswerLink": "",
-                "goodAnswerText": "Temperatures above 130ºC for long term storage may result in cell death",
+                "goodAnswerText": "Temperatures above -130ºC for long term storage may result in cell death",
                 "nextCompId": 1,
                 "previousCompId": 456
             }
@@ -2073,8 +2009,7 @@
                         "title": "Adherent cells",
                         "sub_title": "",
                         "img_src": "https://imgs.ralde.eu/adherent_cells.png",
-                        "menu_sub_items": [
-                        ]
+                        "menu_sub_items": []
                     }
                 ],
                 "nextCompId": 52,
@@ -2085,7 +2020,7 @@
             "component_type": "InfoLinksComponent",
             "data": {
                 "id": 52,
-                "h2": "Cell types & medium",
+                "h2": "Subculturing of cells",
                 "text_p1": "Please read the contents of the following resources as a preparation",
                 "links": [
                     {
@@ -2101,42 +2036,304 @@
                 "previousCompId": 1
             }
         },
-
-
         {
-            "component_type": "QuestionImgComponent",
+            "component_type": "QuestionsComponent",
             "data": {
-                "id": 50,
+                "id": 53,
                 "h2": "Subculturing of cells",
-                "text_p1": "Which of these pictures represents 80% confluency? (answers with pictures)",
-                "nextCompId": 1,
-                "previousCompId": 457,
-                "badAnswerText": "Bad answer, please re-read your notes",
-                "goodAnswerText": "100% confluence means that there is no more room for cells to grow, at this state they can only start dying.",
+                "text_p1": "Check cell confluency. At what confluency should you subculture your cells?",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
                 "isAnswerPictureIllustration": false,
                 "answerIllustrationPicturesUrls": [],
-                "answers": [
+                "choices": [
                     {
-                        "text": "",
-                        "isCorrect": false,
-                        "img_url": "https://imgs.ralde.eu/conf_2.png"
+                        "answer": "50%",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
-                        "text": "",
-                        "isCorrect": true,
-                        "img_url": "https://imgs.ralde.eu/conf_1.png"
+                        "answer": "80%",
+                        "istrue": true
                     },
                     {
-                        "text": "",
-                        "isCorrect": false,
-                        "img_url": "https://imgs.ralde.eu/conf_3.png"
+                        "answer": "100%",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Cells should be in an optimal state in order to undergo trypsinization (80% confluency). At higher densities, cells are stressed and their behaviour may change, they can even mutate.",
+                "nextCompId": 54,
+                "previousCompId": 52
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 54,
+                "h2": "Subculturing of cells",
+                "text_p1": "Which of these pictures represents 80% confluency? (answers with pictures)",
+                "text_p2": "",
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "isPictureIllustration": false,
+                "isAnswerWithPictures": true,
+                "illustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "answer": "",
+                        "istrue": false,
+                        "img_url": "https://imgs.ralde.eu/conf_2.png",
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
                     },
                     {
-                        "text": "",
-                        "isCorrect": false,
-                        "img_url": "https://imgs.ralde.eu/conf_4.png"
+                        "answer": "",
+                        "istrue": true,
+                        "img_url": "https://imgs.ralde.eu/conf_1.png",
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "",
+                        "istrue": false,
+                        "img_url": "https://imgs.ralde.eu/conf_3.png",
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "",
+                        "istrue": false,
+                        "img_url": "https://imgs.ralde.eu/conf_4.png",
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    }
+                ],
+                "badAnswerText": "Please re-read the guidelines or re-watch the instruction film",
+                "badAnswerLink": "",
+                "goodAnswerText": "100% confluence means that there is no more room for cells to grow, at this state they can only start dying.",
+                "nextCompId": 55,
+                "previousCompId": 53
+            }
+        },
+        {
+            "component_type": "ReorderComponent",
+            "data": {
+                "id": 55,
+                "text_p1": "If cells are at 80% confluency a passage should be performed. How would you do it? Order all the steps you’d take. (All steps shown may not be necessary)",
+                "text_p2": "reorder sentence and put non necessary steps in the trash zone",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/conf_1.png"
+                ],
+                "badAnswerText": "Bad order : try again",
+                "goodAnswerText": "Good job you can continue the practical",
+                "nextCompId": 56,
+                "previousCompId": 54,
+                "choices": [
+                    {
+                        "order": 1,
+                        "alternative_order": 1,
+                        "answer": "Remove the medium",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 4,
+                        "alternative_order": 1,
+                        "answer": "Add 0.25% Trypsin (37ºC)",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 7,
+                        "answer": "Add fresh medium (37ºC) into a T25 flask",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 2,
+                        "answer": "Add PBS (37ºC) to the flask and wash the cell monolayer",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 8,
+                        "answer": "Check if the cells are detached under the microscope",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Collect the cells in a tube",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 9,
+                        "answer": "If detached: add fresh medium (37ºC) on top of the trypsin",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 5,
+                        "answer": "Place the cells in the incubator for 5-15 min",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 11,
+                        "answer": "Place the flask with the cells in the incubator",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 3,
+                        "answer": "Remove the PBS",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Dilute the cells to the cell concentration needed for subcultivation",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Take an aliquot to count",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Add fresh medium (37ºC) in to a T75 flask",
+                        "is_bad_step": true
+                    },
+                    {
+                        "order": 6,
+                        "answer": "Prepare the new plates by labelling them with cell type, passage, date and initials",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 10,
+                        "answer": "Subcultivate the cells in a ratio of 1:6 (if the total volume of trypsin stopped with complete medium is 6mL, you transfer 1mL to a new T25 plate)",
+                        "is_bad_step": false
+                    },
+                    {
+                        "order": 0,
+                        "answer": "Subcultivate the cells in a ratio of 1:6 (if the total volume of trypsin stopped with complete medium is 6mL, you transfer 2mL to a new T75 plate)",
+                        "is_bad_step": true
                     }
                 ]
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 56,
+                "h2": "Subculturing of cells",
+                "text_p1": "How would you perform a passage if your cells are in 5 mL and you want to subculture them at 1:5 in a T75?",
+                "text_p2": "",
+                "isPictureIllustration": true,
+                "illustrationPicturesUrls": [
+                    "https://imgs.ralde.eu/under_hood.png"
+                ],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [
+                ],
+                "choices": [
+                    {
+                      
+                        "answer": "Add 5 mL medium to the cells, transfer 3 mL to a new T75 and add 10 mL to the new flask",
+                        "istrue": false
+                    },
+                    {
+                       
+                        "answer": "Take the 5 mL of the flask and transfer them to a new T75. Then add 10 mL complete medium",
+                        "istrue": false
+                    },
+                    {
+                       
+                        "answer": "Add 10 mL complete medium to the flask and transfer 3 mL to anew T75",
+                        "istrue": false
+                    },
+                    {
+                      
+                        "answer": "Add 14 mL complete medium to a new T75 and transfer 1 mL from the original flask",
+                        "istrue": true
+                    }
+                ],
+                "badAnswerText": "Bad answer : please re read your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "Sudden acidity of the medium indicate the presence of more living organisms than just the cell line. The release of CO\u2082 increases in great proportion due to the respiration of the cells and the contaminants and it leads to an intense yellow color of the medium.",
+                "nextCompId": 57,
+                "previousCompId": 55
+            }
+        },
+        {
+            "component_type": "SubMenuPresentationComponent",
+            "data": {
+                "id": 57,
+                "h2": "Subculturing of cells",
+                "text_p1": "The next section and questions are about:",
+                "menu_main_items": [
+                    {
+                        "title": "Cells in suspension",
+                        "sub_title": "",
+                        "img_src": "https://imgs.ralde.eu/suspen_cells.png",
+                        "menu_sub_items": []
+                    }
+                ],
+                "nextCompId": 58,
+                "previousCompId": 56
+            }
+        },
+        {
+            "component_type": "InfoLinksComponent",
+            "data": {
+                "id": 58,
+                "h2": "Subculturing of cells",
+                "text_p1": "Please read the contents of the following resources as a preparation",
+                "links": [
+                    {
+                        "resource_url": "https://www.atcc.org/products/tib-202",
+                        "resource_title": "Explore the cell culture conditions for THP1 cells"
+                    },
+                    {
+                        "resource_url": "https://www.atcc.org/products/crl-8015",
+                        "resource_title": "Explore the cell culture conditions for TK6 cells"
+                    }
+                ],
+                "nextCompId": 59,
+                "previousCompId": 57
+            }
+        },
+        {
+            "component_type": "QuestionsComponent",
+            "data": {
+                "id": 59,
+                "h2": "Subculturing of cells",
+                "text_p1": "Check the cells concentration by counting the cells; when the cells should be subcultured?",
+                "text_p2": "",
+                "isPictureIllustration": false,
+                "illustrationPicturesUrls": [],
+                "isAnswerPictureIllustration": false,
+                "answerIllustrationPicturesUrls": [],
+                "choices": [
+                    {
+                        "answer": "When the cell concentration is above 200.000 cells/mL",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "When the cell concentration is above 500.000 cells/mL",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    },
+                    {
+                        "answer": "When the cell concentration is above 800.000 cells/mL",
+                        "istrue": true
+                        
+                    },
+                    {
+                        "answer": "When the cell concentration is above 1.000.000 cells/mL",
+                        "istrue": false,
+                        "bad_answer_special_text": "Bad answer : please reread your notes"
+                    }
+                ],
+                "badAnswerText": "Bad answer : please reread your notes",
+                "badAnswerLink": "",
+                "goodAnswerText": "ells should be in an optimal state in order to be subcultured; at higher concentrations cells are stressed and their behaviour may change, they can even mutate. TK6 and THP-1 cells should be maintained between 2 x10\u2075 and 1 X 10\u2076 cells/mL-",
+                "nextCompId": 54,
+                "previousCompId": 52
             }
         }
     ]
